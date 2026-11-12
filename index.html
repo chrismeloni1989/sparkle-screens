@@ -1444,7 +1444,7 @@ function getSegmenter() {
     const V = await import(`https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@${MP_VER}/vision_bundle.mjs`);
     const files = await V.FilesetResolver.forVisionTasks(`https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@${MP_VER}/wasm`);
     const opts = d => ({ baseOptions: { modelAssetPath: "https://storage.googleapis.com/mediapipe-models/image_segmenter/selfie_segmenter/float16/latest/selfie_segmenter.tflite", delegate: d }, runningMode: "IMAGE", outputConfidenceMasks: true, outputCategoryMask: false });
-    try { return await V.ImageSegmenter.createFromOptions(files, opts("GPU")); } catch (e) { return await V.ImageSegmenter.createFromOptions(files, opts("CPU")); }
+    return await V.ImageSegmenter.createFromOptions(files, opts("CPU"));
   })();
   segmenterP.catch(() => { segmenterP = null; });
   return segmenterP;
@@ -1453,7 +1453,9 @@ function cutFrame(seg, src, w, h, inv) {
   const c = makeCanvas(w, h), g = c.getContext("2d", { willReadFrequently: true }); g.drawImage(src, 0, 0, w, h);
   let mask = null, mw = 0, mh = 0;
   seg.segment(c, res => { const ms = res.confidenceMasks || []; if (!ms.length) return; const m = ms[0]; mw = m.width; mh = m.height; mask = Float32Array.from(m.getAsFloat32Array()); });
-  if (!mask) throw new Error("no mask");
+  if (!mask || mask.length < mw * mh || !mw || !mh) throw Object.assign(new Error("no mask"), { code: "nomask" });
+  let lo = Infinity, hi = -Infinity; for (let k = 0; k < mask.length; k += 7) { const v = mask[k]; if (v < lo) lo = v; if (v > hi) hi = v; }
+  if (!(hi - lo > 0.05)) throw Object.assign(new Error("flat mask"), { code: "noperson" });
   if (inv == null) { const at = (x, y) => mask[Math.min(mh - 1, Math.floor(y * mh)) * mw + Math.min(mw - 1, Math.floor(x * mw))]; const corners = (at(.03, .03) + at(.97, .03) + at(.03, .97) + at(.97, .97)) / 4; const centre = (at(.5, .4) + at(.5, .55) + at(.45, .5) + at(.55, .5)) / 4; inv = corners > centre + 0.2; }
   const id = g.getImageData(0, 0, w, h), d = id.data;
   for (let y = 0; y < h; y++) {
@@ -1461,7 +1463,7 @@ function cutFrame(seg, src, w, h, inv) {
     for (let x = 0; x < w; x++) {
       const fx = (x + 0.5) * mw / w - 0.5, x0 = clamp(Math.floor(fx), 0, mw - 1), x1 = Math.min(mw - 1, x0 + 1), tx = clamp(fx - x0, 0, 1);
       let v = (mask[y0 * mw + x0] * (1 - tx) + mask[y0 * mw + x1] * tx) * (1 - ty) + (mask[y1 * mw + x0] * (1 - tx) + mask[y1 * mw + x1] * tx) * ty;
-      if (inv) v = 1 - v;
+      if (!(v >= 0)) v = 0; if (inv) v = 1 - v;
       const a = clamp((v - 0.35) / 0.3, 0, 1); const i = (y * w + x) * 4 + 3; d[i] = d[i] * a;
     }
   }
@@ -1478,6 +1480,8 @@ async function cutoutJob(l, ui, range) {
     src.play().catch(() => {});
   } else { const s = Math.min(1, 900 / Math.max(dd.w, dd.h)); const r = cutFrame(seg, src, Math.round(dd.w * s), Math.round(dd.h * s), null); frames.push({ c: r.c, d: 100, at: 0 }); ui.progress(1); }
   if (!frames.length) return null;
+  const f0 = frames[0].c, px = f0.getContext("2d").getImageData(0, 0, f0.width, f0.height).data; let kept = 0; for (let k = 3; k < px.length; k += 16) if (px[k] > 40) kept++;
+  if (kept < px.length / 16 * 0.01) throw Object.assign(new Error("empty"), { code: "noperson" });
   return { w: dd.w, h: dd.h, frames, total: frames.length * 100 };
 }
 function fmtTime(t) { const m = Math.floor(t / 60), sec = t - m * 60; return m + ":" + (sec < 10 ? "0" : "") + sec.toFixed(1); }
@@ -1495,7 +1499,7 @@ function cutOutPerson(l) {
       layers = layers.filter(x => x !== nl && x !== l); layers.splice(Math.max(0, idx), 0, nl);
       if (l.type === "video" && !layers.some(x => x.img === l.img)) { try { l.img.pause(); l.img.remove(); } catch (e) {} }
       select(nl.id, true); toast("Done. Pick a sticker outline or take it away.", 3500);
-    }).catch(e => { console.error(e); backEl.remove(); toast("The cut-out tool couldn't start. Check the internet connection and try again.", 4500); });
+    }).catch(e => { console.error(e); backEl.remove(); if (l.type === "video") l.img.play().catch(() => {}); toast(e && e.code === "noperson" ? "Couldn't find a person in that. Try one where the person is clear and well lit." : e && e.code === "nomask" ? "The cut-out tool hit a problem on this phone. Your picture hasn't been changed." : "The cut-out tool couldn't start. Check the internet connection and try again.", 5000); });
   };
   openSheet((sh, bk) => {
     sheetEl = sh; backEl = bk;
