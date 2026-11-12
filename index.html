@@ -27,6 +27,8 @@
   --accent-2: #ffd23f;
   --accent-ink: #2b0618;
   --danger: #ff6b6b;
+  --glass: rgba(27, 21, 36, .74);
+  --glass-ghost: rgba(27, 21, 36, .18);
   --display: "Fredoka", "Nunito", system-ui, sans-serif;
   --body: "Nunito", system-ui, -apple-system, sans-serif;
   color-scheme: dark;
@@ -45,7 +47,7 @@ button { font: inherit; color: inherit; }
 .top { display: flex; align-items: center; gap: 8px; min-width: 0; }
 .brand { display: flex; align-items: center; gap: 6px; font-family: var(--display); font-weight: 700; font-size: 19px; letter-spacing: .2px; margin-right: auto; white-space: nowrap; min-width: 0; overflow: hidden; }
 .top .btn { flex: none; }
-@media (max-width: 400px) { .brand { font-size: 16px; } .top .btn.small { padding: 6px 10px; font-size: 13px; } }
+@media (max-width: 400px) { .brand { font-size: 16px; } #app { gap: 6px; padding-block: 4px 2px; } .top .btn.small { padding: 6px 10px; font-size: 13px; } }
 .brand svg { width: 22px; height: 22px; }
 .btn { border: 1px solid var(--line); background: var(--surface); border-radius: 999px; padding: 8px 14px; font-weight: 800; font-size: 14px; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; }
 .btn:hover { background: var(--surface-2); }
@@ -56,12 +58,23 @@ button { font: inherit; color: inherit; }
 .btn.danger { color: var(--danger); }
 .btn:disabled { opacity: .5; cursor: default; }
 .btn:focus-visible, .chip:focus-visible, .tab:focus-visible, .sw:focus-visible, .pick:focus-visible { outline: 3px solid var(--accent-2); outline-offset: 2px; }
-.stagewrap { position: relative; display: flex; align-items: center; justify-content: center; min-height: 0; }
+.stagewrap { grid-row: 2; grid-column: 1; position: relative; display: flex; align-items: flex-start; justify-content: center; min-height: 0; padding-bottom: 24px; }
 #stage { display: block; border-radius: 26px; box-shadow: 0 0 0 1px var(--line), 0 18px 50px rgba(0,0,0,.55); touch-action: none; background: #000; cursor: grab; }
-.hint { position: absolute; left: 50%; bottom: 6px; transform: translateX(-50%); background: rgba(21,16,28,.82); border: 1px solid var(--line); color: var(--muted); font-size: 12px; font-weight: 700; padding: 5px 10px; border-radius: 999px; white-space: nowrap; pointer-events: none; }
-.dock { display: flex; flex-direction: column; gap: 6px; min-height: 0; }
-.panel { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; height: clamp(190px, 37vh, 360px); overflow-y: auto; padding: 12px 12px 16px; overscroll-behavior: contain; }
-.tabs { display: grid; grid-template-columns: repeat(7, 1fr); gap: 2px; }
+.hint { position: absolute; left: 50%; bottom: 34px; transform: translateX(-50%); background: rgba(21,16,28,.82); border: 1px solid var(--line); color: var(--muted); font-size: 12px; font-weight: 700; padding: 5px 10px; border-radius: 999px; white-space: nowrap; pointer-events: none; }
+.dock { grid-row: 2; grid-column: 1; align-self: end; z-index: 5; display: flex; flex-direction: column; gap: 0; min-height: 0; }
+.panel { background: var(--glass); -webkit-backdrop-filter: blur(16px) saturate(1.3); backdrop-filter: blur(16px) saturate(1.3); border: 1px solid rgba(255,255,255,.12); border-radius: 20px; overflow-y: auto; padding: 12px 12px 16px; overscroll-behavior: contain; box-shadow: 0 -10px 30px rgba(0,0,0,.25); transition: background-color .2s ease; }
+.dock.ghost .panel { background: var(--glass-ghost); -webkit-backdrop-filter: none; backdrop-filter: none; }
+.dock.ghost .panel .sec:not(.active-sec) { opacity: .25; }
+.dock.closed .panel { display: none; }
+.dock.peek .panel { height: clamp(200px, 38vh, 360px); }
+.dock.full .panel { height: 64vh; }
+.handle { border: 0; background: transparent; height: 20px; width: 100%; display: flex; align-items: center; justify-content: center; cursor: grab; touch-action: none; padding: 0; }
+.handle { height: 24px; }
+.handle i { width: 50px; height: 6px; border-radius: 99px; background: rgba(255,255,255,.85); box-shadow: 0 1px 4px rgba(0,0,0,.5); }
+.handle:focus-visible { outline: 3px solid var(--accent-2); outline-offset: -2px; border-radius: 10px; }
+.mini { position: absolute; left: 50%; bottom: 34px; transform: translateX(-50%); display: flex; gap: 6px; background: rgba(21,16,28,.9); border: 1px solid var(--line); padding: 6px; border-radius: 999px; box-shadow: 0 8px 24px rgba(0,0,0,.45); white-space: nowrap; }
+.mini .btn { padding: 8px 13px; }
+.tabs { grid-row: 3; grid-column: 1; display: grid; grid-template-columns: repeat(7, 1fr); gap: 2px; }
 .tab { border: 0; background: transparent; border-radius: 12px; padding: 6px 2px 4px; display: flex; flex-direction: column; align-items: center; gap: 2px; font-size: 11px; font-weight: 800; color: var(--muted); cursor: pointer; }
 .tab svg { width: 22px; height: 22px; }
 .tab.on { color: var(--fg); background: var(--surface-2); }
@@ -130,10 +143,14 @@ a { color: var(--accent-2); }
 .gif-pick img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .giphy-credit { font-size: 11px; font-weight: 800; color: var(--muted); letter-spacing: .4px; }
 @media (min-width: 860px) {
-  #app { grid-template-columns: minmax(0, 1fr) 420px; grid-template-rows: auto minmax(0, 1fr); column-gap: 18px; }
-  .top { grid-column: 1 / -1; }
-  .dock { flex-direction: column-reverse; }
-  .panel { height: auto; flex: 1; }
+  #app { grid-template-columns: minmax(0, 1fr) 420px; grid-template-rows: auto auto minmax(0, 1fr); column-gap: 18px; }
+  .top { grid-column: 1 / -1; grid-row: 1; }
+  .stagewrap { grid-column: 1; grid-row: 2 / span 2; padding-bottom: 0; align-items: center; }
+  .tabs { grid-column: 2; grid-row: 2; }
+  .dock { grid-column: 2; grid-row: 3; align-self: stretch; }
+  .dock .panel { background: var(--surface); }
+  .dock .panel, .dock.closed .panel, .dock.peek .panel, .dock.full .panel { display: block; height: auto; flex: 1; }
+  .handle, .mini { display: none !important; }
 }
 @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
 </style>
@@ -151,12 +168,14 @@ a { color: var(--accent-2); }
   </header>
   <main class="stagewrap" id="stagewrap">
     <canvas id="stage" aria-label="Wallpaper design"></canvas>
-    <div class="hint" id="hint">Drag things to move them. Pinch to resize and turn.</div>
+    <div class="hint" id="hint">Tap a tool below to start. Drag to move, pinch to resize.</div>
+    <div class="mini" id="mini" hidden></div>
   </main>
-  <section class="dock">
+  <section class="dock closed" id="dock">
+    <button class="handle" id="handle" type="button" aria-label="Show or hide the tools" aria-expanded="false"><i></i></button>
     <div class="panel" id="panel"></div>
-    <nav class="tabs" id="tabs" aria-label="Tools"></nav>
   </section>
+  <nav class="tabs" id="tabs" aria-label="Tools"></nav>
 </div>
 <div id="preview" class="preview" hidden><canvas id="pv"></canvas><div class="pvnote">Tap to go back</div></div>
 <div id="toast" class="toast" hidden></div>
@@ -1543,7 +1562,7 @@ function loop(now) {
 // ---------- layout ----------
 function fitStage() {
   const wrapEl = $("stagewrap"); const r = wrapEl.getBoundingClientRect();
-  const s = Math.min(r.width / W, (r.height - 2) / H); cv.style.width = Math.floor(W * s) + "px"; cv.style.height = Math.floor(H * s) + "px";
+  const pb = parseFloat(getComputedStyle(wrapEl).paddingBottom) || 0; const s = Math.min(r.width / W, (r.height - pb - 2) / H); cv.style.width = Math.floor(W * s) + "px"; cv.style.height = Math.floor(H * s) + "px";
   if (previewOpen) { const ps = Math.min(innerWidth / W, innerHeight / H); pv.width = Math.round(W * ps * devicePixelRatio); pv.height = Math.round(H * ps * devicePixelRatio); pv.style.width = W * ps + "px"; pv.style.height = H * ps + "px"; }
 }
 new ResizeObserver(fitStage).observe($("stagewrap"));
@@ -1557,7 +1576,7 @@ function addLayer(l, opts = {}) {
   return l;
 }
 function textDefaults(text, style = "bubble") { const st = TEXT_STYLES.find(s => s.id === style) || TEXT_STYLES[0]; return Object.assign({ type: "text", text, size: 1, spacing: 0.02, color2: "#7a5cff", fill: "solid", color: "#ffffff", outlineColor: "#000000", outlineW: 0, shadow: "none", shadowColor: "#000000", effect: "none", font: "Fredoka" }, st.p); }
-function select(id, goEdit) { selId = id; if (goEdit) showTab("edit"); else if (currentTab === "edit") renderPanel(); }
+function select(id, goEdit) { selId = id; if (goEdit && panelMode !== "closed") showTab("edit"); else if (goEdit === "open") showTab("edit"); else if (currentTab === "edit" && panelMode !== "closed") renderPanel(); syncMini(); }
 function layerName(l) { if (l.type === "emoji") return [l.emoji, "Picture"]; if (l.type === "photo") return ["📷", "Photo"]; if (l.type === "gif" && l.cutout) return ["🧍", "Cut-out"]; if (l.type === "gif") return ["🎞️", l.cover ? "GIF (whole screen)" : "GIF"]; if (l.type === "video") return ["🎬", l.cover ? "Video (whole screen)" : "Video"]; return ["Aa", "Text: " + (l.text || "").replace(/\n/g, " ")]; }
 
 // ---------- pointer interaction ----------
@@ -1579,8 +1598,8 @@ cv.addEventListener("pointerdown", e => {
   if (ptrs.size === 1) {
     if (s && !s.cover) { const hp = handlePos(s); if (Math.hypot(p.x - hp.x, p.y - hp.y) < 60) { gesture = { mode: "handle", l: s, d0: Math.hypot(p.x - s.x, p.y - s.y), a0: Math.atan2(p.y - s.y, p.x - s.x), s0: s.scale, r0: s.rot }; return; } }
     const hit = hitTest(p);
-    if (hit) { if (hit.id !== selId) select(hit.id, true); else if (currentTab !== "edit") showTab("edit"); gesture = { mode: "drag", l: hit, ox: p.x - hit.x, oy: p.y - hit.y }; }
-    else { gesture = null; if (selId) { selId = null; if (currentTab === "edit") renderPanel(); } }
+    if (hit) { if (hit.id !== selId) select(hit.id, true); else if (currentTab !== "edit" && panelMode !== "closed") showTab("edit"); gesture = { mode: "drag", l: hit, ox: p.x - hit.x, oy: p.y - hit.y }; }
+    else { gesture = null; if (selId) { selId = null; if (currentTab === "edit" && panelMode !== "closed") renderPanel(); syncMini(); } }
   } else if (ptrs.size === 2 && sel()) {
     const [a, b] = [...ptrs.values()]; const l = sel();
     gesture = { mode: "pinch", l, d0: Math.hypot(b.x - a.x, b.y - a.y), a0: Math.atan2(b.y - a.y, b.x - a.x), s0: l.scale, r0: l.rot, mx: (a.x + b.x) / 2 - l.x, my: (a.y + b.y) / 2 - l.y };
@@ -1622,6 +1641,10 @@ function button(label, onClick, cls = "btn small") { const b = el("button", cls,
 function keepScroll(fn) { const y = panel.scrollTop; fn(); panel.scrollTop = y; }
 function syncSliders() { const l = sel(); if (!l || currentTab !== "edit") return; const set = (k, v) => { const r = sliderRefs[k]; if (r && document.activeElement !== r.i) { r.i.value = v; r.out.textContent = r.fmt(v); } }; set("size", l.scale); set("turn", Math.round(((l.rot * 180 / Math.PI) % 360 + 540) % 360 - 180)); }
 
+// see-through panel while dragging a slider
+panel.addEventListener("pointerdown", e => { if (e.target && e.target.type === "range") { const sc = e.target.closest(".sec"); if (sc) sc.classList.add("active-sec"); $("dock").classList.add("ghost"); } });
+addEventListener("pointerup", () => { $("dock").classList.remove("ghost"); panel.querySelectorAll(".active-sec").forEach(x => x.classList.remove("active-sec")); });
+addEventListener("pointercancel", () => $("dock").classList.remove("ghost"));
 // ---------- tabs ----------
 const ICONS = {
   idea: '<path d="M12 2.5l2.2 6.8 6.8 2.2-6.8 2.2L12 20.5l-2.2-6.8-6.8-2.2 6.8-2.2z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>',
@@ -1633,8 +1656,30 @@ const ICONS = {
   edit: '<path d="M5 7h14M5 12h14M5 17h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="9" cy="7" r="2.2" fill="var(--surface)" stroke="currentColor" stroke-width="1.8"/><circle cx="15" cy="12" r="2.2" fill="var(--surface)" stroke="currentColor" stroke-width="1.8"/><circle cx="8" cy="17" r="2.2" fill="var(--surface)" stroke="currentColor" stroke-width="1.8"/>',
 };
 const TABS = [["idea", "Idea"], ["bg", "Background"], ["pics", "Pictures"], ["photos", "Photos"], ["gifs", "GIFs"], ["text", "Text"], ["edit", "Edit"]];
-TABS.forEach(([id, label]) => { const b = el("button", "tab"); b.type = "button"; b.dataset.tab = id; b.innerHTML = `<svg viewBox="0 0 24 24" aria-hidden="true">${ICONS[id]}</svg>`; b.append(el("span", null, label === "Background" ? "Backdrop" : label)); b.onclick = () => showTab(id); $("tabs").append(b); });
-function showTab(id) { currentTab = id; document.querySelectorAll(".tab").forEach(b => b.classList.toggle("on", b.dataset.tab === id)); panel.scrollTop = 0; renderPanel(); }
+TABS.forEach(([id, label]) => { const b = el("button", "tab"); b.type = "button"; b.dataset.tab = id; b.innerHTML = `<svg viewBox="0 0 24 24" aria-hidden="true">${ICONS[id]}</svg>`; b.append(el("span", null, label === "Background" ? "Backdrop" : label)); b.onclick = () => { if (currentTab === id && panelMode !== "closed") setMode("closed"); else showTab(id); }; $("tabs").append(b); });
+let panelMode = "closed";
+function setMode(m) {
+  panelMode = m; const dock = $("dock"); dock.classList.remove("closed", "peek", "full"); dock.classList.add(m);
+  $("handle").setAttribute("aria-expanded", m !== "closed");
+  document.querySelectorAll(".tab").forEach(b => b.classList.toggle("on", m !== "closed" && b.dataset.tab === currentTab));
+  syncMini();
+}
+function showTab(id, mode) { currentTab = id; panel.scrollTop = 0; renderPanel(); setMode(mode || (panelMode === "closed" ? (id === "pics" ? "full" : "peek") : panelMode)); }
+function syncMini() {
+  const mini = $("mini"), l = sel(); const show = panelMode === "closed" && l && !l.cover && !previewOpen && !matchMedia("(min-width: 860px)").matches;
+  mini.hidden = !show; if (!show) return;
+  mini.innerHTML = ""; mini.append(button("Edit", () => showTab("edit", "peek"), "btn primary small"), button("Copy", duplicateSel), button("Delete", deleteSel, "btn small danger"), button("Done", () => { selId = null; syncMini(); }, "btn ghost small"));
+}
+(() => {
+  const h = $("handle"); let y0 = null;
+  h.addEventListener("pointerdown", e => { y0 = e.clientY; h.setPointerCapture(e.pointerId); });
+  h.addEventListener("pointerup", e => {
+    if (y0 == null) return; const dy = e.clientY - y0; y0 = null; const order = ["closed", "peek", "full"]; let i = order.indexOf(panelMode);
+    if (Math.abs(dy) < 8) i = panelMode === "closed" ? 1 : 0; else if (dy < 0) i = Math.min(2, i + (Math.abs(dy) > 160 ? 2 : 1)); else i = Math.max(0, i - (Math.abs(dy) > 160 ? 2 : 1));
+    setMode(order[i]);
+  });
+  h.addEventListener("pointercancel", () => y0 = null);
+})();
 function renderPanel() { panel.innerHTML = ""; for (const k in sliderRefs) delete sliderRefs[k]; ({ idea: renderIdea, bg: renderBg, pics: renderPics, photos: renderPhotos, gifs: renderGifs, text: renderTextTab, edit: renderEdit })[currentTab](); }
 
 // ---------- Idea tab ----------
@@ -1786,7 +1831,7 @@ function renderPics() {
     grid.innerHTML = ""; const list = picQuery.trim() ? emojiSearch(picQuery, 240) : ALL_EMOJI.filter(x => x.g === picCat);
     if (!list.length) { grid.append(note("No pictures match that. Try another word.")); return; }
     const frag = document.createDocumentFragment();
-    list.forEach(x => { const b = el("button", "pick", x.e); b.type = "button"; b.title = x.n; b.setAttribute("aria-label", "Add " + x.n); b.onclick = () => { addLayer({ type: "emoji", emoji: x.e, x: W / 2 + (Math.random() - 0.5) * 160, y: H * 0.55 + (Math.random() - 0.5) * 200 }); toast("Added. Drag it where you like."); }; frag.append(b); });
+    list.forEach(x => { const b = el("button", "pick", x.e); b.type = "button"; b.title = x.n; b.setAttribute("aria-label", "Add " + x.n); b.onclick = () => { addLayer({ type: "emoji", emoji: x.e, x: W / 2 + (Math.random() - 0.5) * 160, y: H * 0.55 + (Math.random() - 0.5) * 200 }); if (panelMode === "full") setMode("peek"); toast("Added. Drag it where you like."); }; frag.append(b); });
     grid.append(frag);
   };
   EMOJI_GROUPS.forEach(([g]) => { const b = el("button", "chip" + (g === picCat && !picQuery ? " on" : ""), GROUP_LABELS[g] || g); b.type = "button"; b.onclick = () => { picCat = g; picQuery = ""; search.value = ""; cats.querySelectorAll(".chip").forEach(x => x.classList.remove("on")); b.classList.add("on"); fill(); }; cats.append(b); });
@@ -1802,7 +1847,7 @@ function renderPhotos() {
       note("Then pick a shape, a frame or a sticker outline for it. You can add as many photos as you like.")),
     sec("Photos on your wallpaper", layerList(l => l.type === "photo", "No photos yet.")));
 }
-function layerList(filter, empty) { const items = layers.filter(filter); if (!items.length) return note(empty); const d = el("div", "layer-list"); items.slice().reverse().forEach(l => { const [ic, nm] = layerName(l); const b = el("button", "layer-btn"); b.type = "button"; b.append(el("b", null, ic), el("span", null, nm)); b.onclick = () => select(l.id, true); d.append(b); }); return d; }
+function layerList(filter, empty) { const items = layers.filter(filter); if (!items.length) return note(empty); const d = el("div", "layer-list"); items.slice().reverse().forEach(l => { const [ic, nm] = layerName(l); const b = el("button", "layer-btn"); b.type = "button"; b.append(el("b", null, ic), el("span", null, nm)); b.onclick = () => select(l.id, "open"); d.append(b); }); return d; }
 
 // ---------- GIFs tab ----------
 let gifQuery = "";
@@ -1841,7 +1886,7 @@ function renderEdit() {
   const l = sel();
   if (!l) { panel.append(el("h3", null, "Things on your wallpaper"), note("Tap something on the screen, or pick it here, to change it."), sec(null, layerList(() => true, "Nothing yet. Add pictures, photos, GIFs or writing."))); return; }
   const [ic, nm] = layerName(l);
-  const head = el("div", "edit-head"); head.append(el("h3", null, l.type === "text" ? "Writing" : nm), button("Done", () => { selId = null; renderPanel(); }, "btn small"));
+  const head = el("div", "edit-head"); head.append(el("h3", null, l.type === "text" ? "Writing" : nm), button("Done", () => { selId = null; renderPanel(); syncMini(); }, "btn small"));
   panel.append(head);
   const re = () => renderPanelKeep();
   if (l.type === "text") {
@@ -1889,7 +1934,7 @@ function renderEdit() {
 function toggle(label, val, on) { const w = el("label", "check"); const i = el("input"); i.type = "checkbox"; i.checked = !!val; i.id = "tg-" + label.replace(/\W/g, ""); i.onchange = () => on(i.checked); w.append(i, el("span", null, label)); return w; }
 function moveLayer(d) { const l = sel(); const i = layers.indexOf(l); const j = clamp(i + d, 0, layers.length - 1); layers.splice(i, 1); layers.splice(j, 0, l); toast(d > 0 ? "Brought forward" : "Sent back", 1200); }
 function duplicateSel() { const l = sel(); if (!l) return; const c = {}; for (const k in l) if (k[0] !== "_" && k !== "id") c[k] = l[k]; c.x += 40; c.y += 40; addLayer(c, { edit: true }); toast("Copied"); }
-function deleteSel() { const l = sel(); if (!l) return; layers = layers.filter(x => x !== l); if (l.type === "video" && !layers.some(x => x.img === l.img)) { try { l.img.pause(); URL.revokeObjectURL(l.img.src); l.img.remove(); } catch (e) {} } selId = null; renderPanelKeep(); toast("Deleted", 1200); }
+function deleteSel() { const l = sel(); if (!l) return; setTimeout(syncMini, 0); layers = layers.filter(x => x !== l); if (l.type === "video" && !layers.some(x => x.img === l.img)) { try { l.img.pause(); URL.revokeObjectURL(l.img.src); l.img.remove(); } catch (e) {} } selId = null; renderPanelKeep(); toast("Deleted", 1200); }
 
 // ---------- files ----------
 function readFile(input) { return new Promise(res => { input.onchange = () => { const f = input.files && input.files[0]; input.value = ""; res(f || null); }; }); }
@@ -1937,8 +1982,8 @@ $("fileGif").addEventListener("click", async () => {
 function ensureFonts() { if (!document.fonts) return; FONTS.forEach(f => document.fonts.load(`${f.w || 400} 40px "${f.name}"`).catch(() => {})); }
 
 // ---------- preview ----------
-$("btnPreview").onclick = () => { previewOpen = true; $("preview").hidden = false; fitStage(); };
-$("preview").onclick = () => { previewOpen = false; $("preview").hidden = true; };
+$("btnPreview").onclick = () => { previewOpen = true; $("preview").hidden = false; fitStage(); syncMini(); };
+$("preview").onclick = () => { previewOpen = false; $("preview").hidden = true; syncMini(); };
 
 // ---------- new design ----------
 function openSheet(build) { const back = el("div", "sheet-back"); const sh = el("div", "sheet"); sh.setAttribute("role", "dialog"); back.append(sh); back.onclick = e => { if (e.target === back && !back._busy) back.remove(); }; build(sh, back); document.body.append(back); return back; }
@@ -1988,7 +2033,7 @@ $("btnSave").onclick = () => openSheet((sh, back) => {
 });
 
 // ---------- start ----------
-showTab("idea");
+currentTab = "idea"; renderPanel(); setMode("closed");
 applyRecipe(RECIPES["Beating heart"]);
 ensureFonts();
 fitStage();
