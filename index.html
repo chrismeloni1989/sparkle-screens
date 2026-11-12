@@ -1111,7 +1111,7 @@ async function giphySearch(q) {
 }
 async function addGifFromUrl(url) {
   toast("Loading GIF…", 4000);
-  try { const r = await fetch(url); if (!r.ok) throw new Error(r.status); const buf = await r.arrayBuffer(); const gif = decodeGif(buf); addLayer({ type: "gif", gif }, { edit: true }); toast("GIF added. Drag it where you like."); }
+  try { const r = await fetch(url); if (!r.ok) throw new Error(r.status); const buf = await r.arrayBuffer(); const gif = decodeGif(buf); const mid = newMid(); storeMedia(mid, { kind: "gif", buf: buf.slice(0) }); addLayer({ type: "gif", gif, mid }, { edit: true }); toast("GIF added. Drag it where you like."); }
   catch (e) { console.error(e); toast("That GIF wouldn't load. Try another one."); }
 }
 function gifResults(box, q) {
@@ -1514,7 +1514,7 @@ function cutOutPerson(l) {
     cutoutJob(l, ui, range).then(gif => {
       backEl.remove(); if (!gif || ui.cancelled) return;
       const b = baseSize(l); const idx = layers.indexOf(l);
-      const nl = addLayer({ type: "gif", gif, cutout: true, x: l.x, y: l.y, rot: l.rot, scale: l.scale * b.w / 420, anim: l.anim, speed: l.speed, outlineColor: "#ffffff", outlineW: 8, shadow: true }, { quiet: true });
+      const cmid = newMid(); storeFrames(cmid, gif); const nl = addLayer({ type: "gif", gif, mid: cmid, cutout: true, x: l.x, y: l.y, rot: l.rot, scale: l.scale * b.w / 420, anim: l.anim, speed: l.speed, outlineColor: "#ffffff", outlineW: 8, shadow: true }, { quiet: true });
       layers = layers.filter(x => x !== nl && x !== l); layers.splice(Math.max(0, idx), 0, nl);
       if (l.type === "video" && !layers.some(x => x.img === l.img)) { try { l.img.pause(); l.img.remove(); } catch (e) {} }
       select(nl.id, true); toast("Done. Pick a sticker outline or take it away.", 3500);
@@ -1902,7 +1902,7 @@ function renderEdit() {
       sec("Shadow", chipGroup(SHADOWS, l.shadow, id => { l.shadow = id; re(); }), l.shadow !== "none" && l.shadow !== "soft" ? swatchGroup(l.shadowColor, c => l.shadowColor = c, { id: "ts" }) : null),
       sec("Letter effects", chipGroup(TEXT_FX, l.effect, id => l.effect = id)));
   }
-  if (l.type === "video") panel.append(sec(null, toggle("Fill the whole screen (as the background)", !!l.cover, v => { l.cover = v; if (v) { layers = layers.filter(x => x !== l); layers.unshift(l); } re(); }), slider("vrate", "Video speed", 0.25, 2, 0.05, l.img.playbackRate || 1, v => { l.img.playbackRate = v; }, v => v.toFixed(2) + "×")));
+  if (l.type === "video") panel.append(sec(null, toggle("Fill the whole screen (as the background)", !!l.cover, v => { l.cover = v; if (v) { layers = layers.filter(x => x !== l); layers.unshift(l); } re(); }), slider("vrate", "Video speed", 0.25, 2, 0.05, l.img.playbackRate || 1, v => { l.img.playbackRate = v; l.rate = v; }, v => v.toFixed(2) + "×")));
   if (l.type === "photo" || (l.type === "video" && !l.cover)) panel.append(sec("Remove the background", note(l.type === "video" ? "Keeps just the person and makes everything else see-through. You choose which bit to use. Works best with one person in good light." : "Keeps just the person and makes everything else see-through. Works best with one person in good light."), button("Cut out the person", () => cutOutPerson(l), "btn primary")));
   if (l.type === "photo" || (l.type === "video" && !l.cover)) {
     panel.append(
@@ -1943,7 +1943,7 @@ async function loadImage(file, max = 1500) {
   try { const img = await new Promise((res, rej) => { const i = new Image(); i.onload = () => res(i); i.onerror = rej; i.src = url; }); const s = Math.min(1, max / Math.max(img.naturalWidth, img.naturalHeight)); const c = makeCanvas(img.naturalWidth * s, img.naturalHeight * s); c.getContext("2d").drawImage(img, 0, 0, c.width, c.height); return c; }
   finally { URL.revokeObjectURL(url); }
 }
-$("filePhoto").addEventListener("click", async () => { const f = await readFile($("filePhoto")); if (!f) return; try { const img = await loadImage(f); addLayer({ type: "photo", img, shape: "rounded", frame: "sticker", frameColor: "#ffffff", frameW: 14, shadow: true, scale: 0.9 }, { edit: true }); toast("Photo added. Pick a shape and frame below."); } catch (e) { toast("That photo couldn't be opened. Try another one."); } });
+$("filePhoto").addEventListener("click", async () => { const f = await readFile($("filePhoto")); if (!f) return; try { const img = await loadImage(f); const mid = newMid(); storeCanvas(mid, img, "image/jpeg"); addLayer({ type: "photo", img, mid, shape: "rounded", frame: "sticker", frameColor: "#ffffff", frameW: 14, shadow: true, scale: 0.9 }, { edit: true }); toast("Photo added. Pick a shape and frame below."); } catch (e) { toast("That photo couldn't be opened. Try another one."); } });
 async function loadVideo(file) {
   const v = document.createElement("video"); v.muted = true; v.defaultMuted = true; v.loop = true; v.playsInline = true;
   v.setAttribute("playsinline", ""); v.setAttribute("muted", ""); v.preload = "auto";
@@ -1960,19 +1960,19 @@ addEventListener("pointerdown", resumeVideos, true);
 $("fileVid").addEventListener("click", async () => {
   const f = await readFile($("fileVid")); if (!f) return;
   toast("Loading video…", 4000);
-  try { const v = await loadVideo(f); addLayer({ type: "video", img: v, shape: "rounded", frame: "sticker", frameColor: "#ffffff", frameW: 12, shadow: true, scale: 0.85 }, { edit: true }); toast("Video added. Drag it where you like, or make it fill the screen."); }
+  try { const v = await loadVideo(f); const mid = newMid(); storeMedia(mid, { kind: "video", blob: f }); addLayer({ type: "video", img: v, mid, shape: "rounded", frame: "sticker", frameColor: "#ffffff", frameW: 12, shadow: true, scale: 0.85 }, { edit: true }); toast("Video added. Drag it where you like, or make it fill the screen."); }
   catch (e) { toast("That video couldn't be opened. Try a different one."); }
 });
-$("fileBg").addEventListener("click", async () => { const f = await readFile($("fileBg")); if (!f) return; try { state.bg.img = await loadImage(f, 1700); state.bg.kind = "photo"; renderPanelKeep(); } catch (e) { toast("That photo couldn't be opened. Try another one."); } });
+$("fileBg").addEventListener("click", async () => { const f = await readFile($("fileBg")); if (!f) return; try { state.bg.img = await loadImage(f, 1700); state.bg.kind = "photo"; state.bg.mid = newMid(); storeCanvas(state.bg.mid, state.bg.img, "image/jpeg"); renderPanelKeep(); } catch (e) { toast("That photo couldn't be opened. Try another one."); } });
 $("fileGif").addEventListener("click", async () => {
   const f = await readFile($("fileGif")); if (!f) return;
   try {
     const buf = await f.arrayBuffer(); const head = new Uint8Array(buf.slice(0, 4));
     if (head[0] === 0x47 && head[1] === 0x49 && head[2] === 0x46) {
       toast("Loading GIF…", 1500); await new Promise(r => setTimeout(r, 30));
-      const gif = decodeGif(buf); addLayer({ type: "gif", gif, scale: 1 }, { edit: true });
+      const gif = decodeGif(buf); const mid = newMid(); storeMedia(mid, { kind: "gif", buf: buf.slice(0) }); addLayer({ type: "gif", gif, mid, scale: 1 }, { edit: true });
       toast(gif.frames.length > 1 ? "GIF added. Drag it where you like." : "That GIF only has one picture in it, so it won't move.");
-    } else { const img = await loadImage(f); addLayer({ type: "photo", img, shape: "rounded", frame: "none", frameColor: "#ffffff", frameW: 0, shadow: false }, { edit: true }); toast("That came through as a still picture. Save GIFs to Files and add them from there to keep them moving.", 5000); }
+    } else { const img = await loadImage(f); const mid = newMid(); storeCanvas(mid, img, "image/jpeg"); addLayer({ type: "photo", img, mid, shape: "rounded", frame: "none", frameColor: "#ffffff", frameW: 0, shadow: false }, { edit: true }); toast("That came through as a still picture. Save GIFs to Files and add them from there to keep them moving.", 5000); }
   } catch (e) { console.error(e); toast("That GIF couldn't be opened. Try another one."); }
 });
 // open pickers directly from buttons (the click listener above wires the change handler first)
@@ -2032,9 +2032,59 @@ $("btnSave").onclick = () => openSheet((sh, back) => {
     button("Close", () => { if (!back._busy) back.remove(); }, "btn ghost"));
 });
 
+// ---------- autosave (kept on the phone in IndexedDB) ----------
+let dbP = null;
+function idb() { if (dbP) return dbP; dbP = new Promise((res, rej) => { try { const r = indexedDB.open("sparkle-screens", 1); r.onupgradeneeded = () => { const d = r.result; if (!d.objectStoreNames.contains("kv")) d.createObjectStore("kv"); if (!d.objectStoreNames.contains("media")) d.createObjectStore("media"); }; r.onsuccess = () => res(r.result); r.onerror = () => rej(r.error); } catch (e) { rej(e); } }); dbP.catch(() => {}); return dbP; }
+function idbReq(store, mode, fn) { return idb().then(d => new Promise((res, rej) => { const tx = d.transaction(store, mode); const st = tx.objectStore(store); let out; const r = fn(st); if (r) r.onsuccess = () => out = r.result; tx.oncomplete = () => res(out); tx.onerror = () => rej(tx.error); tx.onabort = () => rej(tx.error); })); }
+const idbPut = (store, key, val) => idbReq(store, "readwrite", st => st.put(val, key));
+const idbGet = (store, key) => idbReq(store, "readonly", st => st.get(key));
+const idbKeys = store => idbReq(store, "readonly", st => st.getAllKeys());
+const idbDel = (store, key) => idbReq(store, "readwrite", st => st.delete(key));
+function newMid() { return "m" + Date.now().toString(36) + Math.random().toString(36).slice(2, 7); }
+function canvasBlob(c, type = "image/png", q) { return new Promise(res => c.toBlob(b => res(b), type, q)); }
+function storeMedia(mid, val) { return idbPut("media", mid, val).catch(e => console.warn("media not saved", e)); }
+function storeCanvas(mid, c, type) { return canvasBlob(c, type, 0.9).then(b => b && storeMedia(mid, { kind: "image", blob: b })); }
+async function storeFrames(mid, gif) { const blobs = []; for (const f of gif.frames) blobs.push(await canvasBlob(f.c)); return storeMedia(mid, { kind: "frames", w: gif.w, h: gif.h, d: gif.frames.map(f => f.d), blobs }); }
+function blobToCanvas(blob) { return loadImage(blob, 4000); }
+function designData() {
+  const b = state.bg;
+  return { v: 1, bg: { kind: b.kind, id: b.id, color: b.color, dim: b.dim, mid: b.mid || null }, effect: state.effect, pattern: state.pattern, guide: state.guide,
+    layers: layers.filter(l => l.type === "emoji" || l.type === "text" || l.mid).map(l => { const o = {}; for (const k in l) { if (k[0] === "_" || k === "img" || k === "gif" || k === "id") continue; o[k] = l[k]; } return o; }) };
+}
+let lastSaved = "", restoring = true;
+function autosave() { if (restoring) return; let json; try { json = JSON.stringify(designData()); } catch (e) { return; } if (json === lastSaved) return; lastSaved = json; idbPut("kv", "current", json).catch(e => console.warn("not saved", e)); }
+setInterval(autosave, 1500);
+document.addEventListener("visibilitychange", () => { if (document.hidden) autosave(); });
+addEventListener("pagehide", autosave);
+async function restoreDesign() {
+  const json = await idbGet("kv", "current"); if (!json) return false;
+  const d = JSON.parse(json); if (!d || !Array.isArray(d.layers)) return false;
+  state.effect = d.effect || "none"; state.pattern = d.pattern || "none"; state.guide = d.guide !== false;
+  const b = d.bg || {}; state.bg = { kind: b.kind || "gradient", id: b.id || "grape", color: b.color || "#ff4fa3", dim: b.dim || 0, img: null, mid: b.mid || null };
+  if (state.bg.kind === "photo") { const m = state.bg.mid && await idbGet("media", state.bg.mid); if (m && m.blob) state.bg.img = await blobToCanvas(m.blob); else state.bg.kind = "gradient"; }
+  layers = [];
+  for (const ld of d.layers) {
+    try {
+      if (ld.type === "emoji" || ld.type === "text") { addLayer(Object.assign({}, ld), { quiet: true }); continue; }
+      const m = await idbGet("media", ld.mid); if (!m) continue;
+      if (ld.type === "photo") addLayer(Object.assign({}, ld, { img: await blobToCanvas(m.blob) }), { quiet: true });
+      else if (ld.type === "video") { const v = await loadVideo(m.blob); if (ld.rate) v.playbackRate = ld.rate; addLayer(Object.assign({}, ld, { img: v }), { quiet: true }); }
+      else if (ld.type === "gif" && m.kind === "gif") addLayer(Object.assign({}, ld, { gif: decodeGif(m.buf) }), { quiet: true });
+      else if (ld.type === "gif" && m.kind === "frames") { const frames = []; let at = 0; for (let i = 0; i < m.blobs.length; i++) { const c = await blobToCanvas(m.blobs[i]); const dd = (m.d && m.d[i]) || 100; frames.push({ c, d: dd, at }); at += dd; } addLayer(Object.assign({}, ld, { gif: { w: m.w, h: m.h, frames, total: at } }), { quiet: true }); }
+    } catch (e) { console.warn("skipped a layer", e); }
+  }
+  selId = null; ensureFonts();
+  // tidy away media no longer used
+  try { const used = new Set(d.layers.map(l => l.mid).concat([state.bg.mid]).filter(Boolean)); const keys = await idbKeys("media"); for (const k of keys) if (!used.has(k)) idbDel("media", k); } catch (e) {}
+  return true;
+}
+try { navigator.storage && navigator.storage.persist && navigator.storage.persist(); } catch (e) {}
+
 // ---------- start ----------
 currentTab = "idea"; renderPanel(); setMode("closed");
-applyRecipe(RECIPES["Beating heart"]);
+restoreDesign().then(ok => { if (ok) toast("Welcome back. Your design is just as you left it."); else applyRecipe(RECIPES["Beating heart"]); })
+  .catch(e => { console.warn(e); if (!layers.length) applyRecipe(RECIPES["Beating heart"]); })
+  .finally(() => { restoring = false; lastSaved = ""; if (currentTab === "edit" || currentTab === "bg") renderPanel(); });
 ensureFonts();
 fitStage();
 requestAnimationFrame(loop);
