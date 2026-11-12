@@ -1,0 +1,1994 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sparkle Screens</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Sparkle">
+<meta name="theme-color" content="#15101c">
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAAEiUlEQVR4Xu3cTXITSxBFYZnwAmCARzBiH3hdXoHXZe+DETNP2AIBHTQt9Z+zOyszK/N80+cwIB3dKvGM7j5//HIBlnzgYcEa4gBxQI7lAMsBOZYDLAfkWA6wHJBjOcByQI7lAMsBOZYDLAfkWA6wHJBjOcByQI7lAMsBOZYDLAfkWA6wHJBjOcByQI7lAMsBudLL8fb4LH/EHLz9+unwq15qx4FtdZdjmI344+E1GyxHN1wSqbsc2EUc4K3stelVI/K1w+U0GbEcYDkgV3E5Ip8jG+yPmIpxzMXMxb6GG8SBVfc8NqFsr8X0vz58+tr6d35X7eOtN06Qh5en1g/3mpMnSKNQWA43J4OYarQoxOFm/nI/kEujzRjUiiPmu5LRzTM9b6VpCnO8W/kveDr2iCMu450ovRy9D4N9KywHVhHH9XvCTn7k2AZxhGZ/lExViYNJOKBKHDiAOG7F3BiX86VEHDGf73dyyWJQIg4cQxwLul4aRcTRAa+TJX8czMBh+ePAYcSxjL3J/26F5/gMlgOriAPEIceRlHk5eHZPyhwHTiKOLcW3J20cxZ9XFWnjwHnEgWJvZRXPFMVv1R2WA8WWAypYDlRaDvVbgvo37AXLgVV5PhPM5vXt+Llh9vqOwyaINelD6TIO3ybmslbSTRzRgqgwJ9Hj6KWJlHMSMY5+g0g2J4HiyNdE73PiH0eFJhbFv8b6xFE2iL4qMY2DJnaFmpPmcRDEMREqaRUHTSjyCkUzDoJozbgShThowoVBKApxTBFKUwZBTCnHMaISLcZBWMTBnJzk2MSo1XKsYVE2RAjCejkWUckgWhAh4qh87kQOIlwcRULppQm3O4dIgqOnuyBCL0eCC0rXQfQXR/xzJ00QfccRKpSUTfRx53g/y9tJ7iDyLIfZBaVOEFP8W1msShiH+qtc/Rv2ImEc0EIcqHSsQEvO5VC8JSh+q+7kjCONt9dvjn8W4kC9O0eC42CYDcfxYDm2JCjsDOJAvWOld46nySjzcqQ5FLxCyRzHSWnaOow4IvKaihvJ4+DVf0byOA6LVpXLlhBHOC4dLCIOFP57jmgHxGH2i8JyLHDsyb6ADcSBwsdK8I85iIzlCGT3TNn9Al3EccvxwhHNfbTfUEGiPRi/+OH7j9aPlfVngjl657+nNVsOURMb2lXCcljTamLUbkuI40q72VBvYm76S6jMSaFj5c8P6z4+bw+FehwGTez8iU5cTViOJtybUDl0iKOJ6evVMZQzs3G5EMeE+pkyGJ8hm0pOBjFV686xfe1oFMci9VAUmxhxrPhQmZMWQUwRx7/xf3lyyUR6O2kdxFS5/7fiFUGPysUR2e4q7H6BLuLAKuL4+27T6cIRXMU4IqdgfHBsqxhHp+y7IQ5w57g2PVminTL2C7GG5QBxdM5lTlgOsBwzw1Uj2oVj4LITcywHVpX7eY5eqP+08AEsR1ARThbiABdSyLEccQ0ni+P5Qhzg3QrkWA5wIYUcywGWA3IsB1gOyLEcYDkgx3KA5YAcywGWA3IsB1gOyLEcYDkgx3KA5YDcb8tVKw5PKCBfAAAAAElFTkSuQmCC">
+<link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAAEiUlEQVR4Xu3cTXITSxBFYZnwAmCARzBiH3hdXoHXZe+DETNP2AIBHTQt9Z+zOyszK/N80+cwIB3dKvGM7j5//HIBlnzgYcEa4gBxQI7lAMsBOZYDLAfkWA6wHJBjOcByQI7lAMsBOZYDLAfkWA6wHJBjOcByQI7lAMsBOZYDLAfkWA6wHJBjOcByQI7lAMsBudLL8fb4LH/EHLz9+unwq15qx4FtdZdjmI344+E1GyxHN1wSqbsc2EUc4K3stelVI/K1w+U0GbEcYDkgV3E5Ip8jG+yPmIpxzMXMxb6GG8SBVfc8NqFsr8X0vz58+tr6d35X7eOtN06Qh5en1g/3mpMnSKNQWA43J4OYarQoxOFm/nI/kEujzRjUiiPmu5LRzTM9b6VpCnO8W/kveDr2iCMu450ovRy9D4N9KywHVhHH9XvCTn7k2AZxhGZ/lExViYNJOKBKHDiAOG7F3BiX86VEHDGf73dyyWJQIg4cQxwLul4aRcTRAa+TJX8czMBh+ePAYcSxjL3J/26F5/gMlgOriAPEIceRlHk5eHZPyhwHTiKOLcW3J20cxZ9XFWnjwHnEgWJvZRXPFMVv1R2WA8WWAypYDlRaDvVbgvo37AXLgVV5PhPM5vXt+Llh9vqOwyaINelD6TIO3ybmslbSTRzRgqgwJ9Hj6KWJlHMSMY5+g0g2J4HiyNdE73PiH0eFJhbFv8b6xFE2iL4qMY2DJnaFmpPmcRDEMREqaRUHTSjyCkUzDoJozbgShThowoVBKApxTBFKUwZBTCnHMaISLcZBWMTBnJzk2MSo1XKsYVE2RAjCejkWUckgWhAh4qh87kQOIlwcRULppQm3O4dIgqOnuyBCL0eCC0rXQfQXR/xzJ00QfccRKpSUTfRx53g/y9tJ7iDyLIfZBaVOEFP8W1msShiH+qtc/Rv2ImEc0EIcqHSsQEvO5VC8JSh+q+7kjCONt9dvjn8W4kC9O0eC42CYDcfxYDm2JCjsDOJAvWOld46nySjzcqQ5FLxCyRzHSWnaOow4IvKaihvJ4+DVf0byOA6LVpXLlhBHOC4dLCIOFP57jmgHxGH2i8JyLHDsyb6ADcSBwsdK8I85iIzlCGT3TNn9Al3EccvxwhHNfbTfUEGiPRi/+OH7j9aPlfVngjl657+nNVsOURMb2lXCcljTamLUbkuI40q72VBvYm76S6jMSaFj5c8P6z4+bw+FehwGTez8iU5cTViOJtybUDl0iKOJ6evVMZQzs3G5EMeE+pkyGJ8hm0pOBjFV686xfe1oFMci9VAUmxhxrPhQmZMWQUwRx7/xf3lyyUR6O2kdxFS5/7fiFUGPysUR2e4q7H6BLuLAKuL4+27T6cIRXMU4IqdgfHBsqxhHp+y7IQ5w57g2PVminTL2C7GG5QBxdM5lTlgOsBwzw1Uj2oVj4LITcywHVpX7eY5eqP+08AEsR1ARThbiABdSyLEccQ0ni+P5Qhzg3QrkWA5wIYUcywGWA3IsB1gOyLEcYDkgx3KA5YAcywGWA3IsB1gOyLEcYDkgx3KA5YDcb8tVKw5PKCBfAAAAAElFTkSuQmCC">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@500;700;800&family=Abril+Fatface&family=Bangers&family=Barrio&family=Bungee&family=Bungee+Shade&family=Caveat:wght@700&family=Cherry+Bomb+One&family=Creepster&family=Dancing+Script:wght@700&family=Lobster&family=Monoton&family=Pacifico&family=Permanent+Marker&family=Press+Start+2P&family=Rampart+One&family=Righteous&family=Rubik+Bubbles&family=Rubik+Glitch&family=Shrikhand&family=Sniglet:wght@800&display=swap">
+<style>
+/* Layout: one-screen app. Phone-shaped canvas fills the middle; a dock of tabs + a scrolling control panel sits underneath (beside it on wide screens). Single committed dark "night-light" look so the wallpaper glows. */
+:root {
+  --bg: #15101c;
+  --surface: #211a2b;
+  --surface-2: #2d243a;
+  --line: #3d3150;
+  --fg: #f7effd;
+  --muted: #b7a8c8;
+  --accent: #ff4fa3;
+  --accent-2: #ffd23f;
+  --accent-ink: #2b0618;
+  --danger: #ff6b6b;
+  --display: "Fredoka", "Nunito", system-ui, sans-serif;
+  --body: "Nunito", system-ui, -apple-system, sans-serif;
+  color-scheme: dark;
+}
+html { height: 100%; box-sizing: border-box; background: var(--bg); padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
+[hidden] { display: none !important; }
+img { max-width: 100%; }
+*, *::before, *::after { box-sizing: inherit; }
+body { height: 100%; margin: 0; overflow: hidden; background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 15px; -webkit-tap-highlight-color: transparent; overscroll-behavior: none; }
+button { font: inherit; color: inherit; }
+#app {
+  height: 100%; display: grid; grid-template-columns: minmax(0, 1fr); grid-template-rows: auto minmax(0, 1fr) auto; gap: 8px; overflow: hidden;
+  padding-left: max(12px, env(safe-area-inset-left, 0px)); padding-right: max(12px, env(safe-area-inset-right, 0px));
+  padding-block: 8px 6px;
+}
+.top { display: flex; align-items: center; gap: 8px; min-width: 0; }
+.brand { display: flex; align-items: center; gap: 6px; font-family: var(--display); font-weight: 700; font-size: 19px; letter-spacing: .2px; margin-right: auto; white-space: nowrap; min-width: 0; overflow: hidden; }
+.top .btn { flex: none; }
+@media (max-width: 400px) { .brand { font-size: 16px; } .top .btn.small { padding: 6px 10px; font-size: 13px; } }
+.brand svg { width: 22px; height: 22px; }
+.btn { border: 1px solid var(--line); background: var(--surface); border-radius: 999px; padding: 8px 14px; font-weight: 800; font-size: 14px; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; }
+.btn:hover { background: var(--surface-2); }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+.btn.primary:hover { filter: brightness(1.08); }
+.btn.ghost { background: transparent; }
+.btn.small { padding: 6px 11px; font-size: 13px; }
+.btn.danger { color: var(--danger); }
+.btn:disabled { opacity: .5; cursor: default; }
+.btn:focus-visible, .chip:focus-visible, .tab:focus-visible, .sw:focus-visible, .pick:focus-visible { outline: 3px solid var(--accent-2); outline-offset: 2px; }
+.stagewrap { position: relative; display: flex; align-items: center; justify-content: center; min-height: 0; }
+#stage { display: block; border-radius: 26px; box-shadow: 0 0 0 1px var(--line), 0 18px 50px rgba(0,0,0,.55); touch-action: none; background: #000; cursor: grab; }
+.hint { position: absolute; left: 50%; bottom: 6px; transform: translateX(-50%); background: rgba(21,16,28,.82); border: 1px solid var(--line); color: var(--muted); font-size: 12px; font-weight: 700; padding: 5px 10px; border-radius: 999px; white-space: nowrap; pointer-events: none; }
+.dock { display: flex; flex-direction: column; gap: 6px; min-height: 0; }
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; height: clamp(190px, 37vh, 360px); overflow-y: auto; padding: 12px 12px 16px; overscroll-behavior: contain; }
+.tabs { display: grid; grid-template-columns: repeat(7, 1fr); gap: 2px; }
+.tab { border: 0; background: transparent; border-radius: 12px; padding: 6px 2px 4px; display: flex; flex-direction: column; align-items: center; gap: 2px; font-size: 11px; font-weight: 800; color: var(--muted); cursor: pointer; }
+.tab svg { width: 22px; height: 22px; }
+.tab.on { color: var(--fg); background: var(--surface-2); }
+.tab.on svg { color: var(--accent); }
+.sec { display: flex; flex-direction: column; gap: 8px; padding-block: 8px; border-bottom: 1px dashed var(--line); }
+.sec:last-child { border-bottom: 0; }
+.sec h4 { margin: 0; font-family: var(--display); font-weight: 600; font-size: 14px; letter-spacing: .3px; color: var(--muted); text-transform: uppercase; }
+.sec p, .note { margin: 0; color: var(--muted); font-size: 13.5px; line-height: 1.45; }
+.panel h3 { margin: 0 0 4px; font-family: var(--display); font-weight: 700; font-size: 18px; }
+.row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { border: 1px solid var(--line); background: var(--surface-2); border-radius: 999px; padding: 6px 11px; font-size: 13px; font-weight: 700; cursor: pointer; }
+.chip.on { background: var(--accent-2); border-color: var(--accent-2); color: #2a1d00; }
+.swatches { display: flex; flex-wrap: wrap; gap: 7px; align-items: center; }
+.sw { width: 30px; height: 30px; border-radius: 50%; border: 2px solid rgba(255,255,255,.18); cursor: pointer; padding: 0; position: relative; }
+.sw.on { box-shadow: 0 0 0 3px var(--bg), 0 0 0 5px var(--accent-2); }
+.sw.none { background: var(--surface-2); }
+.sw.none::after { content: ""; position: absolute; inset: 5px; background: linear-gradient(135deg, transparent 45%, var(--danger) 45%, var(--danger) 55%, transparent 55%); border-radius: 50%; }
+.sw.rainbow { background: conic-gradient(#ff4f4f, #ffd23f, #4fff8a, #4fc3ff, #b44fff, #ff4f4f); }
+.sw.custom { overflow: hidden; background: conic-gradient(from 90deg, #fff, #999, #fff); }
+.sw.custom input { position: absolute; inset: -8px; width: 46px; height: 46px; opacity: 0; cursor: pointer; }
+.grid-tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(54px, 1fr)); gap: 8px; }
+.tile { aspect-ratio: 9 / 16; border-radius: 10px; border: 2px solid transparent; cursor: pointer; padding: 0; position: relative; max-width: 100%; }
+.tile.on { border-color: var(--accent-2); }
+.tile span { position: absolute; left: 0; right: 0; bottom: 3px; font-size: 10px; font-weight: 800; color: #fff; text-shadow: 0 1px 2px rgba(0,0,0,.7); }
+.slider { display: flex; flex-direction: column; gap: 2px; }
+.sl-top { display: flex; justify-content: space-between; font-size: 13px; font-weight: 700; color: var(--muted); }
+.sl-val { font-variant-numeric: tabular-nums; color: var(--fg); }
+input[type=range] { width: 100%; accent-color: var(--accent); height: 28px; }
+textarea, input[type=search], input[type=text] { width: 100%; background: var(--bg); color: var(--fg); border: 1px solid var(--line); border-radius: 12px; padding: 10px 12px; font: inherit; font-size: 16px; resize: vertical; }
+textarea:focus, input[type=search]:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+.emoji-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(44px, 1fr)); gap: 2px; }
+.pick { border: 0; background: transparent; font-size: 30px; line-height: 1; padding: 6px 0; border-radius: 10px; cursor: pointer; font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif; }
+.pick:hover { background: var(--surface-2); }
+.cats { display: flex; gap: 6px; overflow-x: auto; padding-bottom: 4px; scrollbar-width: none; }
+.cats .chip { white-space: nowrap; flex: none; }
+.styles { display: grid; grid-template-columns: repeat(auto-fill, minmax(96px, 1fr)); gap: 8px; }
+.style-tile { border: 1px solid var(--line); border-radius: 12px; background: #0d0a12; height: 56px; font-size: 22px; cursor: pointer; overflow: hidden; white-space: nowrap; }
+.style-tile small { display: block; font-family: var(--body); font-size: 10px; font-weight: 800; color: var(--muted); text-shadow: none; -webkit-text-stroke: 0; letter-spacing: .3px; }
+.font-chip { font-size: 16px; }
+.layer-list { display: flex; flex-direction: column; gap: 6px; }
+.layer-btn { display: flex; align-items: center; gap: 10px; border: 1px solid var(--line); background: var(--surface-2); border-radius: 12px; padding: 8px 12px; cursor: pointer; text-align: left; }
+.layer-btn b { font-size: 22px; width: 28px; text-align: center; font-family: "Apple Color Emoji", "Segoe UI Emoji", var(--body); }
+.layer-btn span { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.edit-head { display: flex; align-items: center; gap: 8px; }
+.edit-head h3 { margin: 0 auto 0 0; }
+.big-add { width: 100%; justify-content: center; padding: 14px; font-size: 16px; border-radius: 16px; }
+.steps { margin: 0; padding-left: 20px; color: var(--muted); font-size: 13.5px; line-height: 1.5; }
+.steps b { color: var(--fg); }
+a { color: var(--accent-2); }
+.toast { position: fixed; left: 50%; top: calc(env(safe-area-inset-top, 0px) + 14px); transform: translateX(-50%); background: var(--fg); color: var(--bg); padding: 9px 16px; border-radius: 999px; font-weight: 800; font-size: 14px; z-index: 50; max-width: calc(100% - 32px); text-align: center; box-shadow: 0 8px 24px rgba(0,0,0,.4); }
+.sheet-back { position: fixed; inset: 0; background: rgba(8,5,12,.65); z-index: 30; display: flex; align-items: flex-end; justify-content: center; }
+.sheet { background: var(--surface); border: 1px solid var(--line); border-radius: 22px 22px 0 0; width: 100%; max-width: 520px; max-height: 88%; overflow-y: auto; padding: 18px max(18px, env(safe-area-inset-left, 0px)) calc(18px + env(safe-area-inset-bottom, 0px)) max(18px, env(safe-area-inset-right, 0px)); display: flex; flex-direction: column; gap: 12px; }
+.sheet h3 { margin: 0; font-family: var(--display); font-size: 20px; }
+.progress { height: 10px; border-radius: 99px; background: var(--surface-2); overflow: hidden; }
+.progress i { display: block; height: 100%; width: 0; background: linear-gradient(90deg, var(--accent), var(--accent-2)); }
+.result img, .result video { width: 100%; max-height: 50vh; object-fit: contain; border-radius: 14px; background: #000; }
+.preview { position: fixed; inset: 0; background: #000; z-index: 40; display: flex; align-items: center; justify-content: center; }
+.preview canvas { display: block; }
+.preview .pvnote { position: absolute; bottom: calc(env(safe-area-inset-bottom, 0px) + 14px); left: 50%; transform: translateX(-50%); color: rgba(255,255,255,.55); font-size: 12px; font-weight: 700; }
+.check { display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 14px; cursor: pointer; }
+.check input { width: 20px; height: 20px; accent-color: var(--accent); }
+.result-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(44px, 1fr)); gap: 2px; }
+.gif-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(96px, 1fr)); gap: 6px; }
+.gif-pick { border: 0; padding: 0; border-radius: 10px; overflow: hidden; background: var(--surface-2); height: 96px; cursor: pointer; }
+.gif-pick img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.giphy-credit { font-size: 11px; font-weight: 800; color: var(--muted); letter-spacing: .4px; }
+@media (min-width: 860px) {
+  #app { grid-template-columns: minmax(0, 1fr) 420px; grid-template-rows: auto minmax(0, 1fr); column-gap: 18px; }
+  .top { grid-column: 1 / -1; }
+  .dock { flex-direction: column-reverse; }
+  .panel { height: auto; flex: 1; }
+}
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
+</style>
+</head>
+<body>
+<div id="app">
+  <header class="top">
+    <div class="brand">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1.5l2.4 7.3 7.1 2.4-7.1 2.4L12 21l-2.4-7.4-7.1-2.4 7.1-2.4z" fill="var(--accent)"/><path d="M19.5 15.5l.9 2.6 2.6.9-2.6.9-.9 2.6-.9-2.6-2.6-.9 2.6-.9z" fill="var(--accent-2)"/></svg>
+      Sparkle Screens
+    </div>
+    <button class="btn ghost small" id="btnNew" type="button">New</button>
+    <button class="btn small" id="btnPreview" type="button">Preview</button>
+    <button class="btn primary small" id="btnSave" type="button">Save</button>
+  </header>
+  <main class="stagewrap" id="stagewrap">
+    <canvas id="stage" aria-label="Wallpaper design"></canvas>
+    <div class="hint" id="hint">Drag things to move them. Pinch to resize and turn.</div>
+  </main>
+  <section class="dock">
+    <div class="panel" id="panel"></div>
+    <nav class="tabs" id="tabs" aria-label="Tools"></nav>
+  </section>
+</div>
+<div id="preview" class="preview" hidden><canvas id="pv"></canvas><div class="pvnote">Tap to go back</div></div>
+<div id="toast" class="toast" hidden></div>
+<input type="file" id="filePhoto" accept="image/*" hidden>
+<input type="file" id="fileGif" accept="image/gif,image/*" hidden>
+<input type="file" id="fileBg" accept="image/*" hidden>
+<input type="file" id="fileVid" accept="video/*" hidden>
+
+<script>// (c) Dean McNamee <dean@gmail.com>, 2013.
+//
+// https://github.com/deanm/omggif
+//
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the "Software"), to
+// deal in the Software without restriction, including without limitation the
+// rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+// sell copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
+//
+// The above copyright notice and this permission notice shall be included in
+// all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+// FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+// IN THE SOFTWARE.
+//
+// omggif is a JavaScript implementation of a GIF 89a encoder and decoder,
+// including animation and compression.  It does not rely on any specific
+// underlying system, so should run in the browser, Node, or Plask.
+
+"use strict";
+
+function GifWriter(buf, width, height, gopts) {
+  var p = 0;
+
+  var gopts = gopts === undefined ? { } : gopts;
+  var loop_count = gopts.loop === undefined ? null : gopts.loop;
+  var global_palette = gopts.palette === undefined ? null : gopts.palette;
+
+  if (width <= 0 || height <= 0 || width > 65535 || height > 65535)
+    throw new Error("Width/Height invalid.");
+
+  function check_palette_and_num_colors(palette) {
+    var num_colors = palette.length;
+    if (num_colors < 2 || num_colors > 256 ||  num_colors & (num_colors-1)) {
+      throw new Error(
+          "Invalid code/color length, must be power of 2 and 2 .. 256.");
+    }
+    return num_colors;
+  }
+
+  // - Header.
+  buf[p++] = 0x47; buf[p++] = 0x49; buf[p++] = 0x46;  // GIF
+  buf[p++] = 0x38; buf[p++] = 0x39; buf[p++] = 0x61;  // 89a
+
+  // Handling of Global Color Table (palette) and background index.
+  var gp_num_colors_pow2 = 0;
+  var background = 0;
+  if (global_palette !== null) {
+    var gp_num_colors = check_palette_and_num_colors(global_palette);
+    while (gp_num_colors >>= 1) ++gp_num_colors_pow2;
+    gp_num_colors = 1 << gp_num_colors_pow2;
+    --gp_num_colors_pow2;
+    if (gopts.background !== undefined) {
+      background = gopts.background;
+      if (background >= gp_num_colors)
+        throw new Error("Background index out of range.");
+      // The GIF spec states that a background index of 0 should be ignored, so
+      // this is probably a mistake and you really want to set it to another
+      // slot in the palette.  But actually in the end most browsers, etc end
+      // up ignoring this almost completely (including for dispose background).
+      if (background === 0)
+        throw new Error("Background index explicitly passed as 0.");
+    }
+  }
+
+  // - Logical Screen Descriptor.
+  // NOTE(deanm): w/h apparently ignored by implementations, but set anyway.
+  buf[p++] = width & 0xff; buf[p++] = width >> 8 & 0xff;
+  buf[p++] = height & 0xff; buf[p++] = height >> 8 & 0xff;
+  // NOTE: Indicates 0-bpp original color resolution (unused?).
+  buf[p++] = (global_palette !== null ? 0x80 : 0) |  // Global Color Table Flag.
+             gp_num_colors_pow2;  // NOTE: No sort flag (unused?).
+  buf[p++] = background;  // Background Color Index.
+  buf[p++] = 0;  // Pixel aspect ratio (unused?).
+
+  // - Global Color Table
+  if (global_palette !== null) {
+    for (var i = 0, il = global_palette.length; i < il; ++i) {
+      var rgb = global_palette[i];
+      buf[p++] = rgb >> 16 & 0xff;
+      buf[p++] = rgb >> 8 & 0xff;
+      buf[p++] = rgb & 0xff;
+    }
+  }
+
+  if (loop_count !== null) {  // Netscape block for looping.
+    if (loop_count < 0 || loop_count > 65535)
+      throw new Error("Loop count invalid.")
+    // Extension code, label, and length.
+    buf[p++] = 0x21; buf[p++] = 0xff; buf[p++] = 0x0b;
+    // NETSCAPE2.0
+    buf[p++] = 0x4e; buf[p++] = 0x45; buf[p++] = 0x54; buf[p++] = 0x53;
+    buf[p++] = 0x43; buf[p++] = 0x41; buf[p++] = 0x50; buf[p++] = 0x45;
+    buf[p++] = 0x32; buf[p++] = 0x2e; buf[p++] = 0x30;
+    // Sub-block
+    buf[p++] = 0x03; buf[p++] = 0x01;
+    buf[p++] = loop_count & 0xff; buf[p++] = loop_count >> 8 & 0xff;
+    buf[p++] = 0x00;  // Terminator.
+  }
+
+
+  var ended = false;
+
+  this.addFrame = function(x, y, w, h, indexed_pixels, opts) {
+    if (ended === true) { --p; ended = false; }  // Un-end.
+
+    opts = opts === undefined ? { } : opts;
+
+    // TODO(deanm): Bounds check x, y.  Do they need to be within the virtual
+    // canvas width/height, I imagine?
+    if (x < 0 || y < 0 || x > 65535 || y > 65535)
+      throw new Error("x/y invalid.")
+
+    if (w <= 0 || h <= 0 || w > 65535 || h > 65535)
+      throw new Error("Width/Height invalid.")
+
+    if (indexed_pixels.length < w * h)
+      throw new Error("Not enough pixels for the frame size.");
+
+    var using_local_palette = true;
+    var palette = opts.palette;
+    if (palette === undefined || palette === null) {
+      using_local_palette = false;
+      palette = global_palette;
+    }
+
+    if (palette === undefined || palette === null)
+      throw new Error("Must supply either a local or global palette.");
+
+    var num_colors = check_palette_and_num_colors(palette);
+
+    // Compute the min_code_size (power of 2), destroying num_colors.
+    var min_code_size = 0;
+    while (num_colors >>= 1) ++min_code_size;
+    num_colors = 1 << min_code_size;  // Now we can easily get it back.
+
+    var delay = opts.delay === undefined ? 0 : opts.delay;
+
+    // From the spec:
+    //     0 -   No disposal specified. The decoder is
+    //           not required to take any action.
+    //     1 -   Do not dispose. The graphic is to be left
+    //           in place.
+    //     2 -   Restore to background color. The area used by the
+    //           graphic must be restored to the background color.
+    //     3 -   Restore to previous. The decoder is required to
+    //           restore the area overwritten by the graphic with
+    //           what was there prior to rendering the graphic.
+    //  4-7 -    To be defined.
+    // NOTE(deanm): Dispose background doesn't really work, apparently most
+    // browsers ignore the background palette index and clear to transparency.
+    var disposal = opts.disposal === undefined ? 0 : opts.disposal;
+    if (disposal < 0 || disposal > 3)  // 4-7 is reserved.
+      throw new Error("Disposal out of range.");
+
+    var use_transparency = false;
+    var transparent_index = 0;
+    if (opts.transparent !== undefined && opts.transparent !== null) {
+      use_transparency = true;
+      transparent_index = opts.transparent;
+      if (transparent_index < 0 || transparent_index >= num_colors)
+        throw new Error("Transparent color index.");
+    }
+
+    if (disposal !== 0 || use_transparency || delay !== 0) {
+      // - Graphics Control Extension
+      buf[p++] = 0x21; buf[p++] = 0xf9;  // Extension / Label.
+      buf[p++] = 4;  // Byte size.
+
+      buf[p++] = disposal << 2 | (use_transparency === true ? 1 : 0);
+      buf[p++] = delay & 0xff; buf[p++] = delay >> 8 & 0xff;
+      buf[p++] = transparent_index;  // Transparent color index.
+      buf[p++] = 0;  // Block Terminator.
+    }
+
+    // - Image Descriptor
+    buf[p++] = 0x2c;  // Image Seperator.
+    buf[p++] = x & 0xff; buf[p++] = x >> 8 & 0xff;  // Left.
+    buf[p++] = y & 0xff; buf[p++] = y >> 8 & 0xff;  // Top.
+    buf[p++] = w & 0xff; buf[p++] = w >> 8 & 0xff;
+    buf[p++] = h & 0xff; buf[p++] = h >> 8 & 0xff;
+    // NOTE: No sort flag (unused?).
+    // TODO(deanm): Support interlace.
+    buf[p++] = using_local_palette === true ? (0x80 | (min_code_size-1)) : 0;
+
+    // - Local Color Table
+    if (using_local_palette === true) {
+      for (var i = 0, il = palette.length; i < il; ++i) {
+        var rgb = palette[i];
+        buf[p++] = rgb >> 16 & 0xff;
+        buf[p++] = rgb >> 8 & 0xff;
+        buf[p++] = rgb & 0xff;
+      }
+    }
+
+    p = GifWriterOutputLZWCodeStream(
+            buf, p, min_code_size < 2 ? 2 : min_code_size, indexed_pixels);
+
+    return p;
+  };
+
+  this.end = function() {
+    if (ended === false) {
+      buf[p++] = 0x3b;  // Trailer.
+      ended = true;
+    }
+    return p;
+  };
+
+  this.getOutputBuffer = function() { return buf; };
+  this.setOutputBuffer = function(v) { buf = v; };
+  this.getOutputBufferPosition = function() { return p; };
+  this.setOutputBufferPosition = function(v) { p = v; };
+}
+
+// Main compression routine, palette indexes -> LZW code stream.
+// |index_stream| must have at least one entry.
+function GifWriterOutputLZWCodeStream(buf, p, min_code_size, index_stream) {
+  buf[p++] = min_code_size;
+  var cur_subblock = p++;  // Pointing at the length field.
+
+  var clear_code = 1 << min_code_size;
+  var code_mask = clear_code - 1;
+  var eoi_code = clear_code + 1;
+  var next_code = eoi_code + 1;
+
+  var cur_code_size = min_code_size + 1;  // Number of bits per code.
+  var cur_shift = 0;
+  // We have at most 12-bit codes, so we should have to hold a max of 19
+  // bits here (and then we would write out).
+  var cur = 0;
+
+  function emit_bytes_to_buffer(bit_block_size) {
+    while (cur_shift >= bit_block_size) {
+      buf[p++] = cur & 0xff;
+      cur >>= 8; cur_shift -= 8;
+      if (p === cur_subblock + 256) {  // Finished a subblock.
+        buf[cur_subblock] = 255;
+        cur_subblock = p++;
+      }
+    }
+  }
+
+  function emit_code(c) {
+    cur |= c << cur_shift;
+    cur_shift += cur_code_size;
+    emit_bytes_to_buffer(8);
+  }
+
+  // I am not an expert on the topic, and I don't want to write a thesis.
+  // However, it is good to outline here the basic algorithm and the few data
+  // structures and optimizations here that make this implementation fast.
+  // The basic idea behind LZW is to build a table of previously seen runs
+  // addressed by a short id (herein called output code).  All data is
+  // referenced by a code, which represents one or more values from the
+  // original input stream.  All input bytes can be referenced as the same
+  // value as an output code.  So if you didn't want any compression, you
+  // could more or less just output the original bytes as codes (there are
+  // some details to this, but it is the idea).  In order to achieve
+  // compression, values greater then the input range (codes can be up to
+  // 12-bit while input only 8-bit) represent a sequence of previously seen
+  // inputs.  The decompressor is able to build the same mapping while
+  // decoding, so there is always a shared common knowledge between the
+  // encoding and decoder, which is also important for "timing" aspects like
+  // how to handle variable bit width code encoding.
+  //
+  // One obvious but very important consequence of the table system is there
+  // is always a unique id (at most 12-bits) to map the runs.  'A' might be
+  // 4, then 'AA' might be 10, 'AAA' 11, 'AAAA' 12, etc.  This relationship
+  // can be used for an effecient lookup strategy for the code mapping.  We
+  // need to know if a run has been seen before, and be able to map that run
+  // to the output code.  Since we start with known unique ids (input bytes),
+  // and then from those build more unique ids (table entries), we can
+  // continue this chain (almost like a linked list) to always have small
+  // integer values that represent the current byte chains in the encoder.
+  // This means instead of tracking the input bytes (AAAABCD) to know our
+  // current state, we can track the table entry for AAAABC (it is guaranteed
+  // to exist by the nature of the algorithm) and the next character D.
+  // Therefor the tuple of (table_entry, byte) is guaranteed to also be
+  // unique.  This allows us to create a simple lookup key for mapping input
+  // sequences to codes (table indices) without having to store or search
+  // any of the code sequences.  So if 'AAAA' has a table entry of 12, the
+  // tuple of ('AAAA', K) for any input byte K will be unique, and can be our
+  // key.  This leads to a integer value at most 20-bits, which can always
+  // fit in an SMI value and be used as a fast sparse array / object key.
+
+  // Output code for the current contents of the index buffer.
+  var ib_code = index_stream[0] & code_mask;  // Load first input index.
+  var code_table = { };  // Key'd on our 20-bit "tuple".
+
+  emit_code(clear_code);  // Spec says first code should be a clear code.
+
+  // First index already loaded, process the rest of the stream.
+  for (var i = 1, il = index_stream.length; i < il; ++i) {
+    var k = index_stream[i] & code_mask;
+    var cur_key = ib_code << 8 | k;  // (prev, k) unique tuple.
+    var cur_code = code_table[cur_key];  // buffer + k.
+
+    // Check if we have to create a new code table entry.
+    if (cur_code === undefined) {  // We don't have buffer + k.
+      // Emit index buffer (without k).
+      // This is an inline version of emit_code, because this is the core
+      // writing routine of the compressor (and V8 cannot inline emit_code
+      // because it is a closure here in a different context).  Additionally
+      // we can call emit_byte_to_buffer less often, because we can have
+      // 30-bits (from our 31-bit signed SMI), and we know our codes will only
+      // be 12-bits, so can safely have 18-bits there without overflow.
+      // emit_code(ib_code);
+      cur |= ib_code << cur_shift;
+      cur_shift += cur_code_size;
+      while (cur_shift >= 8) {
+        buf[p++] = cur & 0xff;
+        cur >>= 8; cur_shift -= 8;
+        if (p === cur_subblock + 256) {  // Finished a subblock.
+          buf[cur_subblock] = 255;
+          cur_subblock = p++;
+        }
+      }
+
+      if (next_code === 4096) {  // Table full, need a clear.
+        emit_code(clear_code);
+        next_code = eoi_code + 1;
+        cur_code_size = min_code_size + 1;
+        code_table = { };
+      } else {  // Table not full, insert a new entry.
+        // Increase our variable bit code sizes if necessary.  This is a bit
+        // tricky as it is based on "timing" between the encoding and
+        // decoder.  From the encoders perspective this should happen after
+        // we've already emitted the index buffer and are about to create the
+        // first table entry that would overflow our current code bit size.
+        if (next_code >= (1 << cur_code_size)) ++cur_code_size;
+        code_table[cur_key] = next_code++;  // Insert into code table.
+      }
+
+      ib_code = k;  // Index buffer to single input k.
+    } else {
+      ib_code = cur_code;  // Index buffer to sequence in code table.
+    }
+  }
+
+  emit_code(ib_code);  // There will still be something in the index buffer.
+  emit_code(eoi_code);  // End Of Information.
+
+  // Flush / finalize the sub-blocks stream to the buffer.
+  emit_bytes_to_buffer(1);
+
+  // Finish the sub-blocks, writing out any unfinished lengths and
+  // terminating with a sub-block of length 0.  If we have already started
+  // but not yet used a sub-block it can just become the terminator.
+  if (cur_subblock + 1 === p) {  // Started but unused.
+    buf[cur_subblock] = 0;
+  } else {  // Started and used, write length and additional terminator block.
+    buf[cur_subblock] = p - cur_subblock - 1;
+    buf[p++] = 0;
+  }
+  return p;
+}
+
+function GifReader(buf) {
+  var p = 0;
+
+  // - Header (GIF87a or GIF89a).
+  if (buf[p++] !== 0x47 ||            buf[p++] !== 0x49 || buf[p++] !== 0x46 ||
+      buf[p++] !== 0x38 || (buf[p++]+1 & 0xfd) !== 0x38 || buf[p++] !== 0x61) {
+    throw new Error("Invalid GIF 87a/89a header.");
+  }
+
+  // - Logical Screen Descriptor.
+  var width = buf[p++] | buf[p++] << 8;
+  var height = buf[p++] | buf[p++] << 8;
+  var pf0 = buf[p++];  // <Packed Fields>.
+  var global_palette_flag = pf0 >> 7;
+  var num_global_colors_pow2 = pf0 & 0x7;
+  var num_global_colors = 1 << (num_global_colors_pow2 + 1);
+  var background = buf[p++];
+  buf[p++];  // Pixel aspect ratio (unused?).
+
+  var global_palette_offset = null;
+  var global_palette_size   = null;
+
+  if (global_palette_flag) {
+    global_palette_offset = p;
+    global_palette_size = num_global_colors;
+    p += num_global_colors * 3;  // Seek past palette.
+  }
+
+  var no_eof = true;
+
+  var frames = [ ];
+
+  var delay = 0;
+  var transparent_index = null;
+  var disposal = 0;  // 0 - No disposal specified.
+  var loop_count = null;
+
+  this.width = width;
+  this.height = height;
+
+  while (no_eof && p < buf.length) {
+    switch (buf[p++]) {
+      case 0x21:  // Graphics Control Extension Block
+        switch (buf[p++]) {
+          case 0xff:  // Application specific block
+            // Try if it's a Netscape block (with animation loop counter).
+            if (buf[p   ] !== 0x0b ||  // 21 FF already read, check block size.
+                // NETSCAPE2.0
+                buf[p+1 ] == 0x4e && buf[p+2 ] == 0x45 && buf[p+3 ] == 0x54 &&
+                buf[p+4 ] == 0x53 && buf[p+5 ] == 0x43 && buf[p+6 ] == 0x41 &&
+                buf[p+7 ] == 0x50 && buf[p+8 ] == 0x45 && buf[p+9 ] == 0x32 &&
+                buf[p+10] == 0x2e && buf[p+11] == 0x30 &&
+                // Sub-block
+                buf[p+12] == 0x03 && buf[p+13] == 0x01 && buf[p+16] == 0) {
+              p += 14;
+              loop_count = buf[p++] | buf[p++] << 8;
+              p++;  // Skip terminator.
+            } else {  // We don't know what it is, just try to get past it.
+              p += 12;
+              while (true) {  // Seek through subblocks.
+                var block_size = buf[p++];
+                // Bad block size (ex: undefined from an out of bounds read).
+                if (!(block_size >= 0)) throw Error("Invalid block size");
+                if (block_size === 0) break;  // 0 size is terminator
+                p += block_size;
+              }
+            }
+            break;
+
+          case 0xf9:  // Graphics Control Extension
+            if (buf[p++] !== 0x4 || buf[p+4] !== 0)
+              throw new Error("Invalid graphics extension block.");
+            var pf1 = buf[p++];
+            delay = buf[p++] | buf[p++] << 8;
+            transparent_index = buf[p++];
+            if ((pf1 & 1) === 0) transparent_index = null;
+            disposal = pf1 >> 2 & 0x7;
+            p++;  // Skip terminator.
+            break;
+
+          case 0xfe:  // Comment Extension.
+            while (true) {  // Seek through subblocks.
+              var block_size = buf[p++];
+              // Bad block size (ex: undefined from an out of bounds read).
+              if (!(block_size >= 0)) throw Error("Invalid block size");
+              if (block_size === 0) break;  // 0 size is terminator
+              // console.log(buf.slice(p, p+block_size).toString('ascii'));
+              p += block_size;
+            }
+            break;
+
+          default:
+            throw new Error(
+                "Unknown graphic control label: 0x" + buf[p-1].toString(16));
+        }
+        break;
+
+      case 0x2c:  // Image Descriptor.
+        var x = buf[p++] | buf[p++] << 8;
+        var y = buf[p++] | buf[p++] << 8;
+        var w = buf[p++] | buf[p++] << 8;
+        var h = buf[p++] | buf[p++] << 8;
+        var pf2 = buf[p++];
+        var local_palette_flag = pf2 >> 7;
+        var interlace_flag = pf2 >> 6 & 1;
+        var num_local_colors_pow2 = pf2 & 0x7;
+        var num_local_colors = 1 << (num_local_colors_pow2 + 1);
+        var palette_offset = global_palette_offset;
+        var palette_size = global_palette_size;
+        var has_local_palette = false;
+        if (local_palette_flag) {
+          var has_local_palette = true;
+          palette_offset = p;  // Override with local palette.
+          palette_size = num_local_colors;
+          p += num_local_colors * 3;  // Seek past palette.
+        }
+
+        var data_offset = p;
+
+        p++;  // codesize
+        while (true) {
+          var block_size = buf[p++];
+          // Bad block size (ex: undefined from an out of bounds read).
+          if (!(block_size >= 0)) throw Error("Invalid block size");
+          if (block_size === 0) break;  // 0 size is terminator
+          p += block_size;
+        }
+
+        frames.push({x: x, y: y, width: w, height: h,
+                     has_local_palette: has_local_palette,
+                     palette_offset: palette_offset,
+                     palette_size: palette_size,
+                     data_offset: data_offset,
+                     data_length: p - data_offset,
+                     transparent_index: transparent_index,
+                     interlaced: !!interlace_flag,
+                     delay: delay,
+                     disposal: disposal});
+        break;
+
+      case 0x3b:  // Trailer Marker (end of file).
+        no_eof = false;
+        break;
+
+      default:
+        throw new Error("Unknown gif block: 0x" + buf[p-1].toString(16));
+        break;
+    }
+  }
+
+  this.numFrames = function() {
+    return frames.length;
+  };
+
+  this.loopCount = function() {
+    return loop_count;
+  };
+
+  this.frameInfo = function(frame_num) {
+    if (frame_num < 0 || frame_num >= frames.length)
+      throw new Error("Frame index out of range.");
+    return frames[frame_num];
+  }
+
+  this.decodeAndBlitFrameBGRA = function(frame_num, pixels) {
+    var frame = this.frameInfo(frame_num);
+    var num_pixels = frame.width * frame.height;
+    var index_stream = new Uint8Array(num_pixels);  // At most 8-bit indices.
+    GifReaderLZWOutputIndexStream(
+        buf, frame.data_offset, index_stream, num_pixels);
+    var palette_offset = frame.palette_offset;
+
+    // NOTE(deanm): It seems to be much faster to compare index to 256 than
+    // to === null.  Not sure why, but CompareStub_EQ_STRICT shows up high in
+    // the profile, not sure if it's related to using a Uint8Array.
+    var trans = frame.transparent_index;
+    if (trans === null) trans = 256;
+
+    // We are possibly just blitting to a portion of the entire frame.
+    // That is a subrect within the framerect, so the additional pixels
+    // must be skipped over after we finished a scanline.
+    var framewidth  = frame.width;
+    var framestride = width - framewidth;
+    var xleft       = framewidth;  // Number of subrect pixels left in scanline.
+
+    // Output indicies of the top left and bottom right corners of the subrect.
+    var opbeg = ((frame.y * width) + frame.x) * 4;
+    var opend = ((frame.y + frame.height) * width + frame.x) * 4;
+    var op    = opbeg;
+
+    var scanstride = framestride * 4;
+
+    // Use scanstride to skip past the rows when interlacing.  This is skipping
+    // 7 rows for the first two passes, then 3 then 1.
+    if (frame.interlaced === true) {
+      scanstride += width * 4 * 7;  // Pass 1.
+    }
+
+    var interlaceskip = 8;  // Tracking the row interval in the current pass.
+
+    for (var i = 0, il = index_stream.length; i < il; ++i) {
+      var index = index_stream[i];
+
+      if (xleft === 0) {  // Beginning of new scan line
+        op += scanstride;
+        xleft = framewidth;
+        if (op >= opend) { // Catch the wrap to switch passes when interlacing.
+          scanstride = framestride * 4 + width * 4 * (interlaceskip-1);
+          // interlaceskip / 2 * 4 is interlaceskip << 1.
+          op = opbeg + (framewidth + framestride) * (interlaceskip << 1);
+          interlaceskip >>= 1;
+        }
+      }
+
+      if (index === trans) {
+        op += 4;
+      } else {
+        var r = buf[palette_offset + index * 3];
+        var g = buf[palette_offset + index * 3 + 1];
+        var b = buf[palette_offset + index * 3 + 2];
+        pixels[op++] = b;
+        pixels[op++] = g;
+        pixels[op++] = r;
+        pixels[op++] = 255;
+      }
+      --xleft;
+    }
+  };
+
+  // I will go to copy and paste hell one day...
+  this.decodeAndBlitFrameRGBA = function(frame_num, pixels) {
+    var frame = this.frameInfo(frame_num);
+    var num_pixels = frame.width * frame.height;
+    var index_stream = new Uint8Array(num_pixels);  // At most 8-bit indices.
+    GifReaderLZWOutputIndexStream(
+        buf, frame.data_offset, index_stream, num_pixels);
+    var palette_offset = frame.palette_offset;
+
+    // NOTE(deanm): It seems to be much faster to compare index to 256 than
+    // to === null.  Not sure why, but CompareStub_EQ_STRICT shows up high in
+    // the profile, not sure if it's related to using a Uint8Array.
+    var trans = frame.transparent_index;
+    if (trans === null) trans = 256;
+
+    // We are possibly just blitting to a portion of the entire frame.
+    // That is a subrect within the framerect, so the additional pixels
+    // must be skipped over after we finished a scanline.
+    var framewidth  = frame.width;
+    var framestride = width - framewidth;
+    var xleft       = framewidth;  // Number of subrect pixels left in scanline.
+
+    // Output indicies of the top left and bottom right corners of the subrect.
+    var opbeg = ((frame.y * width) + frame.x) * 4;
+    var opend = ((frame.y + frame.height) * width + frame.x) * 4;
+    var op    = opbeg;
+
+    var scanstride = framestride * 4;
+
+    // Use scanstride to skip past the rows when interlacing.  This is skipping
+    // 7 rows for the first two passes, then 3 then 1.
+    if (frame.interlaced === true) {
+      scanstride += width * 4 * 7;  // Pass 1.
+    }
+
+    var interlaceskip = 8;  // Tracking the row interval in the current pass.
+
+    for (var i = 0, il = index_stream.length; i < il; ++i) {
+      var index = index_stream[i];
+
+      if (xleft === 0) {  // Beginning of new scan line
+        op += scanstride;
+        xleft = framewidth;
+        if (op >= opend) { // Catch the wrap to switch passes when interlacing.
+          scanstride = framestride * 4 + width * 4 * (interlaceskip-1);
+          // interlaceskip / 2 * 4 is interlaceskip << 1.
+          op = opbeg + (framewidth + framestride) * (interlaceskip << 1);
+          interlaceskip >>= 1;
+        }
+      }
+
+      if (index === trans) {
+        op += 4;
+      } else {
+        var r = buf[palette_offset + index * 3];
+        var g = buf[palette_offset + index * 3 + 1];
+        var b = buf[palette_offset + index * 3 + 2];
+        pixels[op++] = r;
+        pixels[op++] = g;
+        pixels[op++] = b;
+        pixels[op++] = 255;
+      }
+      --xleft;
+    }
+  };
+}
+
+function GifReaderLZWOutputIndexStream(code_stream, p, output, output_length) {
+  var min_code_size = code_stream[p++];
+
+  var clear_code = 1 << min_code_size;
+  var eoi_code = clear_code + 1;
+  var next_code = eoi_code + 1;
+
+  var cur_code_size = min_code_size + 1;  // Number of bits per code.
+  // NOTE: This shares the same name as the encoder, but has a different
+  // meaning here.  Here this masks each code coming from the code stream.
+  var code_mask = (1 << cur_code_size) - 1;
+  var cur_shift = 0;
+  var cur = 0;
+
+  var op = 0;  // Output pointer.
+
+  var subblock_size = code_stream[p++];
+
+  // TODO(deanm): Would using a TypedArray be any faster?  At least it would
+  // solve the fast mode / backing store uncertainty.
+  // var code_table = Array(4096);
+  var code_table = new Int32Array(4096);  // Can be signed, we only use 20 bits.
+
+  var prev_code = null;  // Track code-1.
+
+  while (true) {
+    // Read up to two bytes, making sure we always 12-bits for max sized code.
+    while (cur_shift < 16) {
+      if (subblock_size === 0) break;  // No more data to be read.
+
+      cur |= code_stream[p++] << cur_shift;
+      cur_shift += 8;
+
+      if (subblock_size === 1) {  // Never let it get to 0 to hold logic above.
+        subblock_size = code_stream[p++];  // Next subblock.
+      } else {
+        --subblock_size;
+      }
+    }
+
+    // TODO(deanm): We should never really get here, we should have received
+    // and EOI.
+    if (cur_shift < cur_code_size)
+      break;
+
+    var code = cur & code_mask;
+    cur >>= cur_code_size;
+    cur_shift -= cur_code_size;
+
+    // TODO(deanm): Maybe should check that the first code was a clear code,
+    // at least this is what you're supposed to do.  But actually our encoder
+    // now doesn't emit a clear code first anyway.
+    if (code === clear_code) {
+      // We don't actually have to clear the table.  This could be a good idea
+      // for greater error checking, but we don't really do any anyway.  We
+      // will just track it with next_code and overwrite old entries.
+
+      next_code = eoi_code + 1;
+      cur_code_size = min_code_size + 1;
+      code_mask = (1 << cur_code_size) - 1;
+
+      // Don't update prev_code ?
+      prev_code = null;
+      continue;
+    } else if (code === eoi_code) {
+      break;
+    }
+
+    // We have a similar situation as the decoder, where we want to store
+    // variable length entries (code table entries), but we want to do in a
+    // faster manner than an array of arrays.  The code below stores sort of a
+    // linked list within the code table, and then "chases" through it to
+    // construct the dictionary entries.  When a new entry is created, just the
+    // last byte is stored, and the rest (prefix) of the entry is only
+    // referenced by its table entry.  Then the code chases through the
+    // prefixes until it reaches a single byte code.  We have to chase twice,
+    // first to compute the length, and then to actually copy the data to the
+    // output (backwards, since we know the length).  The alternative would be
+    // storing something in an intermediate stack, but that doesn't make any
+    // more sense.  I implemented an approach where it also stored the length
+    // in the code table, although it's a bit tricky because you run out of
+    // bits (12 + 12 + 8), but I didn't measure much improvements (the table
+    // entries are generally not the long).  Even when I created benchmarks for
+    // very long table entries the complexity did not seem worth it.
+    // The code table stores the prefix entry in 12 bits and then the suffix
+    // byte in 8 bits, so each entry is 20 bits.
+
+    var chase_code = code < next_code ? code : prev_code;
+
+    // Chase what we will output, either {CODE} or {CODE-1}.
+    var chase_length = 0;
+    var chase = chase_code;
+    while (chase > clear_code) {
+      chase = code_table[chase] >> 8;
+      ++chase_length;
+    }
+
+    var k = chase;
+
+    var op_end = op + chase_length + (chase_code !== code ? 1 : 0);
+    if (op_end > output_length) {
+      console.log("Warning, gif stream longer than expected.");
+      return;
+    }
+
+    // Already have the first byte from the chase, might as well write it fast.
+    output[op++] = k;
+
+    op += chase_length;
+    var b = op;  // Track pointer, writing backwards.
+
+    if (chase_code !== code)  // The case of emitting {CODE-1} + k.
+      output[op++] = k;
+
+    chase = chase_code;
+    while (chase_length--) {
+      chase = code_table[chase];
+      output[--b] = chase & 0xff;  // Write backwards.
+      chase >>= 8;  // Pull down to the prefix code.
+    }
+
+    if (prev_code !== null && next_code < 4096) {
+      code_table[next_code++] = prev_code << 8 | k;
+      // TODO(deanm): Figure out this clearing vs code growth logic better.  I
+      // have an feeling that it should just happen somewhere else, for now it
+      // is awkward between when we grow past the max and then hit a clear code.
+      // For now just check if we hit the max 12-bits (then a clear code should
+      // follow, also of course encoded in 12-bits).
+      if (next_code >= code_mask+1 && cur_code_size < 12) {
+        ++cur_code_size;
+        code_mask = code_mask << 1 | 1;
+      }
+    }
+
+    prev_code = code;
+  }
+
+  if (op !== output_length) {
+    console.log("Warning, gif stream shorter than expected.");
+  }
+
+  return output;
+}
+
+// CommonJS.
+try { exports.GifWriter = GifWriter; exports.GifReader = GifReader } catch(e) {}
+</script>
+<script>const EMOJI_GROUPS = [["Smileys & Emotion","😀|grinning face;😃|grinning face with big eyes;😄|grinning face with smiling eyes;😁|beaming face with smiling eyes;😆|grinning squinting face;😅|grinning face with sweat;🤣|rolling on the floor laughing;😂|face with tears of joy;🙂|slightly smiling face;🙃|upside-down face;🫠|melting face;😉|winking face;😊|smiling face with smiling eyes;😇|smiling face with halo;🥰|smiling face with hearts;😍|smiling face with heart-eyes;🤩|star-struck;😘|face blowing a kiss;😗|kissing face;☺️|smiling face;😚|kissing face with closed eyes;😙|kissing face with smiling eyes;🥲|smiling face with tear;😋|face savoring food;😛|face with tongue;😜|winking face with tongue;🤪|zany face;😝|squinting face with tongue;🤑|money-mouth face;🤗|smiling face with open hands;🤭|face with hand over mouth;🫢|face with open eyes and hand over mouth;🫣|face with peeking eye;🤫|shushing face;🤔|thinking face;🫡|saluting face;🤐|zipper-mouth face;🤨|face with raised eyebrow;😐|neutral face;😑|expressionless face;😶|face without mouth;🫥|dotted line face;😶‍🌫️|face in clouds;😏|smirking face;😒|unamused face;🙄|face with rolling eyes;😬|grimacing face;😮‍💨|face exhaling;🤥|lying face;🫨|shaking face;🙂‍↔️|head shaking horizontally;🙂‍↕️|head shaking vertically;😌|relieved face;😔|pensive face;😪|sleepy face;🤤|drooling face;😴|sleeping face;😷|face with medical mask;🤒|face with thermometer;🤕|face with head-bandage;🤢|nauseated face;🤮|face vomiting;🤧|sneezing face;🥵|hot face;🥶|cold face;🥴|woozy face;😵|face with crossed-out eyes;😵‍💫|face with spiral eyes;🤯|exploding head;🤠|cowboy hat face;🥳|partying face;🥸|disguised face;😎|smiling face with sunglasses;🤓|nerd face;🧐|face with monocle;😕|confused face;🫤|face with diagonal mouth;😟|worried face;🙁|slightly frowning face;☹️|frowning face;😮|face with open mouth;😯|hushed face;😲|astonished face;😳|flushed face;🥺|pleading face;🥹|face holding back tears;😦|frowning face with open mouth;😧|anguished face;😨|fearful face;😰|anxious face with sweat;😥|sad but relieved face;😢|crying face;😭|loudly crying face;😱|face screaming in fear;😖|confounded face;😣|persevering face;😞|disappointed face;😓|downcast face with sweat;😩|weary face;😫|tired face;🥱|yawning face;😤|face with steam from nose;😡|enraged face;😠|angry face;🤬|face with symbols on mouth;😈|smiling face with horns;👿|angry face with horns;💀|skull;☠️|skull and crossbones;💩|pile of poo;🤡|clown face;👹|ogre;👺|goblin;👻|ghost;👽|alien;👾|alien monster;🤖|robot;😺|grinning cat;😸|grinning cat with smiling eyes;😹|cat with tears of joy;😻|smiling cat with heart-eyes;😼|cat with wry smile;😽|kissing cat;🙀|weary cat;😿|crying cat;😾|pouting cat;🙈|see-no-evil monkey;🙉|hear-no-evil monkey;🙊|speak-no-evil monkey;💌|love letter;💘|heart with arrow;💝|heart with ribbon;💖|sparkling heart;💗|growing heart;💓|beating heart;💞|revolving hearts;💕|two hearts;💟|heart decoration;❣️|heart exclamation;💔|broken heart;❤️‍🔥|heart on fire;❤️‍🩹|mending heart;❤️|red heart;🩷|pink heart;🧡|orange heart;💛|yellow heart;💚|green heart;💙|blue heart;🩵|light blue heart;💜|purple heart;🤎|brown heart;🖤|black heart;🩶|grey heart;🤍|white heart;💋|kiss mark;💯|hundred points;💢|anger symbol;💥|collision;💫|dizzy;💦|sweat droplets;💨|dashing away;🕳️|hole;💬|speech balloon;👁️‍🗨️|eye in speech bubble;🗨️|left speech bubble;🗯️|right anger bubble;💭|thought balloon;💤|ZZZ"],["People & Body","👋|waving hand;🤚|raised back of hand;🖐️|hand with fingers splayed;✋|raised hand;🖖|vulcan salute;🫱|rightwards hand;🫲|leftwards hand;🫳|palm down hand;🫴|palm up hand;🫷|leftwards pushing hand;🫸|rightwards pushing hand;👌|OK hand;🤌|pinched fingers;🤏|pinching hand;✌️|victory hand;🤞|crossed fingers;🫰|hand with index finger and thumb crossed;🤟|love-you gesture;🤘|sign of the horns;🤙|call me hand;👈|backhand index pointing left;👉|backhand index pointing right;👆|backhand index pointing up;🖕|middle finger;👇|backhand index pointing down;☝️|index pointing up;🫵|index pointing at the viewer;👍|thumbs up;👎|thumbs down;✊|raised fist;👊|oncoming fist;🤛|left-facing fist;🤜|right-facing fist;👏|clapping hands;🙌|raising hands;🫶|heart hands;👐|open hands;🤲|palms up together;🤝|handshake;🙏|folded hands;✍️|writing hand;💅|nail polish;🤳|selfie;💪|flexed biceps;🦾|mechanical arm;🦿|mechanical leg;🦵|leg;🦶|foot;👂|ear;🦻|ear with hearing aid;👃|nose;🧠|brain;🫀|anatomical heart;🫁|lungs;🦷|tooth;🦴|bone;👀|eyes;👁️|eye;👅|tongue;👄|mouth;🫦|biting lip;👶|baby;🧒|child;👦|boy;👧|girl;🧑|person;👱|person blond hair;👨|man;🧔|person beard;🧔‍♂️|man beard;🧔‍♀️|woman beard;👨‍🦰|man red hair;👨‍🦱|man curly hair;👨‍🦳|man white hair;👨‍🦲|man bald;👩|woman;👩‍🦰|woman red hair;🧑‍🦰|person red hair;👩‍🦱|woman curly hair;🧑‍🦱|person curly hair;👩‍🦳|woman white hair;🧑‍🦳|person white hair;👩‍🦲|woman bald;🧑‍🦲|person bald;👱‍♀️|woman blond hair;👱‍♂️|man blond hair;🧓|older person;👴|old man;👵|old woman;🙍|person frowning;🙍‍♂️|man frowning;🙍‍♀️|woman frowning;🙎|person pouting;🙎‍♂️|man pouting;🙎‍♀️|woman pouting;🙅|person gesturing NO;🙅‍♂️|man gesturing NO;🙅‍♀️|woman gesturing NO;🙆|person gesturing OK;🙆‍♂️|man gesturing OK;🙆‍♀️|woman gesturing OK;💁|person tipping hand;💁‍♂️|man tipping hand;💁‍♀️|woman tipping hand;🙋|person raising hand;🙋‍♂️|man raising hand;🙋‍♀️|woman raising hand;🧏|deaf person;🧏‍♂️|deaf man;🧏‍♀️|deaf woman;🙇|person bowing;🙇‍♂️|man bowing;🙇‍♀️|woman bowing;🤦|person facepalming;🤦‍♂️|man facepalming;🤦‍♀️|woman facepalming;🤷|person shrugging;🤷‍♂️|man shrugging;🤷‍♀️|woman shrugging;🧑‍⚕️|health worker;👨‍⚕️|man health worker;👩‍⚕️|woman health worker;🧑‍🎓|student;👨‍🎓|man student;👩‍🎓|woman student;🧑‍🏫|teacher;👨‍🏫|man teacher;👩‍🏫|woman teacher;🧑‍⚖️|judge;👨‍⚖️|man judge;👩‍⚖️|woman judge;🧑‍🌾|farmer;👨‍🌾|man farmer;👩‍🌾|woman farmer;🧑‍🍳|cook;👨‍🍳|man cook;👩‍🍳|woman cook;🧑‍🔧|mechanic;👨‍🔧|man mechanic;👩‍🔧|woman mechanic;🧑‍🏭|factory worker;👨‍🏭|man factory worker;👩‍🏭|woman factory worker;🧑‍💼|office worker;👨‍💼|man office worker;👩‍💼|woman office worker;🧑‍🔬|scientist;👨‍🔬|man scientist;👩‍🔬|woman scientist;🧑‍💻|technologist;👨‍💻|man technologist;👩‍💻|woman technologist;🧑‍🎤|singer;👨‍🎤|man singer;👩‍🎤|woman singer;🧑‍🎨|artist;👨‍🎨|man artist;👩‍🎨|woman artist;🧑‍✈️|pilot;👨‍✈️|man pilot;👩‍✈️|woman pilot;🧑‍🚀|astronaut;👨‍🚀|man astronaut;👩‍🚀|woman astronaut;🧑‍🚒|firefighter;👨‍🚒|man firefighter;👩‍🚒|woman firefighter;👮|police officer;👮‍♂️|man police officer;👮‍♀️|woman police officer;🕵️|detective;🕵️‍♂️|man detective;🕵️‍♀️|woman detective;💂|guard;💂‍♂️|man guard;💂‍♀️|woman guard;🥷|ninja;👷|construction worker;👷‍♂️|man construction worker;👷‍♀️|woman construction worker;🫅|person with crown;🤴|prince;👸|princess;👳|person wearing turban;👳‍♂️|man wearing turban;👳‍♀️|woman wearing turban;👲|person with skullcap;🧕|woman with headscarf;🤵|person in tuxedo;🤵‍♂️|man in tuxedo;🤵‍♀️|woman in tuxedo;👰|person with veil;👰‍♂️|man with veil;👰‍♀️|woman with veil;🤰|pregnant woman;🫃|pregnant man;🫄|pregnant person;🤱|breast-feeding;👩‍🍼|woman feeding baby;👨‍🍼|man feeding baby;🧑‍🍼|person feeding baby;👼|baby angel;🎅|Santa Claus;🤶|Mrs. Claus;🧑‍🎄|Mx Claus;🦸|superhero;🦸‍♂️|man superhero;🦸‍♀️|woman superhero;🦹|supervillain;🦹‍♂️|man supervillain;🦹‍♀️|woman supervillain;🧙|mage;🧙‍♂️|man mage;🧙‍♀️|woman mage;🧚|fairy;🧚‍♂️|man fairy;🧚‍♀️|woman fairy;🧛|vampire;🧛‍♂️|man vampire;🧛‍♀️|woman vampire;🧜|merperson;🧜‍♂️|merman;🧜‍♀️|mermaid;🧝|elf;🧝‍♂️|man elf;🧝‍♀️|woman elf;🧞|genie;🧞‍♂️|man genie;🧞‍♀️|woman genie;🧟|zombie;🧟‍♂️|man zombie;🧟‍♀️|woman zombie;🧌|troll;💆|person getting massage;💆‍♂️|man getting massage;💆‍♀️|woman getting massage;💇|person getting haircut;💇‍♂️|man getting haircut;💇‍♀️|woman getting haircut;🚶|person walking;🚶‍♂️|man walking;🚶‍♀️|woman walking;🚶‍➡️|person walking facing right;🚶‍♀️‍➡️|woman walking facing right;🚶‍♂️‍➡️|man walking facing right;🧍|person standing;🧍‍♂️|man standing;🧍‍♀️|woman standing;🧎|person kneeling;🧎‍♂️|man kneeling;🧎‍♀️|woman kneeling;🧎‍➡️|person kneeling facing right;🧎‍♀️‍➡️|woman kneeling facing right;🧎‍♂️‍➡️|man kneeling facing right;🧑‍🦯|person with white cane;🧑‍🦯‍➡️|person with white cane facing right;👨‍🦯|man with white cane;👨‍🦯‍➡️|man with white cane facing right;👩‍🦯|woman with white cane;👩‍🦯‍➡️|woman with white cane facing right;🧑‍🦼|person in motorized wheelchair;🧑‍🦼‍➡️|person in motorized wheelchair facing right;👨‍🦼|man in motorized wheelchair;👨‍🦼‍➡️|man in motorized wheelchair facing right;👩‍🦼|woman in motorized wheelchair;👩‍🦼‍➡️|woman in motorized wheelchair facing right;🧑‍🦽|person in manual wheelchair;🧑‍🦽‍➡️|person in manual wheelchair facing right;👨‍🦽|man in manual wheelchair;👨‍🦽‍➡️|man in manual wheelchair facing right;👩‍🦽|woman in manual wheelchair;👩‍🦽‍➡️|woman in manual wheelchair facing right;🏃|person running;🏃‍♂️|man running;🏃‍♀️|woman running;🏃‍➡️|person running facing right;🏃‍♀️‍➡️|woman running facing right;🏃‍♂️‍➡️|man running facing right;💃|woman dancing;🕺|man dancing;🕴️|person in suit levitating;👯|people with bunny ears;👯‍♂️|men with bunny ears;👯‍♀️|women with bunny ears;🧖|person in steamy room;🧖‍♂️|man in steamy room;🧖‍♀️|woman in steamy room;🧗|person climbing;🧗‍♂️|man climbing;🧗‍♀️|woman climbing;🤺|person fencing;🏇|horse racing;⛷️|skier;🏂|snowboarder;🏌️|person golfing;🏌️‍♂️|man golfing;🏌️‍♀️|woman golfing;🏄|person surfing;🏄‍♂️|man surfing;🏄‍♀️|woman surfing;🚣|person rowing boat;🚣‍♂️|man rowing boat;🚣‍♀️|woman rowing boat;🏊|person swimming;🏊‍♂️|man swimming;🏊‍♀️|woman swimming;⛹️|person bouncing ball;⛹️‍♂️|man bouncing ball;⛹️‍♀️|woman bouncing ball;🏋️|person lifting weights;🏋️‍♂️|man lifting weights;🏋️‍♀️|woman lifting weights;🚴|person biking;🚴‍♂️|man biking;🚴‍♀️|woman biking;🚵|person mountain biking;🚵‍♂️|man mountain biking;🚵‍♀️|woman mountain biking;🤸|person cartwheeling;🤸‍♂️|man cartwheeling;🤸‍♀️|woman cartwheeling;🤼|people wrestling;🤼‍♂️|men wrestling;🤼‍♀️|women wrestling;🤽|person playing water polo;🤽‍♂️|man playing water polo;🤽‍♀️|woman playing water polo;🤾|person playing handball;🤾‍♂️|man playing handball;🤾‍♀️|woman playing handball;🤹|person juggling;🤹‍♂️|man juggling;🤹‍♀️|woman juggling;🧘|person in lotus position;🧘‍♂️|man in lotus position;🧘‍♀️|woman in lotus position;🛀|person taking bath;🛌|person in bed;🧑‍🤝‍🧑|people holding hands;👭|women holding hands;👫|woman and man holding hands;👬|men holding hands;💏|kiss;👩‍❤️‍💋‍👨|kiss woman, man;👨‍❤️‍💋‍👨|kiss man, man;👩‍❤️‍💋‍👩|kiss woman, woman;💑|couple with heart;👩‍❤️‍👨|couple with heart woman, man;👨‍❤️‍👨|couple with heart man, man;👩‍❤️‍👩|couple with heart woman, woman;👨‍👩‍👦|family man, woman, boy;👨‍👩‍👧|family man, woman, girl;👨‍👩‍👧‍👦|family man, woman, girl, boy;👨‍👩‍👦‍👦|family man, woman, boy, boy;👨‍👩‍👧‍👧|family man, woman, girl, girl;👨‍👨‍👦|family man, man, boy;👨‍👨‍👧|family man, man, girl;👨‍👨‍👧‍👦|family man, man, girl, boy;👨‍👨‍👦‍👦|family man, man, boy, boy;👨‍👨‍👧‍👧|family man, man, girl, girl;👩‍👩‍👦|family woman, woman, boy;👩‍👩‍👧|family woman, woman, girl;👩‍👩‍👧‍👦|family woman, woman, girl, boy;👩‍👩‍👦‍👦|family woman, woman, boy, boy;👩‍👩‍👧‍👧|family woman, woman, girl, girl;👨‍👦|family man, boy;👨‍👦‍👦|family man, boy, boy;👨‍👧|family man, girl;👨‍👧‍👦|family man, girl, boy;👨‍👧‍👧|family man, girl, girl;👩‍👦|family woman, boy;👩‍👦‍👦|family woman, boy, boy;👩‍👧|family woman, girl;👩‍👧‍👦|family woman, girl, boy;👩‍👧‍👧|family woman, girl, girl;🗣️|speaking head;👤|bust in silhouette;👥|busts in silhouette;🫂|people hugging;👪|family;🧑‍🧑‍🧒|family adult, adult, child;🧑‍🧑‍🧒‍🧒|family adult, adult, child, child;🧑‍🧒|family adult, child;🧑‍🧒‍🧒|family adult, child, child;👣|footprints"],["Animals & Nature","🐵|monkey face;🐒|monkey;🦍|gorilla;🦧|orangutan;🐶|dog face;🐕|dog;🦮|guide dog;🐕‍🦺|service dog;🐩|poodle;🐺|wolf;🦊|fox;🦝|raccoon;🐱|cat face;🐈|cat;🐈‍⬛|black cat;🦁|lion;🐯|tiger face;🐅|tiger;🐆|leopard;🐴|horse face;🫎|moose;🫏|donkey;🐎|horse;🦄|unicorn;🦓|zebra;🦌|deer;🦬|bison;🐮|cow face;🐂|ox;🐃|water buffalo;🐄|cow;🐷|pig face;🐖|pig;🐗|boar;🐽|pig nose;🐏|ram;🐑|ewe;🐐|goat;🐪|camel;🐫|two-hump camel;🦙|llama;🦒|giraffe;🐘|elephant;🦣|mammoth;🦏|rhinoceros;🦛|hippopotamus;🐭|mouse face;🐁|mouse;🐀|rat;🐹|hamster;🐰|rabbit face;🐇|rabbit;🐿️|chipmunk;🦫|beaver;🦔|hedgehog;🦇|bat;🐻|bear;🐻‍❄️|polar bear;🐨|koala;🐼|panda;🦥|sloth;🦦|otter;🦨|skunk;🦘|kangaroo;🦡|badger;🐾|paw prints;🦃|turkey;🐔|chicken;🐓|rooster;🐣|hatching chick;🐤|baby chick;🐥|front-facing baby chick;🐦|bird;🐧|penguin;🕊️|dove;🦅|eagle;🦆|duck;🦢|swan;🦉|owl;🦤|dodo;🪶|feather;🦩|flamingo;🦚|peacock;🦜|parrot;🪽|wing;🐦‍⬛|black bird;🪿|goose;🐦‍🔥|phoenix;🐸|frog;🐊|crocodile;🐢|turtle;🦎|lizard;🐍|snake;🐲|dragon face;🐉|dragon;🦕|sauropod;🦖|T-Rex;🐳|spouting whale;🐋|whale;🐬|dolphin;🦭|seal;🐟|fish;🐠|tropical fish;🐡|blowfish;🦈|shark;🐙|octopus;🐚|spiral shell;🪸|coral;🪼|jellyfish;🦀|crab;🦞|lobster;🦐|shrimp;🦑|squid;🦪|oyster;🐌|snail;🦋|butterfly;🐛|bug;🐜|ant;🐝|honeybee;🪲|beetle;🐞|lady beetle;🦗|cricket;🪳|cockroach;🕷️|spider;🕸️|spider web;🦂|scorpion;🦟|mosquito;🪰|fly;🪱|worm;🦠|microbe;💐|bouquet;🌸|cherry blossom;💮|white flower;🪷|lotus;🏵️|rosette;🌹|rose;🥀|wilted flower;🌺|hibiscus;🌻|sunflower;🌼|blossom;🌷|tulip;🪻|hyacinth;🌱|seedling;🪴|potted plant;🌲|evergreen tree;🌳|deciduous tree;🌴|palm tree;🌵|cactus;🌾|sheaf of rice;🌿|herb;☘️|shamrock;🍀|four leaf clover;🍁|maple leaf;🍂|fallen leaf;🍃|leaf fluttering in wind;🪹|empty nest;🪺|nest with eggs;🍄|mushroom"],["Food & Drink","🍇|grapes;🍈|melon;🍉|watermelon;🍊|tangerine;🍋|lemon;🍋‍🟩|lime;🍌|banana;🍍|pineapple;🥭|mango;🍎|red apple;🍏|green apple;🍐|pear;🍑|peach;🍒|cherries;🍓|strawberry;🫐|blueberries;🥝|kiwi fruit;🍅|tomato;🫒|olive;🥥|coconut;🥑|avocado;🍆|eggplant;🥔|potato;🥕|carrot;🌽|ear of corn;🌶️|hot pepper;🫑|bell pepper;🥒|cucumber;🥬|leafy green;🥦|broccoli;🧄|garlic;🧅|onion;🥜|peanuts;🫘|beans;🌰|chestnut;🫚|ginger root;🫛|pea pod;🍄‍🟫|brown mushroom;🍞|bread;🥐|croissant;🥖|baguette bread;🫓|flatbread;🥨|pretzel;🥯|bagel;🥞|pancakes;🧇|waffle;🧀|cheese wedge;🍖|meat on bone;🍗|poultry leg;🥩|cut of meat;🥓|bacon;🍔|hamburger;🍟|french fries;🍕|pizza;🌭|hot dog;🥪|sandwich;🌮|taco;🌯|burrito;🫔|tamale;🥙|stuffed flatbread;🧆|falafel;🥚|egg;🍳|cooking;🥘|shallow pan of food;🍲|pot of food;🫕|fondue;🥣|bowl with spoon;🥗|green salad;🍿|popcorn;🧈|butter;🧂|salt;🥫|canned food;🍱|bento box;🍘|rice cracker;🍙|rice ball;🍚|cooked rice;🍛|curry rice;🍜|steaming bowl;🍝|spaghetti;🍠|roasted sweet potato;🍢|oden;🍣|sushi;🍤|fried shrimp;🍥|fish cake with swirl;🥮|moon cake;🍡|dango;🥟|dumpling;🥠|fortune cookie;🥡|takeout box;🍦|soft ice cream;🍧|shaved ice;🍨|ice cream;🍩|doughnut;🍪|cookie;🎂|birthday cake;🍰|shortcake;🧁|cupcake;🥧|pie;🍫|chocolate bar;🍬|candy;🍭|lollipop;🍮|custard;🍯|honey pot;🍼|baby bottle;🥛|glass of milk;☕|hot beverage;🫖|teapot;🍵|teacup without handle;🍶|sake;🍾|bottle with popping cork;🍷|wine glass;🍸|cocktail glass;🍹|tropical drink;🍺|beer mug;🍻|clinking beer mugs;🥂|clinking glasses;🥃|tumbler glass;🫗|pouring liquid;🥤|cup with straw;🧋|bubble tea;🧃|beverage box;🧉|mate;🧊|ice;🥢|chopsticks;🍽️|fork and knife with plate;🍴|fork and knife;🥄|spoon;🔪|kitchen knife;🫙|jar;🏺|amphora"],["Travel & Places","🌍|globe showing Europe-Africa;🌎|globe showing Americas;🌏|globe showing Asia-Australia;🌐|globe with meridians;🗺️|world map;🗾|map of Japan;🧭|compass;🏔️|snow-capped mountain;⛰️|mountain;🌋|volcano;🗻|mount fuji;🏕️|camping;🏖️|beach with umbrella;🏜️|desert;🏝️|desert island;🏞️|national park;🏟️|stadium;🏛️|classical building;🏗️|building construction;🧱|brick;🪨|rock;🪵|wood;🛖|hut;🏘️|houses;🏚️|derelict house;🏠|house;🏡|house with garden;🏢|office building;🏣|Japanese post office;🏤|post office;🏥|hospital;🏦|bank;🏨|hotel;🏩|love hotel;🏪|convenience store;🏫|school;🏬|department store;🏭|factory;🏯|Japanese castle;🏰|castle;💒|wedding;🗼|Tokyo tower;🗽|Statue of Liberty;⛪|church;🕌|mosque;🛕|hindu temple;🕍|synagogue;⛩️|shinto shrine;🕋|kaaba;⛲|fountain;⛺|tent;🌁|foggy;🌃|night with stars;🏙️|cityscape;🌄|sunrise over mountains;🌅|sunrise;🌆|cityscape at dusk;🌇|sunset;🌉|bridge at night;♨️|hot springs;🎠|carousel horse;🛝|playground slide;🎡|ferris wheel;🎢|roller coaster;💈|barber pole;🎪|circus tent;🚂|locomotive;🚃|railway car;🚄|high-speed train;🚅|bullet train;🚆|train;🚇|metro;🚈|light rail;🚉|station;🚊|tram;🚝|monorail;🚞|mountain railway;🚋|tram car;🚌|bus;🚍|oncoming bus;🚎|trolleybus;🚐|minibus;🚑|ambulance;🚒|fire engine;🚓|police car;🚔|oncoming police car;🚕|taxi;🚖|oncoming taxi;🚗|automobile;🚘|oncoming automobile;🚙|sport utility vehicle;🛻|pickup truck;🚚|delivery truck;🚛|articulated lorry;🚜|tractor;🏎️|racing car;🏍️|motorcycle;🛵|motor scooter;🦽|manual wheelchair;🦼|motorized wheelchair;🛺|auto rickshaw;🚲|bicycle;🛴|kick scooter;🛹|skateboard;🛼|roller skate;🚏|bus stop;🛣️|motorway;🛤️|railway track;🛢️|oil drum;⛽|fuel pump;🛞|wheel;🚨|police car light;🚥|horizontal traffic light;🚦|vertical traffic light;🛑|stop sign;🚧|construction;⚓|anchor;🛟|ring buoy;⛵|sailboat;🛶|canoe;🚤|speedboat;🛳️|passenger ship;⛴️|ferry;🛥️|motor boat;🚢|ship;✈️|airplane;🛩️|small airplane;🛫|airplane departure;🛬|airplane arrival;🪂|parachute;💺|seat;🚁|helicopter;🚟|suspension railway;🚠|mountain cableway;🚡|aerial tramway;🛰️|satellite;🚀|rocket;🛸|flying saucer;🛎️|bellhop bell;🧳|luggage;⌛|hourglass done;⏳|hourglass not done;⌚|watch;⏰|alarm clock;⏱️|stopwatch;⏲️|timer clock;🕰️|mantelpiece clock;🕛|twelve o’clock;🕧|twelve-thirty;🕐|one o’clock;🕜|one-thirty;🕑|two o’clock;🕝|two-thirty;🕒|three o’clock;🕞|three-thirty;🕓|four o’clock;🕟|four-thirty;🕔|five o’clock;🕠|five-thirty;🕕|six o’clock;🕡|six-thirty;🕖|seven o’clock;🕢|seven-thirty;🕗|eight o’clock;🕣|eight-thirty;🕘|nine o’clock;🕤|nine-thirty;🕙|ten o’clock;🕥|ten-thirty;🕚|eleven o’clock;🕦|eleven-thirty;🌑|new moon;🌒|waxing crescent moon;🌓|first quarter moon;🌔|waxing gibbous moon;🌕|full moon;🌖|waning gibbous moon;🌗|last quarter moon;🌘|waning crescent moon;🌙|crescent moon;🌚|new moon face;🌛|first quarter moon face;🌜|last quarter moon face;🌡️|thermometer;☀️|sun;🌝|full moon face;🌞|sun with face;🪐|ringed planet;⭐|star;🌟|glowing star;🌠|shooting star;🌌|milky way;☁️|cloud;⛅|sun behind cloud;⛈️|cloud with lightning and rain;🌤️|sun behind small cloud;🌥️|sun behind large cloud;🌦️|sun behind rain cloud;🌧️|cloud with rain;🌨️|cloud with snow;🌩️|cloud with lightning;🌪️|tornado;🌫️|fog;🌬️|wind face;🌀|cyclone;🌈|rainbow;🌂|closed umbrella;☂️|umbrella;☔|umbrella with rain drops;⛱️|umbrella on ground;⚡|high voltage;❄️|snowflake;☃️|snowman;⛄|snowman without snow;☄️|comet;🔥|fire;💧|droplet;🌊|water wave"],["Activities","🎃|jack-o-lantern;🎄|Christmas tree;🎆|fireworks;🎇|sparkler;🧨|firecracker;✨|sparkles;🎈|balloon;🎉|party popper;🎊|confetti ball;🎋|tanabata tree;🎍|pine decoration;🎎|Japanese dolls;🎏|carp streamer;🎐|wind chime;🎑|moon viewing ceremony;🧧|red envelope;🎀|ribbon;🎁|wrapped gift;🎗️|reminder ribbon;🎟️|admission tickets;🎫|ticket;🎖️|military medal;🏆|trophy;🏅|sports medal;🥇|1st place medal;🥈|2nd place medal;🥉|3rd place medal;⚽|soccer ball;⚾|baseball;🥎|softball;🏀|basketball;🏐|volleyball;🏈|american football;🏉|rugby football;🎾|tennis;🥏|flying disc;🎳|bowling;🏏|cricket game;🏑|field hockey;🏒|ice hockey;🥍|lacrosse;🏓|ping pong;🏸|badminton;🥊|boxing glove;🥋|martial arts uniform;🥅|goal net;⛳|flag in hole;⛸️|ice skate;🎣|fishing pole;🤿|diving mask;🎽|running shirt;🎿|skis;🛷|sled;🥌|curling stone;🎯|bullseye;🪀|yo-yo;🪁|kite;🔫|water pistol;🎱|pool 8 ball;🔮|crystal ball;🪄|magic wand;🎮|video game;🕹️|joystick;🎰|slot machine;🎲|game die;🧩|puzzle piece;🧸|teddy bear;🪅|piñata;🪩|mirror ball;🪆|nesting dolls;♠️|spade suit;♥️|heart suit;♦️|diamond suit;♣️|club suit;♟️|chess pawn;🃏|joker;🀄|mahjong red dragon;🎴|flower playing cards;🎭|performing arts;🖼️|framed picture;🎨|artist palette;🧵|thread;🪡|sewing needle;🧶|yarn;🪢|knot"],["Objects","👓|glasses;🕶️|sunglasses;🥽|goggles;🥼|lab coat;🦺|safety vest;👔|necktie;👕|t-shirt;👖|jeans;🧣|scarf;🧤|gloves;🧥|coat;🧦|socks;👗|dress;👘|kimono;🥻|sari;🩱|one-piece swimsuit;🩲|briefs;🩳|shorts;👙|bikini;👚|woman’s clothes;🪭|folding hand fan;👛|purse;👜|handbag;👝|clutch bag;🛍️|shopping bags;🎒|backpack;🩴|thong sandal;👞|man’s shoe;👟|running shoe;🥾|hiking boot;🥿|flat shoe;👠|high-heeled shoe;👡|woman’s sandal;🩰|ballet shoes;👢|woman’s boot;🪮|hair pick;👑|crown;👒|woman’s hat;🎩|top hat;🎓|graduation cap;🧢|billed cap;🪖|military helmet;⛑️|rescue worker’s helmet;📿|prayer beads;💄|lipstick;💍|ring;💎|gem stone;🔇|muted speaker;🔈|speaker low volume;🔉|speaker medium volume;🔊|speaker high volume;📢|loudspeaker;📣|megaphone;📯|postal horn;🔔|bell;🔕|bell with slash;🎼|musical score;🎵|musical note;🎶|musical notes;🎙️|studio microphone;🎚️|level slider;🎛️|control knobs;🎤|microphone;🎧|headphone;📻|radio;🎷|saxophone;🎺|trumpet;🪗|accordion;🎸|guitar;🎹|musical keyboard;🎻|violin;🪕|banjo;🥁|drum;🪘|long drum;🪇|maracas;🪈|flute;📱|mobile phone;📲|mobile phone with arrow;☎️|telephone;📞|telephone receiver;📟|pager;📠|fax machine;🔋|battery;🪫|low battery;🔌|electric plug;💻|laptop;🖥️|desktop computer;🖨️|printer;⌨️|keyboard;🖱️|computer mouse;🖲️|trackball;💽|computer disk;💾|floppy disk;💿|optical disk;📀|dvd;🧮|abacus;🎥|movie camera;🎞️|film frames;📽️|film projector;🎬|clapper board;📺|television;📷|camera;📸|camera with flash;📹|video camera;📼|videocassette;🔍|magnifying glass tilted left;🔎|magnifying glass tilted right;🕯️|candle;💡|light bulb;🔦|flashlight;🏮|red paper lantern;🪔|diya lamp;📔|notebook with decorative cover;📕|closed book;📖|open book;📗|green book;📘|blue book;📙|orange book;📚|books;📓|notebook;📒|ledger;📃|page with curl;📜|scroll;📄|page facing up;📰|newspaper;🗞️|rolled-up newspaper;📑|bookmark tabs;🔖|bookmark;🏷️|label;🪙|coin;💰|money bag;💴|yen banknote;💵|dollar banknote;💶|euro banknote;💷|pound banknote;💸|money with wings;💳|credit card;🧾|receipt;💹|chart increasing with yen;✉️|envelope;📧|e-mail;📨|incoming envelope;📩|envelope with arrow;📤|outbox tray;📥|inbox tray;📦|package;📫|closed mailbox with raised flag;📪|closed mailbox with lowered flag;📬|open mailbox with raised flag;📭|open mailbox with lowered flag;📮|postbox;🗳️|ballot box with ballot;✏️|pencil;✒️|black nib;🖋️|fountain pen;🖊️|pen;🖌️|paintbrush;🖍️|crayon;📝|memo;💼|briefcase;📁|file folder;📂|open file folder;🗂️|card index dividers;📅|calendar;📆|tear-off calendar;🗒️|spiral notepad;🗓️|spiral calendar;📇|card index;📈|chart increasing;📉|chart decreasing;📊|bar chart;📋|clipboard;📌|pushpin;📍|round pushpin;📎|paperclip;🖇️|linked paperclips;📏|straight ruler;📐|triangular ruler;✂️|scissors;🗃️|card file box;🗄️|file cabinet;🗑️|wastebasket;🔒|locked;🔓|unlocked;🔏|locked with pen;🔐|locked with key;🔑|key;🗝️|old key;🔨|hammer;🪓|axe;⛏️|pick;⚒️|hammer and pick;🛠️|hammer and wrench;🗡️|dagger;⚔️|crossed swords;💣|bomb;🪃|boomerang;🏹|bow and arrow;🛡️|shield;🪚|carpentry saw;🔧|wrench;🪛|screwdriver;🔩|nut and bolt;⚙️|gear;🗜️|clamp;⚖️|balance scale;🦯|white cane;🔗|link;⛓️‍💥|broken chain;⛓️|chains;🪝|hook;🧰|toolbox;🧲|magnet;🪜|ladder;⚗️|alembic;🧪|test tube;🧫|petri dish;🧬|dna;🔬|microscope;🔭|telescope;📡|satellite antenna;💉|syringe;🩸|drop of blood;💊|pill;🩹|adhesive bandage;🩼|crutch;🩺|stethoscope;🩻|x-ray;🚪|door;🛗|elevator;🪞|mirror;🪟|window;🛏️|bed;🛋️|couch and lamp;🪑|chair;🚽|toilet;🪠|plunger;🚿|shower;🛁|bathtub;🪤|mouse trap;🪒|razor;🧴|lotion bottle;🧷|safety pin;🧹|broom;🧺|basket;🧻|roll of paper;🪣|bucket;🧼|soap;🫧|bubbles;🪥|toothbrush;🧽|sponge;🧯|fire extinguisher;🛒|shopping cart;🚬|cigarette;⚰️|coffin;🪦|headstone;⚱️|funeral urn;🧿|nazar amulet;🪬|hamsa;🗿|moai;🪧|placard;🪪|identification card"],["Symbols","🏧|ATM sign;🚮|litter in bin sign;🚰|potable water;♿|wheelchair symbol;🚹|men’s room;🚺|women’s room;🚻|restroom;🚼|baby symbol;🚾|water closet;🛂|passport control;🛃|customs;🛄|baggage claim;🛅|left luggage;⚠️|warning;🚸|children crossing;⛔|no entry;🚫|prohibited;🚳|no bicycles;🚭|no smoking;🚯|no littering;🚱|non-potable water;🚷|no pedestrians;📵|no mobile phones;🔞|no one under eighteen;☢️|radioactive;☣️|biohazard;⬆️|up arrow;↗️|up-right arrow;➡️|right arrow;↘️|down-right arrow;⬇️|down arrow;↙️|down-left arrow;⬅️|left arrow;↖️|up-left arrow;↕️|up-down arrow;↔️|left-right arrow;↩️|right arrow curving left;↪️|left arrow curving right;⤴️|right arrow curving up;⤵️|right arrow curving down;🔃|clockwise vertical arrows;🔄|counterclockwise arrows button;🔙|BACK arrow;🔚|END arrow;🔛|ON! arrow;🔜|SOON arrow;🔝|TOP arrow;🛐|place of worship;⚛️|atom symbol;🕉️|om;✡️|star of David;☸️|wheel of dharma;☯️|yin yang;✝️|latin cross;☦️|orthodox cross;☪️|star and crescent;☮️|peace symbol;🕎|menorah;🔯|dotted six-pointed star;🪯|khanda;♈|Aries;♉|Taurus;♊|Gemini;♋|Cancer;♌|Leo;♍|Virgo;♎|Libra;♏|Scorpio;♐|Sagittarius;♑|Capricorn;♒|Aquarius;♓|Pisces;⛎|Ophiuchus;🔀|shuffle tracks button;🔁|repeat button;🔂|repeat single button;▶️|play button;⏩|fast-forward button;⏭️|next track button;⏯️|play or pause button;◀️|reverse button;⏪|fast reverse button;⏮️|last track button;🔼|upwards button;⏫|fast up button;🔽|downwards button;⏬|fast down button;⏸️|pause button;⏹️|stop button;⏺️|record button;⏏️|eject button;🎦|cinema;🔅|dim button;🔆|bright button;📶|antenna bars;🛜|wireless;📳|vibration mode;📴|mobile phone off;♀️|female sign;♂️|male sign;⚧️|transgender symbol;✖️|multiply;➕|plus;➖|minus;➗|divide;🟰|heavy equals sign;♾️|infinity;‼️|double exclamation mark;⁉️|exclamation question mark;❓|red question mark;❔|white question mark;❕|white exclamation mark;❗|red exclamation mark;〰️|wavy dash;💱|currency exchange;💲|heavy dollar sign;⚕️|medical symbol;♻️|recycling symbol;⚜️|fleur-de-lis;🔱|trident emblem;📛|name badge;🔰|Japanese symbol for beginner;⭕|hollow red circle;✅|check mark button;☑️|check box with check;✔️|check mark;❌|cross mark;❎|cross mark button;➰|curly loop;➿|double curly loop;〽️|part alternation mark;✳️|eight-spoked asterisk;✴️|eight-pointed star;❇️|sparkle;©️|copyright;®️|registered;™️|trade mark;#️⃣|keycap #;*️⃣|keycap *;0️⃣|keycap 0;1️⃣|keycap 1;2️⃣|keycap 2;3️⃣|keycap 3;4️⃣|keycap 4;5️⃣|keycap 5;6️⃣|keycap 6;7️⃣|keycap 7;8️⃣|keycap 8;9️⃣|keycap 9;🔟|keycap 10;🔠|input latin uppercase;🔡|input latin lowercase;🔢|input numbers;🔣|input symbols;🔤|input latin letters;🅰️|A button (blood type);🆎|AB button (blood type);🅱️|B button (blood type);🆑|CL button;🆒|COOL button;🆓|FREE button;ℹ️|information;🆔|ID button;Ⓜ️|circled M;🆕|NEW button;🆖|NG button;🅾️|O button (blood type);🆗|OK button;🅿️|P button;🆘|SOS button;🆙|UP! button;🆚|VS button;🈁|Japanese “here” button;🈂️|Japanese “service charge” button;🈷️|Japanese “monthly amount” button;🈶|Japanese “not free of charge” button;🈯|Japanese “reserved” button;🉐|Japanese “bargain” button;🈹|Japanese “discount” button;🈚|Japanese “free of charge” button;🈲|Japanese “prohibited” button;🉑|Japanese “acceptable” button;🈸|Japanese “application” button;🈴|Japanese “passing grade” button;🈳|Japanese “vacancy” button;㊗️|Japanese “congratulations” button;㊙️|Japanese “secret” button;🈺|Japanese “open for business” button;🈵|Japanese “no vacancy” button;🔴|red circle;🟠|orange circle;🟡|yellow circle;🟢|green circle;🔵|blue circle;🟣|purple circle;🟤|brown circle;⚫|black circle;⚪|white circle;🟥|red square;🟧|orange square;🟨|yellow square;🟩|green square;🟦|blue square;🟪|purple square;🟫|brown square;⬛|black large square;⬜|white large square;◼️|black medium square;◻️|white medium square;◾|black medium-small square;◽|white medium-small square;▪️|black small square;▫️|white small square;🔶|large orange diamond;🔷|large blue diamond;🔸|small orange diamond;🔹|small blue diamond;🔺|red triangle pointed up;🔻|red triangle pointed down;💠|diamond with a dot;🔘|radio button;🔳|white square button;🔲|black square button"],["Flags","🏁|chequered flag;🚩|triangular flag;🎌|crossed flags;🏴|black flag;🏳️|white flag;🏳️‍🌈|rainbow flag;🏳️‍⚧️|transgender flag;🏴‍☠️|pirate flag;🇦🇨|flag Ascension Island;🇦🇩|flag Andorra;🇦🇪|flag United Arab Emirates;🇦🇫|flag Afghanistan;🇦🇬|flag Antigua & Barbuda;🇦🇮|flag Anguilla;🇦🇱|flag Albania;🇦🇲|flag Armenia;🇦🇴|flag Angola;🇦🇶|flag Antarctica;🇦🇷|flag Argentina;🇦🇸|flag American Samoa;🇦🇹|flag Austria;🇦🇺|flag Australia;🇦🇼|flag Aruba;🇦🇽|flag Åland Islands;🇦🇿|flag Azerbaijan;🇧🇦|flag Bosnia & Herzegovina;🇧🇧|flag Barbados;🇧🇩|flag Bangladesh;🇧🇪|flag Belgium;🇧🇫|flag Burkina Faso;🇧🇬|flag Bulgaria;🇧🇭|flag Bahrain;🇧🇮|flag Burundi;🇧🇯|flag Benin;🇧🇱|flag St. Barthélemy;🇧🇲|flag Bermuda;🇧🇳|flag Brunei;🇧🇴|flag Bolivia;🇧🇶|flag Caribbean Netherlands;🇧🇷|flag Brazil;🇧🇸|flag Bahamas;🇧🇹|flag Bhutan;🇧🇻|flag Bouvet Island;🇧🇼|flag Botswana;🇧🇾|flag Belarus;🇧🇿|flag Belize;🇨🇦|flag Canada;🇨🇨|flag Cocos (Keeling) Islands;🇨🇩|flag Congo - Kinshasa;🇨🇫|flag Central African Republic;🇨🇬|flag Congo - Brazzaville;🇨🇭|flag Switzerland;🇨🇮|flag Côte d’Ivoire;🇨🇰|flag Cook Islands;🇨🇱|flag Chile;🇨🇲|flag Cameroon;🇨🇳|flag China;🇨🇴|flag Colombia;🇨🇵|flag Clipperton Island;🇨🇷|flag Costa Rica;🇨🇺|flag Cuba;🇨🇻|flag Cape Verde;🇨🇼|flag Curaçao;🇨🇽|flag Christmas Island;🇨🇾|flag Cyprus;🇨🇿|flag Czechia;🇩🇪|flag Germany;🇩🇬|flag Diego Garcia;🇩🇯|flag Djibouti;🇩🇰|flag Denmark;🇩🇲|flag Dominica;🇩🇴|flag Dominican Republic;🇩🇿|flag Algeria;🇪🇦|flag Ceuta & Melilla;🇪🇨|flag Ecuador;🇪🇪|flag Estonia;🇪🇬|flag Egypt;🇪🇭|flag Western Sahara;🇪🇷|flag Eritrea;🇪🇸|flag Spain;🇪🇹|flag Ethiopia;🇪🇺|flag European Union;🇫🇮|flag Finland;🇫🇯|flag Fiji;🇫🇰|flag Falkland Islands;🇫🇲|flag Micronesia;🇫🇴|flag Faroe Islands;🇫🇷|flag France;🇬🇦|flag Gabon;🇬🇧|flag United Kingdom;🇬🇩|flag Grenada;🇬🇪|flag Georgia;🇬🇫|flag French Guiana;🇬🇬|flag Guernsey;🇬🇭|flag Ghana;🇬🇮|flag Gibraltar;🇬🇱|flag Greenland;🇬🇲|flag Gambia;🇬🇳|flag Guinea;🇬🇵|flag Guadeloupe;🇬🇶|flag Equatorial Guinea;🇬🇷|flag Greece;🇬🇸|flag South Georgia & South Sandwich Islands;🇬🇹|flag Guatemala;🇬🇺|flag Guam;🇬🇼|flag Guinea-Bissau;🇬🇾|flag Guyana;🇭🇰|flag Hong Kong SAR China;🇭🇲|flag Heard & McDonald Islands;🇭🇳|flag Honduras;🇭🇷|flag Croatia;🇭🇹|flag Haiti;🇭🇺|flag Hungary;🇮🇨|flag Canary Islands;🇮🇩|flag Indonesia;🇮🇪|flag Ireland;🇮🇱|flag Israel;🇮🇲|flag Isle of Man;🇮🇳|flag India;🇮🇴|flag British Indian Ocean Territory;🇮🇶|flag Iraq;🇮🇷|flag Iran;🇮🇸|flag Iceland;🇮🇹|flag Italy;🇯🇪|flag Jersey;🇯🇲|flag Jamaica;🇯🇴|flag Jordan;🇯🇵|flag Japan;🇰🇪|flag Kenya;🇰🇬|flag Kyrgyzstan;🇰🇭|flag Cambodia;🇰🇮|flag Kiribati;🇰🇲|flag Comoros;🇰🇳|flag St. Kitts & Nevis;🇰🇵|flag North Korea;🇰🇷|flag South Korea;🇰🇼|flag Kuwait;🇰🇾|flag Cayman Islands;🇰🇿|flag Kazakhstan;🇱🇦|flag Laos;🇱🇧|flag Lebanon;🇱🇨|flag St. Lucia;🇱🇮|flag Liechtenstein;🇱🇰|flag Sri Lanka;🇱🇷|flag Liberia;🇱🇸|flag Lesotho;🇱🇹|flag Lithuania;🇱🇺|flag Luxembourg;🇱🇻|flag Latvia;🇱🇾|flag Libya;🇲🇦|flag Morocco;🇲🇨|flag Monaco;🇲🇩|flag Moldova;🇲🇪|flag Montenegro;🇲🇫|flag St. Martin;🇲🇬|flag Madagascar;🇲🇭|flag Marshall Islands;🇲🇰|flag North Macedonia;🇲🇱|flag Mali;🇲🇲|flag Myanmar (Burma);🇲🇳|flag Mongolia;🇲🇴|flag Macao SAR China;🇲🇵|flag Northern Mariana Islands;🇲🇶|flag Martinique;🇲🇷|flag Mauritania;🇲🇸|flag Montserrat;🇲🇹|flag Malta;🇲🇺|flag Mauritius;🇲🇻|flag Maldives;🇲🇼|flag Malawi;🇲🇽|flag Mexico;🇲🇾|flag Malaysia;🇲🇿|flag Mozambique;🇳🇦|flag Namibia;🇳🇨|flag New Caledonia;🇳🇪|flag Niger;🇳🇫|flag Norfolk Island;🇳🇬|flag Nigeria;🇳🇮|flag Nicaragua;🇳🇱|flag Netherlands;🇳🇴|flag Norway;🇳🇵|flag Nepal;🇳🇷|flag Nauru;🇳🇺|flag Niue;🇳🇿|flag New Zealand;🇴🇲|flag Oman;🇵🇦|flag Panama;🇵🇪|flag Peru;🇵🇫|flag French Polynesia;🇵🇬|flag Papua New Guinea;🇵🇭|flag Philippines;🇵🇰|flag Pakistan;🇵🇱|flag Poland;🇵🇲|flag St. Pierre & Miquelon;🇵🇳|flag Pitcairn Islands;🇵🇷|flag Puerto Rico;🇵🇸|flag Palestinian Territories;🇵🇹|flag Portugal;🇵🇼|flag Palau;🇵🇾|flag Paraguay;🇶🇦|flag Qatar;🇷🇪|flag Réunion;🇷🇴|flag Romania;🇷🇸|flag Serbia;🇷🇺|flag Russia;🇷🇼|flag Rwanda;🇸🇦|flag Saudi Arabia;🇸🇧|flag Solomon Islands;🇸🇨|flag Seychelles;🇸🇩|flag Sudan;🇸🇪|flag Sweden;🇸🇬|flag Singapore;🇸🇭|flag St. Helena;🇸🇮|flag Slovenia;🇸🇯|flag Svalbard & Jan Mayen;🇸🇰|flag Slovakia;🇸🇱|flag Sierra Leone;🇸🇲|flag San Marino;🇸🇳|flag Senegal;🇸🇴|flag Somalia;🇸🇷|flag Suriname;🇸🇸|flag South Sudan;🇸🇹|flag São Tomé & Príncipe;🇸🇻|flag El Salvador;🇸🇽|flag Sint Maarten;🇸🇾|flag Syria;🇸🇿|flag Eswatini;🇹🇦|flag Tristan da Cunha;🇹🇨|flag Turks & Caicos Islands;🇹🇩|flag Chad;🇹🇫|flag French Southern Territories;🇹🇬|flag Togo;🇹🇭|flag Thailand;🇹🇯|flag Tajikistan;🇹🇰|flag Tokelau;🇹🇱|flag Timor-Leste;🇹🇲|flag Turkmenistan;🇹🇳|flag Tunisia;🇹🇴|flag Tonga;🇹🇷|flag Türkiye;🇹🇹|flag Trinidad & Tobago;🇹🇻|flag Tuvalu;🇹🇼|flag Taiwan;🇹🇿|flag Tanzania;🇺🇦|flag Ukraine;🇺🇬|flag Uganda;🇺🇲|flag U.S. Outlying Islands;🇺🇳|flag United Nations;🇺🇸|flag United States;🇺🇾|flag Uruguay;🇺🇿|flag Uzbekistan;🇻🇦|flag Vatican City;🇻🇨|flag St. Vincent & Grenadines;🇻🇪|flag Venezuela;🇻🇬|flag British Virgin Islands;🇻🇮|flag U.S. Virgin Islands;🇻🇳|flag Vietnam;🇻🇺|flag Vanuatu;🇼🇫|flag Wallis & Futuna;🇼🇸|flag Samoa;🇽🇰|flag Kosovo;🇾🇪|flag Yemen;🇾🇹|flag Mayotte;🇿🇦|flag South Africa;🇿🇲|flag Zambia;🇿🇼|flag Zimbabwe;🏴󠁧󠁢󠁥󠁮󠁧󠁿|flag England;🏴󠁧󠁢󠁳󠁣󠁴󠁿|flag Scotland;🏴󠁧󠁢󠁷󠁬󠁳󠁿|flag Wales"]];</script>
+<script>
+"use strict";
+// ---------- constants & data ----------
+const W = 720, H = 1560;
+const EMOJI_FONT = '"Apple Color Emoji","Segoe UI Emoji","Noto Color Emoji","Twemoji Mozilla",sans-serif';
+const GROUP_LABELS = { "Smileys & Emotion": "Faces", "People & Body": "People", "Animals & Nature": "Animals & nature", "Food & Drink": "Food", "Travel & Places": "Places", "Activities": "Fun & sport", "Objects": "Objects", "Symbols": "Hearts & symbols", "Flags": "Flags" };
+const ALL_EMOJI = [];
+EMOJI_GROUPS.forEach(([g, s]) => s.split(";").forEach(item => { const i = item.indexOf("|"); ALL_EMOJI.push({ e: item.slice(0, i), n: item.slice(i + 1), g }); }));
+const EMOJI_SET = new Set(ALL_EMOJI.map(x => x.e));
+
+const COLORS = ["#ffffff", "#000000", "#ff4fa3", "#ff2b4f", "#ff8a00", "#ffd23f", "#9cff57", "#2bd47d", "#22d3ee", "#3b82f6", "#7a5cff", "#c084fc", "#f9a8d4", "#fde68a", "#a7f3d0", "#8b5e3c", "#9ca3af", "#1e293b"];
+const GRADIENTS = [
+  { id: "candy", name: "Candy", a: 160, s: ["#ff9ad5", "#ffd1a1"] },
+  { id: "grape", name: "Grape", a: 160, s: ["#7a2bd9", "#ff4fa3"] },
+  { id: "sunset", name: "Sunset", a: 180, s: ["#ff5f6d", "#ffc371"] },
+  { id: "lagoon", name: "Lagoon", a: 180, s: ["#5ee7df", "#3b6fd9"] },
+  { id: "unicorn", name: "Unicorn", a: 135, s: ["#ffd1f7", "#c9b6ff", "#a7f0ff", "#fff4b8"] },
+  { id: "night", name: "Night", a: 180, s: ["#0f0c29", "#302b63", "#24243e"] },
+  { id: "galaxy", name: "Galaxy", a: 200, s: ["#1a0b3d", "#5b2a86", "#e94e9a"] },
+  { id: "peach", name: "Peach", a: 170, s: ["#ffecd2", "#fcb69f"] },
+  { id: "ocean", name: "Ocean", a: 190, s: ["#00c6fb", "#005bea"] },
+  { id: "berry", name: "Berry", a: 150, s: ["#ff0844", "#7b1fa2"] },
+  { id: "mint", name: "Mint", a: 200, s: ["#d4fc79", "#47c9a6"] },
+  { id: "lemon", name: "Lemon", a: 180, s: ["#fff6a3", "#ffb347"] },
+  { id: "cotton", name: "Cotton", a: 135, s: ["#a1c4fd", "#c2e9fb", "#fbc2eb"] },
+  { id: "forest", name: "Forest", a: 180, s: ["#134e5e", "#71b280"] },
+  { id: "fire", name: "Fire", a: 180, s: ["#f9d423", "#f83600"] },
+  { id: "rose", name: "Rose", a: 180, s: ["#f5c6d6", "#e66d9c"] },
+  { id: "sky", name: "Sky", a: 180, s: ["#89f7fe", "#66a6ff"] },
+  { id: "lava", name: "Lava", a: 170, s: ["#3a0010", "#d1003f", "#ff9a3c"] },
+  { id: "ice", name: "Ice", a: 200, s: ["#e0f7ff", "#7dc8f0"] },
+  { id: "cloud", name: "Cloud", a: 180, s: ["#ffffff", "#dfe7f2"] },
+  { id: "midnight", name: "Midnight", a: 180, s: ["#3a3a44", "#0b0b0f"] },
+  { id: "glow", name: "Glow", r: true, s: ["#ff7ad9", "#2a0b3d"] },
+  { id: "spot", name: "Spotlight", r: true, s: ["#ffe29f", "#ff719a", "#3a1048"] },
+  { id: "deep", name: "Deep blue", r: true, s: ["#3b82f6", "#0b1030"] },
+];
+const EFFECTS = [
+  { id: "none", label: "None" }, { id: "stars", label: "Twinkle stars" }, { id: "hearts", label: "Floating hearts" },
+  { id: "bubbles", label: "Bubbles" }, { id: "snow", label: "Snow" }, { id: "confetti", label: "Confetti" },
+  { id: "sparkles", label: "Sparkles" }, { id: "fireflies", label: "Fireflies" }, { id: "aurora", label: "Aurora" },
+  { id: "lava", label: "Lava lamp" }, { id: "sunburst", label: "Sunburst" }, { id: "disco", label: "Disco dots" },
+];
+const PATTERNS = [
+  { id: "none", label: "None" }, { id: "dots", label: "Polka dots" }, { id: "stripes", label: "Stripes" },
+  { id: "checks", label: "Checks" }, { id: "zigzag", label: "Zigzag" }, { id: "grid", label: "Grid" },
+  { id: "hearts", label: "Little hearts" }, { id: "stars", label: "Little stars" },
+];
+const ANIMS = [
+  { id: "still", label: "Stay put" }, { id: "heartbeat", label: "Heartbeat" }, { id: "pulse", label: "Pulse" },
+  { id: "bounce", label: "Bounce" }, { id: "float", label: "Float" }, { id: "spin", label: "Spin" },
+  { id: "wiggle", label: "Wiggle" }, { id: "swing", label: "Swing" }, { id: "jelly", label: "Jelly" },
+  { id: "shake", label: "Shake" }, { id: "flash", label: "Flash" }, { id: "fade", label: "Fade in & out" },
+  { id: "zoom", label: "Zoom" }, { id: "orbit", label: "Circle round" },
+  { id: "left", label: "Scroll left" }, { id: "right", label: "Scroll right" }, { id: "up", label: "Scroll up" },
+  { id: "down", label: "Scroll down" }, { id: "diag", label: "Diagonal up" }, { id: "diag2", label: "Diagonal down" },
+];
+const ANIM_IDS = new Set(ANIMS.map(a => a.id));
+const FONTS = [
+  { name: "Fredoka", w: 700, label: "Bubble" }, { name: "Rubik Bubbles" }, { name: "Cherry Bomb One" }, { name: "Sniglet", w: 800 },
+  { name: "Bungee" }, { name: "Bungee Shade" }, { name: "Bangers" }, { name: "Shrikhand" }, { name: "Pacifico" },
+  { name: "Lobster" }, { name: "Dancing Script", w: 700 }, { name: "Caveat", w: 700 }, { name: "Permanent Marker" },
+  { name: "Righteous" }, { name: "Abril Fatface" }, { name: "Monoton" }, { name: "Press Start 2P" },
+  { name: "Rubik Glitch" }, { name: "Rampart One" }, { name: "Creepster" }, { name: "Barrio" },
+];
+const FILLS = [
+  { id: "solid", label: "One colour" }, { id: "gradient", label: "Two colours" }, { id: "rainbow", label: "Rainbow" },
+  { id: "gold", label: "Shiny gold" }, { id: "chrome", label: "Chrome" }, { id: "holo", label: "Holographic" }, { id: "glitter", label: "Glitter" },
+];
+const SHADOWS = [
+  { id: "none", label: "None" }, { id: "soft", label: "Soft" }, { id: "hard", label: "Hard" }, { id: "3d", label: "3D" }, { id: "glow", label: "Glow" },
+];
+const TEXT_FX = [
+  { id: "none", label: "None" }, { id: "wave", label: "Wave" }, { id: "bounce", label: "Bouncy letters" },
+  { id: "jelly", label: "Jelly letters" }, { id: "typewriter", label: "Typewriter" }, { id: "shine", label: "Shine sweep" },
+  { id: "sparkle", label: "Sparkles" }, { id: "glitch", label: "Glitch" }, { id: "flicker", label: "Neon flicker" },
+];
+const TEXT_STYLES = [
+  { id: "bubble", label: "Bubble", p: { font: "Rubik Bubbles", fill: "gradient", color: "#ff7ad9", color2: "#7a5cff", outlineColor: "#ffffff", outlineW: 6, shadow: "soft", shadowColor: "#000000", effect: "none" } },
+  { id: "gold", label: "Gold", p: { font: "Shrikhand", fill: "gold", color: "#ffd23f", outlineColor: "#5a3a00", outlineW: 3, shadow: "3d", shadowColor: "#3a2500", effect: "shine" } },
+  { id: "neon", label: "Neon", p: { font: "Righteous", fill: "solid", color: "#ffffff", outlineColor: "#ff2bd6", outlineW: 0, shadow: "glow", shadowColor: "#ff2bd6", effect: "flicker" } },
+  { id: "comic", label: "Comic", p: { font: "Bangers", fill: "solid", color: "#ffd23f", outlineColor: "#000000", outlineW: 6, shadow: "hard", shadowColor: "#e4002b", effect: "none" } },
+  { id: "rainbow", label: "Rainbow", p: { font: "Cherry Bomb One", fill: "rainbow", color: "#ffffff", outlineColor: "#ffffff", outlineW: 5, shadow: "soft", shadowColor: "#000000", effect: "wave" } },
+  { id: "chrome", label: "Chrome", p: { font: "Bungee", fill: "chrome", color: "#ffffff", outlineColor: "#1c2433", outlineW: 3, shadow: "3d", shadowColor: "#0d1220", effect: "shine" } },
+  { id: "glitter", label: "Glitter", p: { font: "Fredoka", fill: "glitter", color: "#ff4fa3", outlineColor: "#ffffff", outlineW: 5, shadow: "soft", shadowColor: "#000000", effect: "sparkle" } },
+  { id: "candy", label: "Candy", p: { font: "Sniglet", fill: "holo", color: "#ffffff", outlineColor: "#ff4fa3", outlineW: 6, shadow: "hard", shadowColor: "#7a1b52", effect: "jelly" } },
+  { id: "glitch", label: "Glitch", p: { font: "Rubik Glitch", fill: "solid", color: "#ffffff", outlineColor: "#000000", outlineW: 0, shadow: "none", shadowColor: "#000000", effect: "glitch" } },
+  { id: "script", label: "Script", p: { font: "Pacifico", fill: "solid", color: "#ffffff", outlineColor: "#000000", outlineW: 0, shadow: "soft", shadowColor: "#000000", effect: "sparkle" } },
+  { id: "spooky", label: "Spooky", p: { font: "Creepster", fill: "solid", color: "#9cff57", outlineColor: "#0b2a00", outlineW: 2, shadow: "glow", shadowColor: "#3cff00", effect: "wave" } },
+  { id: "arcade", label: "Arcade", p: { font: "Press Start 2P", fill: "solid", color: "#7cffcb", outlineColor: "#000000", outlineW: 0, shadow: "hard", shadowColor: "#ff3e9a", effect: "typewriter" } },
+  { id: "marker", label: "Marker", p: { font: "Permanent Marker", fill: "solid", color: "#111111", outlineColor: "#ffffff", outlineW: 8, shadow: "none", shadowColor: "#000000", effect: "none" } },
+  { id: "retro", label: "Retro", p: { font: "Monoton", fill: "gradient", color: "#ffd23f", color2: "#ff4fa3", outlineColor: "#000000", outlineW: 0, shadow: "glow", shadowColor: "#ff4fa3", effect: "none" } },
+];
+const SHAPES = [
+  { id: "rounded", label: "Rounded" }, { id: "square", label: "Square" }, { id: "circle", label: "Circle" }, { id: "heart", label: "Heart" },
+  { id: "star", label: "Star" }, { id: "hexagon", label: "Hexagon" }, { id: "flower", label: "Flower" }, { id: "blob", label: "Blob" }, { id: "arch", label: "Arch" },
+];
+const FRAMES = [
+  { id: "none", label: "No frame" }, { id: "sticker", label: "Sticker" }, { id: "double", label: "Double sticker" },
+  { id: "dashed", label: "Cut-out line" }, { id: "neon", label: "Neon" }, { id: "rainbow", label: "Rainbow" },
+  { id: "gold", label: "Gold" }, { id: "polaroid", label: "Polaroid" }, { id: "film", label: "Film strip" },
+  { id: "w-hearts", label: "Heart ring" }, { id: "w-flowers", label: "Flower ring" }, { id: "w-stars", label: "Star ring" }, { id: "w-sparkles", label: "Sparkle ring" },
+];
+const WREATH = { "w-hearts": "💖", "w-flowers": "🌸", "w-stars": "⭐", "w-sparkles": "✨" };
+
+// ---------- GIPHY ----------
+// Paste your free GIPHY API key between the quotes below to switch on GIF search for everyone who uses this copy.
+const GIPHY_KEY_IN_FILE = "P0LOGjTQ8QBbhsMghfwlYVc6SM90PXtX";
+function giphyKey() { if (GIPHY_KEY_IN_FILE) return GIPHY_KEY_IN_FILE; try { return localStorage.getItem("giphyKey") || ""; } catch (e) { return ""; } }
+async function giphySearch(q) {
+  const k = encodeURIComponent(giphyKey());
+  const url = q && q.trim() ? `https://api.giphy.com/v1/gifs/search?api_key=${k}&q=${encodeURIComponent(q.trim())}&limit=24&rating=g&lang=en` : `https://api.giphy.com/v1/gifs/trending?api_key=${k}&limit=24&rating=g`;
+  const r = await fetch(url); if (!r.ok) throw new Error("giphy " + r.status);
+  const j = await r.json();
+  return (j.data || []).map(d => ({ title: d.title || "GIF", thumb: (d.images.fixed_width_small || d.images.fixed_width || d.images.downsized).url, full: (d.images.downsized || d.images.downsized_medium || d.images.original).url }));
+}
+async function addGifFromUrl(url) {
+  toast("Loading GIF…", 4000);
+  try { const r = await fetch(url); if (!r.ok) throw new Error(r.status); const buf = await r.arrayBuffer(); const gif = decodeGif(buf); addLayer({ type: "gif", gif }, { edit: true }); toast("GIF added. Drag it where you like."); }
+  catch (e) { console.error(e); toast("That GIF wouldn't load. Try another one."); }
+}
+function gifResults(box, q) {
+  box.innerHTML = "";
+  if (!giphyKey()) { box.append(keySetup(() => gifResults(box, q))); return; }
+  box.append(note("Searching…"));
+  giphySearch(q).then(list => {
+    box.innerHTML = "";
+    if (!list.length) { box.append(note("No GIFs found. Try different words.")); return; }
+    const g = el("div", "gif-grid");
+    list.forEach(x => { const b = el("button", "gif-pick"); b.type = "button"; b.setAttribute("aria-label", "Add " + x.title); const img = el("img"); img.src = x.thumb; img.alt = x.title; img.loading = "lazy"; b.append(img); b.onclick = () => addGifFromUrl(x.full); g.append(b); });
+    box.append(g, el("div", "giphy-credit", "POWERED BY GIPHY"));
+  }).catch(e => { box.innerHTML = ""; box.append(note("GIF search isn't working right now. Check the internet connection, or that the GIPHY key is right."), keySetup(() => gifResults(box, q), true)); });
+}
+function keySetup(after, isRetry) {
+  const d = el("div", "sec");
+  d.append(note(isRetry ? "You can paste a new GIPHY key here:" : "GIF search needs a free key from GIPHY. Ask a grown-up to paste it in once:"));
+  const i = el("input"); i.type = "text"; i.id = "giphykey"; i.placeholder = "Paste GIPHY key"; i.autocomplete = "off"; i.spellcheck = false;
+  d.append(i, button("Save key", () => { const v = i.value.trim(); if (v.length < 20) { toast("That doesn't look like a GIPHY key."); return; } try { localStorage.setItem("giphyKey", v); } catch (e) {} after(); }, "btn"));
+  return d;
+}
+
+// ---------- state ----------
+const state = {
+  bg: { kind: "gradient", id: "grape", color: "#ff4fa3", img: null, dim: 0 },
+  effect: "sparkles", pattern: "none", guide: true,
+};
+let layers = [], selId = null, nextId = 1, exporting = false, previewOpen = false;
+const cv = document.getElementById("stage"), ctx = cv.getContext("2d");
+cv.width = W; cv.height = H;
+const mcv = document.createElement("canvas"), mctx = mcv.getContext("2d");
+
+// ---------- helpers ----------
+const $ = id => document.getElementById(id);
+function el(tag, cls, text) { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
+function rng(seed) { let a = seed >>> 0; return () => { a |= 0; a = a + 0x6D2B79F5 | 0; let t = Math.imul(a ^ a >>> 15, 1 | a); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
+function hash(n) { return rng(n * 9973 + 17)(); }
+function wrap(v, a, b) { const r = b - a; return a + (((v - a) % r) + r) % r; }
+function clamp(v, a, b) { return Math.max(a, Math.min(b, v)); }
+function makeCanvas(w, h) { const c = document.createElement("canvas"); c.width = Math.max(1, Math.ceil(w)); c.height = Math.max(1, Math.ceil(h)); return c; }
+function ensure(obj, key, w, h) { let c = obj[key]; w = Math.max(1, Math.ceil(w)); h = Math.max(1, Math.ceil(h)); if (!c) { c = obj[key] = makeCanvas(w, h); } else if (c.width !== w || c.height !== h) { c.width = w; c.height = h; } return c; }
+let toastTimer;
+function toast(msg, ms = 2600) { const t = $("toast"); t.textContent = msg; t.hidden = false; clearTimeout(toastTimer); toastTimer = setTimeout(() => t.hidden = true, ms); }
+function sel() { return layers.find(l => l.id === selId) || null; }
+function cap_unused(name) { try { return (window.claude && window.claude.use) ? Promise.resolve(window.claude.use(name)).catch(() => null) : Promise.resolve(null); } catch (e) { return Promise.resolve(null); } }
+
+// emoji glyphs rendered once to a canvas
+const glyphCache = new Map();
+function emojiCanvas(e) {
+  let c = glyphCache.get(e); if (c) return c;
+  c = makeCanvas(256, 256); const g = c.getContext("2d");
+  g.font = `200px ${EMOJI_FONT}`; g.textAlign = "left"; g.textBaseline = "alphabetic";
+  const m = g.measureText(e);
+  const L = m.actualBoundingBoxLeft || 0, R = m.actualBoundingBoxRight || m.width, A = m.actualBoundingBoxAscent || 160, D = m.actualBoundingBoxDescent || 40;
+  g.fillText(e, 128 - (R - L) / 2 + L, 128 + (A - D) / 2);
+  glyphCache.set(e, c); return c;
+}
+function tint(src, color, key) {
+  const c = tint.pool[key] || (tint.pool[key] = makeCanvas(1, 1));
+  if (c.width !== src.width || c.height !== src.height) { c.width = src.width; c.height = src.height; }
+  const g = c.getContext("2d"); g.globalCompositeOperation = "source-over"; g.clearRect(0, 0, c.width, c.height);
+  g.drawImage(src, 0, 0); g.globalCompositeOperation = "source-in"; g.fillStyle = color; g.fillRect(0, 0, c.width, c.height);
+  g.globalCompositeOperation = "source-over"; return c;
+}
+tint.pool = {};
+function rainbowGrad(g, x0, y0, x1, y1, shift = 0, light = 60) { const gr = g.createLinearGradient(x0, y0, x1, y1); for (let k = 0; k <= 6; k++) gr.addColorStop(k / 6, `hsl(${(k * 60 + shift) % 360},100%,${light}%)`); return gr; }
+function makeOutline(src, color, w) {
+  const pad = Math.ceil(w) + 2; const c = makeCanvas(src.width + pad * 2, src.height + pad * 2); const g = c.getContext("2d");
+  const sil = makeCanvas(src.width, src.height), sg = sil.getContext("2d");
+  sg.drawImage(src, 0, 0); sg.globalCompositeOperation = "source-in";
+  sg.fillStyle = color === "rainbow" ? rainbowGrad(sg, 0, 0, sil.width, sil.height) : color; sg.fillRect(0, 0, sil.width, sil.height);
+  for (const r of [w, w * 0.66, w * 0.33]) { const steps = Math.max(12, Math.round(r * 1.6)); for (let i = 0; i < steps; i++) { const a = i / steps * Math.PI * 2; g.drawImage(sil, pad + Math.cos(a) * r, pad + Math.sin(a) * r); } }
+  g.drawImage(src, pad, pad); c._pad = pad; return c;
+}
+function outlined(l, src, idx) {
+  if (!l.outlineW || l.outlineColor === "none") return src;
+  const key = l.outlineColor + "|" + l.outlineW;
+  if (!l._oc || l._oc.key !== key) l._oc = { key, m: new Map() };
+  let c = l._oc.m.get(idx); if (!c) { c = makeOutline(src, l.outlineColor, l.outlineW); l._oc.m.set(idx, c); }
+  return c;
+}
+
+// ---------- shapes ----------
+function heartPts(p, cx, cy, sx, sy) { p.moveTo(cx, cy + 0.9 * sy); p.bezierCurveTo(cx - 1.25 * sx, cy + 0.05 * sy, cx - 0.9 * sx, cy - 1.15 * sy, cx, cy - 0.45 * sy); p.bezierCurveTo(cx + 0.9 * sx, cy - 1.15 * sy, cx + 1.25 * sx, cy + 0.05 * sy, cx, cy + 0.9 * sy); p.closePath(); }
+function polar(p, n, f, sx, sy) { for (let i = 0; i <= n; i++) { const a = i / n * Math.PI * 2 - Math.PI / 2; const r = f(a, i); const x = Math.cos(a) * r * sx, y = Math.sin(a) * r * sy; i ? p.lineTo(x, y) : p.moveTo(x, y); } p.closePath(); }
+function rrect(p, x, y, w, h, r) { r = Math.min(r, w / 2, h / 2); p.moveTo(x + r, y); p.arcTo(x + w, y, x + w, y + h, r); p.arcTo(x + w, y + h, x, y + h, r); p.arcTo(x, y + h, x, y, r); p.arcTo(x, y, x + w, y, r); p.closePath(); }
+function shapePath(shape, w, h) {
+  const p = new Path2D(), sx = w / 2, sy = h / 2;
+  switch (shape) {
+    case "square": p.rect(-sx, -sy, w, h); break;
+    case "circle": p.ellipse(0, 0, sx, sy, 0, 0, Math.PI * 2); break;
+    case "heart": heartPts(p, 0, 0.02 * sy, sx * 0.85, sy * 0.98); break;
+    case "star": { const pp = new Path2D(); for (let i = 0; i < 10; i++) { const a = i / 10 * Math.PI * 2 - Math.PI / 2, r = i % 2 ? 0.48 : 1; const x = Math.cos(a) * r * sx, y = Math.sin(a) * r * sy + 0.08 * sy; i ? pp.lineTo(x, y) : pp.moveTo(x, y); } pp.closePath(); return pp; }
+    case "hexagon": polar(p, 6, () => 1, sx, sy); break;
+    case "flower": polar(p, 160, a => 0.87 + 0.13 * Math.cos(a * 8), sx, sy); break;
+    case "blob": polar(p, 160, a => 0.9 + 0.07 * Math.sin(a * 3 + 1) + 0.04 * Math.cos(a * 5), sx, sy); break;
+    case "arch": { const r = Math.min(sx, h / 2); p.moveTo(-sx, sy); p.lineTo(-sx, -sy + r); p.arc(0, -sy + r, sx, Math.PI, 0); p.lineTo(sx, sy); p.closePath(); break; }
+    default: rrect(p, -sx, -sy, w, h, Math.min(w, h) * 0.13);
+  }
+  return p;
+}
+const SQUARE_SHAPES = new Set(["circle", "heart", "star", "hexagon", "flower", "blob"]);
+function heartAt(g, x, y, s) { const p = new Path2D(); heartPts(p, x, y, s, s); g.fill(p); }
+function starAt(g, x, y, r, inner = 0.45, n = 5, rot = 0) { g.beginPath(); for (let i = 0; i < n * 2; i++) { const a = i / (n * 2) * Math.PI * 2 - Math.PI / 2 + rot; const rr = i % 2 ? r * inner : r; g.lineTo(x + Math.cos(a) * rr, y + Math.sin(a) * rr); } g.closePath(); g.fill(); }
+function glint(g, x, y, r) { g.beginPath(); g.moveTo(x, y - r); g.quadraticCurveTo(x, y, x + r, y); g.quadraticCurveTo(x, y, x, y + r); g.quadraticCurveTo(x, y, x - r, y); g.quadraticCurveTo(x, y, x, y - r); g.fill(); }
+
+// ---------- background ----------
+function gradFill(g, gr, w, h) {
+  let f;
+  if (gr.r) { f = g.createRadialGradient(w / 2, h * 0.42, 0, w / 2, h * 0.42, Math.hypot(w, h) * 0.55); }
+  else { const a = gr.a * Math.PI / 180, dx = Math.sin(a), dy = -Math.cos(a), L = Math.abs(w / 2 * dx) + Math.abs(h / 2 * dy); f = g.createLinearGradient(w / 2 - dx * L, h / 2 - dy * L, w / 2 + dx * L, h / 2 + dy * L); }
+  gr.s.forEach((c, i) => f.addColorStop(i / (gr.s.length - 1), c)); return f;
+}
+function cssGrad(gr) { return gr.r ? `radial-gradient(circle at 50% 42%, ${gr.s.join(",")})` : `linear-gradient(${gr.a}deg, ${gr.s.join(",")})`; }
+function dims(m) { return { w: m.videoWidth || m.naturalWidth || m.width || 1, h: m.videoHeight || m.naturalHeight || m.height || 1 }; }
+function drawCover(g, img, x, y, w, h) { const dd = dims(img); if (dd.w < 2) return; const iw = dd.w, ih = dd.h, s = Math.max(w / iw, h / ih); const dw = iw * s, dh = ih * s; g.drawImage(img, x + (w - dw) / 2, y + (h - dh) / 2, dw, dh); }
+const P = Array.from({ length: 90 }, (_, i) => { const r = rng(i * 31 + 7); return { x: r(), y: r(), s: r(), p: r(), q: r() }; });
+const CONF_COLS = ["#ff4fa3", "#ffd23f", "#22d3ee", "#9cff57", "#7a5cff", "#ff8a00", "#ffffff"];
+function drawBackground(g, t) {
+  const b = state.bg;
+  if (b.kind === "solid") { g.fillStyle = b.color; g.fillRect(0, 0, W, H); }
+  else if (b.kind === "photo" && b.img) { g.fillStyle = "#000"; g.fillRect(0, 0, W, H); drawCover(g, b.img, 0, 0, W, H); if (b.dim) { g.fillStyle = `rgba(0,0,0,${b.dim})`; g.fillRect(0, 0, W, H); } }
+  else { const gr = GRADIENTS.find(x => x.id === b.id) || GRADIENTS[0]; g.fillStyle = gradFill(g, gr, W, H); g.fillRect(0, 0, W, H); }
+  layers.forEach(l => { if (l.cover && l.type === "gif") drawGifCover(g, l, t); else if (l.cover && l.type === "video") { g.save(); g.globalAlpha = l.opacity; drawCover(g, l.img, 0, 0, W, H); g.restore(); } });
+  drawPattern(g, t); drawEffect(g, t);
+}
+function drawPattern(g, t) {
+  const p = state.pattern; if (p === "none") return;
+  g.save(); g.fillStyle = "rgba(255,255,255,.2)"; g.strokeStyle = "rgba(255,255,255,.2)";
+  const off = (t * 12) % 120;
+  if (p === "dots") { for (let y = -120; y < H + 120; y += 60) for (let x = -120; x < W + 120; x += 60) { const xx = x + ((y / 60) % 2 ? 30 : 0) + off, yy = y + off; g.beginPath(); g.arc(xx, yy, 9, 0, 7); g.fill(); } }
+  else if (p === "stripes") { g.lineWidth = 22; for (let k = -H; k < W + H; k += 64) { g.beginPath(); g.moveTo(k + off, 0); g.lineTo(k + off - H, H); g.stroke(); } }
+  else if (p === "checks") { g.fillStyle = "rgba(255,255,255,.13)"; for (let y = -120; y < H + 120; y += 70) for (let x = -140; x < W + 140; x += 70) if (((x + y) / 70) % 2 === 0) g.fillRect(x + off, y + off, 70, 70); }
+  else if (p === "zigzag") { g.lineWidth = 9; g.lineJoin = "round"; for (let y = -60; y < H + 60; y += 80) { g.beginPath(); for (let x = -60, i = 0; x < W + 120; x += 40, i++) g.lineTo(x + (off % 80), y + (i % 2 ? 22 : -22)); g.stroke(); } }
+  else if (p === "grid") { g.lineWidth = 3; for (let x = (off % 60) - 60; x < W; x += 60) { g.beginPath(); g.moveTo(x, 0); g.lineTo(x, H); g.stroke(); } for (let y = (off % 60) - 60; y < H; y += 60) { g.beginPath(); g.moveTo(0, y); g.lineTo(W, y); g.stroke(); } }
+  else if (p === "hearts") { for (let y = -120; y < H + 120; y += 90) for (let x = -120; x < W + 120; x += 90) heartAt(g, x + ((y / 90) % 2 ? 45 : 0) + off * 0.75, y + off * 0.75, 18); }
+  else if (p === "stars") { for (let y = -120; y < H + 120; y += 90) for (let x = -120; x < W + 120; x += 90) starAt(g, x + ((y / 90) % 2 ? 45 : 0) + off * 0.75, y + off * 0.75, 17); }
+  g.restore();
+}
+function drawEffect(g, t) {
+  const e = state.effect; if (e === "none") return;
+  g.save();
+  if (e === "stars") { P.forEach(p => { const a = 0.25 + 0.75 * (0.5 + 0.5 * Math.sin(t * (1.5 + p.q * 2) + p.p * 6.28)); g.fillStyle = `rgba(255,255,255,${a})`; const r = 1.6 + p.s * 3.4; g.beginPath(); g.arc(p.x * W, p.y * H, r, 0, 7); g.fill(); if (p.s > 0.82) { g.fillStyle = `rgba(255,255,255,${a * 0.8})`; glint(g, p.x * W, p.y * H, r * 4.5); } }); }
+  else if (e === "hearts") { P.slice(0, 34).forEach(p => { const y = wrap(p.y - t * 0.045 * (0.5 + p.s), -0.06, 1.06) * H; const x = p.x * W + Math.sin(t * 1.3 + p.p * 6.28) * 26; g.fillStyle = `hsla(${330 + p.q * 30},100%,${70 + p.s * 15}%,${0.35 + p.s * 0.4})`; heartAt(g, x, y, 12 + p.s * 30); }); }
+  else if (e === "bubbles") { P.slice(0, 40).forEach(p => { const r = 10 + p.s * 42; const y = wrap(p.y - t * 0.05 * (0.4 + p.q), -0.05, 1.05) * H; const x = p.x * W + Math.sin(t * 1.1 + p.p * 6.28) * 22; g.strokeStyle = "rgba(255,255,255,.55)"; g.lineWidth = 3; g.beginPath(); g.arc(x, y, r, 0, 7); g.stroke(); g.fillStyle = "rgba(255,255,255,.12)"; g.fill(); g.fillStyle = "rgba(255,255,255,.7)"; g.beginPath(); g.arc(x - r * 0.35, y - r * 0.35, r * 0.18, 0, 7); g.fill(); }); }
+  else if (e === "snow") { P.forEach(p => { const y = wrap(p.y + t * 0.05 * (0.35 + p.s), -0.02, 1.02) * H; const x = wrap(p.x * W + Math.sin(t * 0.9 + p.p * 6.28) * 30, -10, W + 10); g.fillStyle = `rgba(255,255,255,${0.5 + p.s * 0.5})`; g.beginPath(); g.arc(x, y, 3 + p.s * 7, 0, 7); g.fill(); }); }
+  else if (e === "confetti") { P.slice(0, 70).forEach((p, i) => { const y = wrap(p.y + t * 0.07 * (0.5 + p.s), -0.03, 1.03) * H; const x = p.x * W + Math.sin(t * 2 + p.p * 6.28) * 20; g.save(); g.translate(x, y); g.rotate(t * (1 + p.q * 3) + p.p * 6); g.scale(1, Math.cos(t * 3 + p.p * 9)); g.fillStyle = CONF_COLS[i % CONF_COLS.length]; g.fillRect(-9, -5, 18, 10); g.restore(); }); }
+  else if (e === "sparkles") { P.slice(0, 50).forEach(p => { const k = Math.pow(Math.max(0, Math.sin(t * (1.2 + p.q * 1.6) + p.p * 6.28)), 3); if (k < 0.02) return; g.fillStyle = `rgba(255,255,255,${0.9 * k})`; g.shadowColor = "rgba(255,255,255,.9)"; g.shadowBlur = 14; glint(g, p.x * W, p.y * H, (10 + p.s * 26) * k); }); }
+  else if (e === "fireflies") { g.shadowColor = "#ffe76a"; g.shadowBlur = 22; P.slice(0, 36).forEach(p => { const x = p.x * W + Math.sin(t * 0.6 + p.p * 9) * 60, y = p.y * H + Math.cos(t * 0.5 + p.q * 9) * 50; const a = 0.3 + 0.7 * (0.5 + 0.5 * Math.sin(t * 2 + p.p * 6.28)); g.fillStyle = `rgba(255,236,120,${a})`; g.beginPath(); g.arc(x, y, 4 + p.s * 4, 0, 7); g.fill(); }); }
+  else if (e === "aurora") { g.globalCompositeOperation = "lighter"; const cols = ["rgba(60,255,170,.22)", "rgba(80,160,255,.2)", "rgba(200,90,255,.2)"]; cols.forEach((c, k) => { g.fillStyle = c; g.beginPath(); g.moveTo(0, H); for (let x = 0; x <= W; x += 20) g.lineTo(x, H * (0.28 + k * 0.1) + Math.sin(x / 140 + t * (0.7 + k * 0.25) + k * 2) * 90 + Math.sin(x / 60 + t * 1.3) * 20); g.lineTo(W, H); g.closePath(); g.fill(); }); }
+  else if (e === "lava") { g.globalCompositeOperation = "lighter"; const cols = ["255,80,160", "255,150,60", "150,80,255", "255,90,90", "255,200,80", "120,120,255"]; cols.forEach((c, k) => { const x = W * (0.5 + 0.38 * Math.sin(t * 0.3 * (1 + k * 0.17) + k * 1.7)), y = H * (0.5 + 0.42 * Math.sin(t * 0.22 * (1 + k * 0.13) + k * 2.3)); const r = 230 + 70 * Math.sin(t * 0.5 + k); const gr = g.createRadialGradient(x, y, 0, x, y, r); gr.addColorStop(0, `rgba(${c},.55)`); gr.addColorStop(1, `rgba(${c},0)`); g.fillStyle = gr; g.fillRect(0, 0, W, H); }); }
+  else if (e === "sunburst") { g.translate(W / 2, H * 0.45); g.rotate(t * 0.12); g.fillStyle = "rgba(255,255,255,.12)"; for (let i = 0; i < 16; i++) { g.beginPath(); g.moveTo(0, 0); g.arc(0, 0, H, i / 16 * Math.PI * 2, (i + 0.5) / 16 * Math.PI * 2); g.closePath(); g.fill(); } }
+  else if (e === "disco") { for (let y = 40; y < H; y += 80) for (let x = 40; x < W; x += 80) { const k = 0.5 + 0.5 * Math.sin(t * 2.4 + x * 0.013 + y * 0.009); g.fillStyle = `hsla(${(x * 0.3 + y * 0.2 + t * 60) % 360},100%,65%,${0.15 + 0.35 * k})`; g.beginPath(); g.arc(x, y, 8 + 18 * k, 0, 7); g.fill(); } }
+  g.restore();
+}
+function drawGuide(g) {
+  const now = new Date();
+  g.save(); g.textAlign = "center"; g.fillStyle = "rgba(255,255,255,.5)"; g.shadowColor = "rgba(0,0,0,.25)"; g.shadowBlur = 8;
+  g.font = `600 36px -apple-system, "SF Pro Display", system-ui, sans-serif`;
+  g.fillText(now.toLocaleDateString("en-GB", { weekday: "long", day: "numeric", month: "long" }), W / 2, 200);
+  g.font = `700 210px -apple-system, "SF Pro Rounded", system-ui, sans-serif`;
+  g.fillText(now.toLocaleTimeString("en-GB", { hour: "2-digit", minute: "2-digit" }), W / 2, 395);
+  g.fillStyle = "rgba(255,255,255,.22)";
+  g.beginPath(); g.arc(110, H - 130, 46, 0, 7); g.fill(); g.beginPath(); g.arc(W - 110, H - 130, 46, 0, 7); g.fill();
+  g.fillRect(W / 2 - 120, H - 30, 240, 9);
+  g.restore();
+}
+
+// ---------- layers ----------
+function baseSize(l) {
+  if (l.type === "emoji") return { w: 260, h: 260 };
+  if (l.type === "gif") return { w: 420, h: 420 * l.gif.h / l.gif.w };
+  if (l.type === "photo" || l.type === "video") { if (SQUARE_SHAPES.has(l.shape)) return { w: 440, h: 440 }; const dd = dims(l.img); const r = dd.w < 2 ? 16 / 9 : clamp(dd.h / dd.w, 0.5, 2); return l.shape === "arch" ? { w: 400, h: Math.max(400, 400 * r) } : { w: 440, h: 440 * r }; }
+  if (l.type === "text") return { w: l._cw || 300, h: l._ch || 120 };
+  return { w: 200, h: 200 };
+}
+function motion(l, t) {
+  const T = t * l.speed; let dx = 0, dy = 0, sx = 1, sy = 1, r = 0, a = 1, x = l.x, y = l.y;
+  switch (l.anim) {
+    case "heartbeat": { const p = (T * 1.1) % 1; const s = 1 + 0.2 * Math.exp(-Math.pow((p - 0.1) / 0.055, 2)) + 0.13 * Math.exp(-Math.pow((p - 0.3) / 0.055, 2)); sx = sy = s; break; }
+    case "pulse": sx = sy = 1 + 0.1 * Math.sin(T * Math.PI * 2); break;
+    case "bounce": dy = -Math.abs(Math.sin(T * Math.PI * 1.4)) * 120; break;
+    case "float": dy = Math.sin(T * Math.PI * 0.8) * 40; dx = Math.sin(T * Math.PI * 0.4) * 20; break;
+    case "spin": r = T * Math.PI; break;
+    case "wiggle": r = Math.sin(T * Math.PI * 6) * 0.15; break;
+    case "swing": r = Math.sin(T * Math.PI * 1.6) * 0.35; break;
+    case "jelly": { const k = Math.sin(T * Math.PI * 3); sx = 1 + 0.12 * k; sy = 1 - 0.12 * k; break; }
+    case "shake": dx = Math.sin(T * 90) * 8; dy = Math.cos(T * 77) * 8; break;
+    case "flash": a = (Math.floor(T * 2.5) % 2) ? 0.1 : 1; break;
+    case "fade": a = 0.2 + 0.8 * (0.5 + 0.5 * Math.sin(T * Math.PI * 1.5)); break;
+    case "zoom": sx = sy = 0.6 + 0.5 * (0.5 + 0.5 * Math.sin(T * Math.PI * 1.2)); break;
+    case "orbit": dx = Math.cos(T * Math.PI) * 90; dy = Math.sin(T * Math.PI) * 90; break;
+    default: {
+      if (["left", "right", "up", "down", "diag", "diag2"].includes(l.anim)) {
+        const b = baseSize(l); const e = Math.max(b.w, b.h) * l.scale / 2 + 20; const v = 230;
+        if (l.anim === "left") x = wrap(l.x - v * T, -e, W + e);
+        if (l.anim === "right") x = wrap(l.x + v * T, -e, W + e);
+        if (l.anim === "up") y = wrap(l.y - v * T, -e, H + e);
+        if (l.anim === "down") y = wrap(l.y + v * T, -e, H + e);
+        if (l.anim === "diag" || l.anim === "diag2") { const vy = v * (H + 2 * e) / (W + 2 * e); x = wrap(l.x + v * T, -e, W + e); y = wrap(l.y + (l.anim === "diag" ? -vy : vy) * T, -e, H + e); }
+      }
+    }
+  }
+  return { x: x + dx, y: y + dy, sx, sy, r, a };
+}
+function drawLayer(g, l, t) {
+  if (l.cover) return;
+  const m = motion(l, t); const b = baseSize(l);
+  let content = null;
+  if (l.type === "text") { content = renderText(l, t); }
+  g.save();
+  g.globalAlpha = clamp(l.opacity * m.a, 0, 1);
+  g.translate(m.x, m.y); g.rotate(l.rot + m.r); g.scale(l.scale * m.sx * (l.flip ? -1 : 1), l.scale * m.sy);
+  if (l.type === "emoji" || l.type === "gif") {
+    let src, base;
+    if (l.type === "emoji") { base = emojiCanvas(l.emoji); src = outlined(l, base, 0); }
+    else { const fi = gifFrameIndex(l.gif, t); base = l.gif.frames[fi].c; src = outlined(l, base, fi); }
+    const k = b.w / base.width, pad = (src._pad || 0) * k;
+    if (l.shadow) { g.shadowColor = "rgba(0,0,0,.45)"; g.shadowBlur = 26; g.shadowOffsetY = 12; }
+    g.drawImage(src, -b.w / 2 - pad, -b.h / 2 - pad, b.w + pad * 2, b.h + pad * 2);
+  } else if (l.type === "photo" || l.type === "video") { drawPhoto(g, l, t, b); }
+  else if (content) { g.drawImage(content, -content.width / 2, -content.height / 2); }
+  g.restore();
+}
+function drawSelection(g, l) {
+  const b = baseSize(l); const pad = 14;
+  g.save(); g.translate(l.x, l.y); g.rotate(l.rot);
+  const w = b.w * l.scale + pad * 2, h = b.h * l.scale + pad * 2;
+  g.lineWidth = 4; g.setLineDash([16, 12]); g.strokeStyle = "#ffffff"; g.shadowColor = "rgba(0,0,0,.6)"; g.shadowBlur = 6;
+  g.strokeRect(-w / 2, -h / 2, w, h); g.setLineDash([]);
+  g.fillStyle = "#ffd23f"; g.beginPath(); g.arc(w / 2, h / 2, 26, 0, 7); g.fill();
+  g.shadowBlur = 0; g.strokeStyle = "#2a1d00"; g.lineWidth = 4; g.beginPath(); g.arc(w / 2, h / 2, 11, -0.3, 4.2); g.stroke();
+  g.restore();
+}
+function handlePos(l) { const b = baseSize(l); const cx = (b.w * l.scale) / 2 + 14, cy = (b.h * l.scale) / 2 + 14; const c = Math.cos(l.rot), s = Math.sin(l.rot); return { x: l.x + cx * c - cy * s, y: l.y + cx * s + cy * c }; }
+
+// photo drawing with shapes and frames
+function drawPhoto(g, l, t, b) {
+  const { w, h } = b, path = shapePath(l.shape, w, h), fw = l.frameW, fc = l.frameColor, fr = l.frame;
+  const shadowOn = () => { if (l.shadow) { g.shadowColor = "rgba(0,0,0,.45)"; g.shadowBlur = 30; g.shadowOffsetY = 14; } };
+  g.save();
+  if (fr === "polaroid") { const m = Math.max(16, fw * 1.4), mb = Math.max(70, fw * 4.5); shadowOn(); g.fillStyle = fc; const p = new Path2D(); rrect(p, -w / 2 - m, -h / 2 - m, w + m * 2, h + m + mb, 8); g.fill(p); }
+  else if (fr === "film") { const m = Math.max(40, fw * 2.6); shadowOn(); g.fillStyle = "#111"; g.fillRect(-w / 2 - 16, -h / 2 - m, w + 32, h + m * 2); g.shadowColor = "transparent"; g.fillStyle = fc; const n = Math.max(4, Math.round(w / 52)); for (let i = 0; i < n; i++) { const x = -w / 2 + (i + 0.5) * (w / n) - 11; g.fillRect(x, -h / 2 - m * 0.72, 22, m * 0.44); g.fillRect(x, h / 2 + m * 0.28, 22, m * 0.44); } }
+  else if (fr !== "none" && !fr.startsWith("w-")) {
+    g.lineJoin = "round"; shadowOn();
+    if (fr === "double") { g.strokeStyle = isLight(fc) ? "#111" : "#fff"; g.lineWidth = fw * 2 + 16; g.stroke(path); g.shadowColor = "transparent"; }
+    g.lineWidth = fw * 2;
+    if (fr === "rainbow") g.strokeStyle = g.createConicGradient ? (() => { const cg = g.createConicGradient(t * 0.8, 0, 0); ["#ff4f4f", "#ffd23f", "#4fff8a", "#4fc3ff", "#b44fff", "#ff4f4f"].forEach((c, i) => cg.addColorStop(i / 5, c)); return cg; })() : rainbowGrad(g, -w / 2, 0, w / 2, 0, t * 60);
+    else if (fr === "gold") { const gg = g.createLinearGradient(-w / 2, -h / 2, w / 2, h / 2); ["#fff3b0", "#d4a017", "#fff8d6", "#b8860b", "#ffe680"].forEach((c, i) => gg.addColorStop(i / 4, c)); g.strokeStyle = gg; }
+    else if (fr === "neon") { g.shadowColor = fc; g.shadowBlur = 40; g.shadowOffsetY = 0; g.strokeStyle = fc; }
+    else g.strokeStyle = fc;
+    g.stroke(path);
+    if (fr === "neon") { g.lineWidth = fw * 2; g.stroke(path); }
+  } else if (l.shadow) { shadowOn(); g.fillStyle = "#000"; g.fill(path); }
+  g.restore();
+  g.save(); g.clip(path); drawCover(g, l.img, -w / 2, -h / 2, w, h); g.restore();
+  if (fr === "neon") { g.save(); g.lineWidth = Math.max(3, fw * 0.35); g.strokeStyle = "rgba(255,255,255,.9)"; g.stroke(path); g.restore(); }
+  if (fr === "gold") { g.save(); g.lineWidth = 3; g.strokeStyle = "rgba(90,60,0,.7)"; g.stroke(path); g.restore(); }
+  if (fr === "dashed") { const k = 1 + (fw * 0.6) / (Math.min(w, h) / 2); g.save(); g.scale(k, k); g.lineWidth = 4 / k; g.setLineDash([16 / k, 11 / k]); g.lineDashOffset = -t * 20; g.strokeStyle = isLight(fc) ? "rgba(0,0,0,.65)" : "rgba(255,255,255,.85)"; g.stroke(path); g.restore(); }
+  if (fr.startsWith("w-")) {
+    const glyph = emojiCanvas(WREATH[fr]); const rx = w / 2 + 18 + fw, ry = h / 2 + 18 + fw; const size = 56 + fw * 2.2;
+    const per = Math.PI * (3 * (rx + ry) - Math.sqrt((3 * rx + ry) * (rx + 3 * ry))); const n = Math.max(8, Math.round(per / (size * 0.82)));
+    for (let i = 0; i < n; i++) { const a = i / n * Math.PI * 2 + t * 0.08; const x = Math.cos(a) * rx, y = Math.sin(a) * ry; const s = size * (1 + 0.08 * Math.sin(t * 3 + i)); g.save(); g.translate(x, y); g.rotate(a + Math.PI / 2); g.drawImage(glyph, -s / 2, -s / 2, s, s); g.restore(); }
+  }
+}
+function isLight(hex) { if (!hex || hex[0] !== "#") return false; const n = parseInt(hex.slice(1), 16); const r = n >> 16 & 255, gg = n >> 8 & 255, b = n & 255; return (r * 299 + gg * 587 + b * 114) / 1000 > 160; }
+
+// ---------- text rendering ----------
+function fontSpec(l, fs) { const F = FONTS.find(f => f.name === l.font) || FONTS[0]; return `${F.w || 400} ${fs}px "${F.name}", "Nunito", system-ui, sans-serif`; }
+function renderText(l, t) {
+  const fs = Math.round(96 * l.size), font = fontSpec(l, fs);
+  const lines = String(l.text || " ").split("\n");
+  mctx.font = font; const ls = l.spacing * fs; const lh = fs * 1.2;
+  let maxW = 0; const glyphs = []; let idx = 0;
+  const lineWs = lines.map(line => { let w = 0; for (const ch of Array.from(line)) w += mctx.measureText(ch).width + ls; w = Math.max(0, w - ls); maxW = Math.max(maxW, w); return w; });
+  const ow = l.outlineW || 0; const pad = Math.ceil(ow + fs * 0.55 + 8);
+  const cw = maxW + pad * 2, ch = lines.length * lh + pad * 2;
+  l._cw = Math.max(40, maxW + ow * 2); l._ch = lines.length * lh + ow * 2;
+  lines.forEach((line, i) => { let x = pad + (maxW - lineWs[i]) / 2; const y = pad + i * lh + fs * 0.92; for (const c of Array.from(line)) { const w = mctx.measureText(c).width; glyphs.push({ c, x, y, w, i: idx++ }); x += w + ls; } });
+  const total = glyphs.length; let visible = total;
+  if (l.effect === "typewriter") { const cyc = total + 14; visible = Math.min(total, Math.floor((t * 9) % cyc)); }
+  const O = ensure(l, "_O", cw, ch), Fc = ensure(l, "_F", cw, ch), A = ensure(l, "_A", cw, ch), B = ensure(l, "_B", cw, ch);
+  const og = O.getContext("2d"), fg = Fc.getContext("2d"), ag = A.getContext("2d"), bg = B.getContext("2d");
+  [og, fg, ag, bg].forEach(g => { g.setTransform(1, 0, 0, 1, 0, 0); g.globalCompositeOperation = "source-over"; g.globalAlpha = 1; g.shadowColor = "transparent"; g.clearRect(0, 0, cw, ch); g.font = font; g.textBaseline = "alphabetic"; g.lineJoin = "round"; g.miterLimit = 2; });
+  const each = (g, fn) => { for (const gl of glyphs) { if (gl.i >= visible || gl.c === " ") continue; let dy = 0, sc = 1; if (l.effect === "wave") dy = Math.sin(t * 4 + gl.i * 0.55) * fs * 0.12; else if (l.effect === "bounce") dy = -Math.abs(Math.sin(t * 3.2 + gl.i * 0.35)) * fs * 0.22; else if (l.effect === "jelly") sc = 1 + 0.18 * Math.sin(t * 5 + gl.i * 0.6); g.save(); g.translate(gl.x + gl.w / 2, gl.y - fs * 0.35 + dy); if (sc !== 1) g.scale(sc, sc); fn(g, gl.c, -gl.w / 2, fs * 0.35); g.restore(); } };
+  if (ow > 0) { og.lineWidth = ow * 2; og.strokeStyle = "#fff"; each(og, (g, c, x, y) => g.strokeText(c, x, y)); og.globalCompositeOperation = "source-in"; og.fillStyle = l.outlineColor === "rainbow" ? rainbowGrad(og, 0, 0, cw, 0, t * 80) : l.outlineColor; og.fillRect(0, 0, cw, ch); }
+  fg.fillStyle = "#fff"; each(fg, (g, c, x, y) => g.fillText(c, x, y));
+  fg.globalCompositeOperation = "source-atop";
+  const top = pad, bot = ch - pad;
+  let fill;
+  switch (l.fill) {
+    case "gradient": fill = fg.createLinearGradient(0, top, 0, bot); fill.addColorStop(0, l.color); fill.addColorStop(1, l.color2); break;
+    case "rainbow": fill = rainbowGrad(fg, pad, 0, cw - pad, 0, t * 90); break;
+    case "holo": fill = rainbowGrad(fg, pad, top, cw - pad, bot, t * 60, 82); break;
+    case "gold": fill = fg.createLinearGradient(0, top, 0, bot); ["#fff7cc", "#ffd34d", "#c98a00", "#ffe680", "#a86f00"].forEach((c, i) => fill.addColorStop(i / 4, c)); break;
+    case "chrome": fill = fg.createLinearGradient(0, top, 0, bot); ["#ffffff", "#c9d3e0", "#6f7d90", "#f2f5fa", "#8e9aab"].forEach((c, i) => fill.addColorStop(i / 4, c)); break;
+    default: fill = l.color;
+  }
+  fg.fillStyle = fill; fg.fillRect(0, 0, cw, ch);
+  if (l.fill === "glitter") { const r = rng(l.id * 77); const n = Math.round(cw * ch / 160); for (let i = 0; i < n; i++) { const x = r() * cw, y = r() * ch, p = r(), s = r(); const k = 0.5 + 0.5 * Math.sin(t * 5 + p * 30); fg.fillStyle = s > 0.5 ? `rgba(255,255,255,${0.25 + 0.75 * k})` : `rgba(0,0,0,${0.12 * k})`; fg.fillRect(x, y, 2 + s * 3, 2 + s * 3); } }
+  if (l.fill === "gold" || l.fill === "chrome" || l.effect === "shine") { const bx = ((t * 0.55) % 1.6 - 0.3) * cw; const sh = fg.createLinearGradient(bx - fs * 0.9, 0, bx + fs * 0.9, ch * 0.6); sh.addColorStop(0, "rgba(255,255,255,0)"); sh.addColorStop(0.5, "rgba(255,255,255,.85)"); sh.addColorStop(1, "rgba(255,255,255,0)"); fg.fillStyle = sh; fg.fillRect(0, 0, cw, ch); }
+  ag.drawImage(O, 0, 0); ag.drawImage(Fc, 0, 0);
+  // compose shadows and effects
+  let alpha = 1;
+  if (l.effect === "flicker") { const r = hash(Math.floor(t * 14)); alpha = r < 0.07 ? 0.2 : r < 0.13 ? 0.6 : 1; }
+  bg.globalAlpha = alpha;
+  const sc = l.shadowColor || "#000000";
+  if (l.shadow === "soft") { bg.save(); bg.shadowColor = "rgba(0,0,0,.55)"; bg.shadowBlur = fs * 0.2; bg.shadowOffsetY = fs * 0.06; bg.drawImage(A, 0, 0); bg.restore(); }
+  else if (l.shadow === "glow") { bg.save(); bg.shadowColor = sc; bg.shadowBlur = fs * 0.32; bg.drawImage(A, 0, 0); bg.shadowBlur = fs * 0.12; bg.drawImage(A, 0, 0); bg.restore(); }
+  else if (l.shadow === "hard") { bg.drawImage(tint(A, sc, "s"), fs * 0.07, fs * 0.07); }
+  else if (l.shadow === "3d") { const S = tint(A, sc, "s"); const depth = Math.max(4, fs * 0.13); for (let d = depth; d > 0; d -= 1.5) bg.drawImage(S, d, d); }
+  if (l.effect === "glitch") {
+    const step = Math.floor(t * 10), r = rng(step * 13 + l.id); const amt = r() < 0.7 ? fs * 0.035 : fs * 0.12;
+    bg.globalAlpha = 0.85 * alpha; bg.drawImage(tint(A, "#00f0ff", "c"), -amt, 0); bg.drawImage(tint(A, "#ff2bd6", "m"), amt, 0); bg.globalAlpha = alpha;
+    bg.drawImage(A, 0, 0);
+    for (let k = 0; k < 2; k++) { if (r() < 0.45) continue; const sy = r() * ch, sh = 6 + r() * fs * 0.25, off = (r() - 0.5) * fs * 0.5; bg.clearRect(0, sy, cw, sh); bg.drawImage(A, 0, sy, cw, sh, off, sy, cw, sh); }
+  } else if (l.shadow === "soft" || l.shadow === "glow") { /* already drawn with A */ }
+  else bg.drawImage(A, 0, 0);
+  if (l.effect === "sparkle") { const r = rng(l.id * 5 + 3); bg.save(); bg.fillStyle = "#fff"; bg.shadowColor = "#fff"; bg.shadowBlur = 12; for (let i = 0; i < 7; i++) { const x = pad + r() * maxW, y = pad + r() * lines.length * lh, p = r(); const k = Math.pow(Math.max(0, Math.sin(t * 2.2 + p * 6.28)), 2); if (k > 0.03) glint(bg, x, y, fs * 0.22 * k); } bg.restore(); }
+  return B;
+}
+
+// ---------- GIFs ----------
+function decodeGif(buf) {
+  const r = new GifReader(new Uint8Array(buf)); const w = r.width, h = r.height; const n = Math.min(r.numFrames(), 250);
+  const scale = Math.min(1, Math.sqrt(9e6 / (w * h * n)), 640 / Math.max(w, h));
+  const px = new Uint8ClampedArray(w * h * 4); const full = makeCanvas(w, h), fgx = full.getContext("2d");
+  const frames = []; let prev = null, saved = null, total = 0;
+  for (let i = 0; i < n; i++) {
+    const info = r.frameInfo(i);
+    if (prev) { if (prev.disposal === 2) { for (let y = prev.y; y < prev.y + prev.height; y++) { const o = (y * w + prev.x) * 4; px.fill(0, o, o + prev.width * 4); } } else if (prev.disposal === 3 && saved) px.set(saved); }
+    saved = info.disposal === 3 ? px.slice() : null;
+    r.decodeAndBlitFrameRGBA(i, px);
+    fgx.putImageData(new ImageData(new Uint8ClampedArray(px), w, h), 0, 0);
+    const c = makeCanvas(w * scale, h * scale); c.getContext("2d").drawImage(full, 0, 0, c.width, c.height);
+    const d = (info.delay > 1 ? info.delay : 10) * 10; frames.push({ c, d, at: total }); total += d; prev = info;
+  }
+  return { w, h, frames, total };
+}
+function gifFrameIndex(gif, t) { if (gif.frames.length < 2) return 0; const ms = (t * 1000) % gif.total; let lo = 0, hi = gif.frames.length - 1; while (lo < hi) { const mid = (lo + hi + 1) >> 1; if (gif.frames[mid].at <= ms) lo = mid; else hi = mid - 1; } return lo; }
+function drawGifCover(g, l, t) { const f = l.gif.frames[gifFrameIndex(l.gif, t)].c; g.save(); g.globalAlpha = l.opacity; drawCover(g, f, 0, 0, W, H); g.restore(); }
+
+// ---------- cut out people (on-device person detection) ----------
+const MP_VER = "0.10.14";
+let segmenterP = null;
+function getSegmenter() {
+  if (segmenterP) return segmenterP;
+  segmenterP = (async () => {
+    const V = await import(`https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@${MP_VER}/vision_bundle.mjs`);
+    const files = await V.FilesetResolver.forVisionTasks(`https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@${MP_VER}/wasm`);
+    const opts = d => ({ baseOptions: { modelAssetPath: "https://storage.googleapis.com/mediapipe-models/image_segmenter/selfie_segmenter/float16/latest/selfie_segmenter.tflite", delegate: d }, runningMode: "IMAGE", outputConfidenceMasks: true, outputCategoryMask: false });
+    try { return await V.ImageSegmenter.createFromOptions(files, opts("GPU")); } catch (e) { return await V.ImageSegmenter.createFromOptions(files, opts("CPU")); }
+  })();
+  segmenterP.catch(() => { segmenterP = null; });
+  return segmenterP;
+}
+function cutFrame(seg, src, w, h, inv) {
+  const c = makeCanvas(w, h), g = c.getContext("2d", { willReadFrequently: true }); g.drawImage(src, 0, 0, w, h);
+  let mask = null, mw = 0, mh = 0;
+  seg.segment(c, res => { const ms = res.confidenceMasks || []; if (!ms.length) return; const m = ms[0]; mw = m.width; mh = m.height; mask = Float32Array.from(m.getAsFloat32Array()); });
+  if (!mask) throw new Error("no mask");
+  if (inv == null) { const at = (x, y) => mask[Math.min(mh - 1, Math.floor(y * mh)) * mw + Math.min(mw - 1, Math.floor(x * mw))]; const corners = (at(.03, .03) + at(.97, .03) + at(.03, .97) + at(.97, .97)) / 4; const centre = (at(.5, .4) + at(.5, .55) + at(.45, .5) + at(.55, .5)) / 4; inv = corners > centre + 0.2; }
+  const id = g.getImageData(0, 0, w, h), d = id.data;
+  for (let y = 0; y < h; y++) {
+    const fy = (y + 0.5) * mh / h - 0.5, y0 = clamp(Math.floor(fy), 0, mh - 1), y1 = Math.min(mh - 1, y0 + 1), ty = clamp(fy - y0, 0, 1);
+    for (let x = 0; x < w; x++) {
+      const fx = (x + 0.5) * mw / w - 0.5, x0 = clamp(Math.floor(fx), 0, mw - 1), x1 = Math.min(mw - 1, x0 + 1), tx = clamp(fx - x0, 0, 1);
+      let v = (mask[y0 * mw + x0] * (1 - tx) + mask[y0 * mw + x1] * tx) * (1 - ty) + (mask[y1 * mw + x0] * (1 - tx) + mask[y1 * mw + x1] * tx) * ty;
+      if (inv) v = 1 - v;
+      const a = clamp((v - 0.35) / 0.3, 0, 1); const i = (y * w + x) * 4 + 3; d[i] = d[i] * a;
+    }
+  }
+  g.putImageData(id, 0, 0); return { c, inv };
+}
+function seekTo(v, t) { return new Promise(res => { let done = false; const fin = () => { if (done) return; done = true; v.removeEventListener("seeked", fin); res(); }; v.addEventListener("seeked", fin); v.currentTime = t; setTimeout(fin, 2500); }); }
+async function cutoutJob(l, ui, range) {
+  const seg = await getSegmenter(); ui.status("Cutting out…");
+  const src = l.img, dd = dims(src); let frames = [], inv = null;
+  if (l.type === "video") {
+    src.pause(); const start = range ? range.start : 0; const full = isFinite(src.duration) && src.duration > 0 ? src.duration : 5; const dur = Math.min(range ? range.len : 5, Math.max(0.1, full - start)); const fps = 10; const n = Math.max(1, Math.floor(dur * fps));
+    const s = Math.min(1, 360 / Math.max(dd.w, dd.h)), w = Math.round(dd.w * s), h = Math.round(dd.h * s);
+    for (let i = 0; i < n; i++) { if (ui.cancelled) break; await seekTo(src, start + i / fps); const r = cutFrame(seg, src, w, h, inv); inv = r.inv; frames.push({ c: r.c, d: 100, at: i * 100 }); ui.progress((i + 1) / n); await new Promise(r2 => setTimeout(r2, 0)); }
+    src.play().catch(() => {});
+  } else { const s = Math.min(1, 900 / Math.max(dd.w, dd.h)); const r = cutFrame(seg, src, Math.round(dd.w * s), Math.round(dd.h * s), null); frames.push({ c: r.c, d: 100, at: 0 }); ui.progress(1); }
+  if (!frames.length) return null;
+  return { w: dd.w, h: dd.h, frames, total: frames.length * 100 };
+}
+function fmtTime(t) { const m = Math.floor(t / 60), sec = t - m * 60; return m + ":" + (sec < 10 ? "0" : "") + sec.toFixed(1); }
+function cutOutPerson(l) {
+  let ui, sheetEl, backEl;
+  const run = range => {
+    sheetEl.innerHTML = ""; backEl._busy = true;
+    const bar = el("div", "progress"), fillBar = el("i"); bar.append(fillBar); const st = note("Getting the cut-out tool ready. The first time takes a little longer.");
+    ui = { cancelled: false, progress: p => fillBar.style.width = Math.round(p * 100) + "%", status: t => st.textContent = t };
+    sheetEl.append(el("h3", null, "Cutting out the person"), st, bar, button("Cancel", () => { ui.cancelled = true; backEl.remove(); }, "btn ghost"));
+    cutoutJob(l, ui, range).then(gif => {
+      backEl.remove(); if (!gif || ui.cancelled) return;
+      const b = baseSize(l); const idx = layers.indexOf(l);
+      const nl = addLayer({ type: "gif", gif, cutout: true, x: l.x, y: l.y, rot: l.rot, scale: l.scale * b.w / 420, anim: l.anim, speed: l.speed, outlineColor: "#ffffff", outlineW: 8, shadow: true }, { quiet: true });
+      layers = layers.filter(x => x !== nl && x !== l); layers.splice(Math.max(0, idx), 0, nl);
+      if (l.type === "video" && !layers.some(x => x.img === l.img)) { try { l.img.pause(); l.img.remove(); } catch (e) {} }
+      select(nl.id, true); toast("Done. Pick a sticker outline or take it away.", 3500);
+    }).catch(e => { console.error(e); backEl.remove(); toast("The cut-out tool couldn't start. Check the internet connection and try again.", 4500); });
+  };
+  openSheet((sh, bk) => {
+    sheetEl = sh; backEl = bk;
+    if (l.type !== "video") { setTimeout(() => run(null), 0); return; }
+    const dur = isFinite(l.img.duration) && l.img.duration > 0 ? l.img.duration : 5;
+    let len = Math.min(3, dur), start = 0;
+    const pv = el("video"); pv.src = l.img.src; pv.muted = true; pv.playsInline = true; pv.setAttribute("playsinline", ""); pv.preload = "auto";
+    pv.style.cssText = "width:100%;max-height:38vh;object-fit:contain;background:#000;border-radius:14px;display:block";
+    const info = note("");
+    const upd = () => { info.textContent = `Uses ${fmtTime(start)} to ${fmtTime(Math.min(dur, start + len))}`; };
+    const sl = slider("cutstart", "Start at", 0, Math.max(0, dur - len), 0.1, 0, v => { start = v; pv.pause(); pv.currentTime = start; upd(); }, fmtTime);
+    const lens = [2, 3, 5].filter(x => x < dur + 0.05);
+    const lenChips = lens.length ? chipGroup(lens.map(x => ({ id: x, label: x + " seconds" })), lens.includes(3) ? 3 : lens[lens.length - 1], v => { len = v; const mx = Math.max(0, dur - len); sl._i.max = mx; if (start > mx) { start = mx; sl._i.value = mx; sl._out.textContent = fmtTime(mx); pv.currentTime = start; } upd(); }) : note("The whole video will be used.");
+    if (lens.length) len = lens.includes(3) ? 3 : lens[lens.length - 1];
+    const stopAt = () => { if (pv.currentTime >= start + len) { pv.pause(); pv.currentTime = start; } };
+    pv.addEventListener("timeupdate", stopAt);
+    pv.addEventListener("loadeddata", () => { pv.currentTime = 0.01; }, { once: true });
+    upd();
+    const row = el("div", "row"); row.append(button("Play this bit", () => { pv.currentTime = start; pv.play().catch(() => {}); }, "btn"), button("Cut out this bit", () => { pv.pause(); pv.removeAttribute("src"); run({ start, len }); }, "btn primary"));
+    sh.append(el("h3", null, "Choose the bit to cut out"), pv, sec("How long", lenChips), sl, info, row, button("Cancel", () => bk.remove(), "btn ghost"));
+  });
+}
+
+// ---------- scene loop ----------
+const t0 = performance.now();
+function drawScene(t) {
+  ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.globalAlpha = 1; ctx.globalCompositeOperation = "source-over"; ctx.shadowColor = "transparent";
+  drawBackground(ctx, t);
+  for (const l of layers) drawLayer(ctx, l, t);
+  if (!exporting && state.guide) drawGuide(ctx);
+  if (!exporting && !previewOpen) { const s = sel(); if (s && !s.cover) drawSelection(ctx, s); }
+}
+const pv = $("pv"), pctx = pv.getContext("2d");
+function loop(now) {
+  const t = (now - t0) / 1000;
+  try { drawScene(t); } catch (e) { console.error(e); }
+  if (previewOpen) pctx.drawImage(cv, 0, 0, pv.width, pv.height);
+  requestAnimationFrame(loop);
+}
+
+// ---------- layout ----------
+function fitStage() {
+  const wrapEl = $("stagewrap"); const r = wrapEl.getBoundingClientRect();
+  const s = Math.min(r.width / W, (r.height - 2) / H); cv.style.width = Math.floor(W * s) + "px"; cv.style.height = Math.floor(H * s) + "px";
+  if (previewOpen) { const ps = Math.min(innerWidth / W, innerHeight / H); pv.width = Math.round(W * ps * devicePixelRatio); pv.height = Math.round(H * ps * devicePixelRatio); pv.style.width = W * ps + "px"; pv.style.height = H * ps + "px"; }
+}
+new ResizeObserver(fitStage).observe($("stagewrap"));
+addEventListener("resize", fitStage);
+
+// ---------- layer creation ----------
+function addLayer(l, opts = {}) {
+  const def = { x: W / 2, y: H * 0.55, scale: 1, rot: 0, anim: "still", speed: 1, opacity: 1, flip: false, shadow: false, outlineColor: "none", outlineW: 0 };
+  l = Object.assign(def, l); l.id = nextId++; layers.push(l);
+  if (!opts.quiet) select(l.id, opts.edit);
+  return l;
+}
+function textDefaults(text, style = "bubble") { const st = TEXT_STYLES.find(s => s.id === style) || TEXT_STYLES[0]; return Object.assign({ type: "text", text, size: 1, spacing: 0.02, color2: "#7a5cff", fill: "solid", color: "#ffffff", outlineColor: "#000000", outlineW: 0, shadow: "none", shadowColor: "#000000", effect: "none", font: "Fredoka" }, st.p); }
+function select(id, goEdit) { selId = id; if (goEdit) showTab("edit"); else if (currentTab === "edit") renderPanel(); }
+function layerName(l) { if (l.type === "emoji") return [l.emoji, "Picture"]; if (l.type === "photo") return ["📷", "Photo"]; if (l.type === "gif" && l.cutout) return ["🧍", "Cut-out"]; if (l.type === "gif") return ["🎞️", l.cover ? "GIF (whole screen)" : "GIF"]; if (l.type === "video") return ["🎬", l.cover ? "Video (whole screen)" : "Video"]; return ["Aa", "Text: " + (l.text || "").replace(/\n/g, " ")]; }
+
+// ---------- pointer interaction ----------
+const ptrs = new Map(); let gesture = null;
+function toCanvas(e) { const r = cv.getBoundingClientRect(); return { x: (e.clientX - r.left) / r.width * W, y: (e.clientY - r.top) / r.height * H }; }
+function hitTest(p) {
+  for (let i = layers.length - 1; i >= 0; i--) {
+    const l = layers[i]; if (l.cover) continue;
+    const b = baseSize(l); const dx = p.x - l.x, dy = p.y - l.y, c = Math.cos(-l.rot), s = Math.sin(-l.rot);
+    const lx = (dx * c - dy * s) / l.scale, ly = (dx * s + dy * c) / l.scale;
+    const slop = 24 / l.scale;
+    if (Math.abs(lx) <= b.w / 2 + slop && Math.abs(ly) <= b.h / 2 + slop) return l;
+  }
+  return null;
+}
+cv.addEventListener("pointerdown", e => {
+  cv.setPointerCapture(e.pointerId); const p = toCanvas(e); ptrs.set(e.pointerId, p); $("hint").hidden = true;
+  const s = sel();
+  if (ptrs.size === 1) {
+    if (s && !s.cover) { const hp = handlePos(s); if (Math.hypot(p.x - hp.x, p.y - hp.y) < 60) { gesture = { mode: "handle", l: s, d0: Math.hypot(p.x - s.x, p.y - s.y), a0: Math.atan2(p.y - s.y, p.x - s.x), s0: s.scale, r0: s.rot }; return; } }
+    const hit = hitTest(p);
+    if (hit) { if (hit.id !== selId) select(hit.id, true); else if (currentTab !== "edit") showTab("edit"); gesture = { mode: "drag", l: hit, ox: p.x - hit.x, oy: p.y - hit.y }; }
+    else { gesture = null; if (selId) { selId = null; if (currentTab === "edit") renderPanel(); } }
+  } else if (ptrs.size === 2 && sel()) {
+    const [a, b] = [...ptrs.values()]; const l = sel();
+    gesture = { mode: "pinch", l, d0: Math.hypot(b.x - a.x, b.y - a.y), a0: Math.atan2(b.y - a.y, b.x - a.x), s0: l.scale, r0: l.rot, mx: (a.x + b.x) / 2 - l.x, my: (a.y + b.y) / 2 - l.y };
+  }
+});
+cv.addEventListener("pointermove", e => {
+  if (!ptrs.has(e.pointerId)) return; const p = toCanvas(e); ptrs.set(e.pointerId, p);
+  if (!gesture) return; const l = gesture.l;
+  if (gesture.mode === "drag") { l.x = clamp(p.x - gesture.ox, -100, W + 100); l.y = clamp(p.y - gesture.oy, -100, H + 100); }
+  else if (gesture.mode === "handle") { const d = Math.hypot(p.x - l.x, p.y - l.y); l.scale = clamp(gesture.s0 * d / Math.max(10, gesture.d0), 0.08, 8); l.rot = gesture.r0 + Math.atan2(p.y - l.y, p.x - l.x) - gesture.a0; syncSliders(); }
+  else if (gesture.mode === "pinch" && ptrs.size >= 2) { const [a, b] = [...ptrs.values()]; const d = Math.hypot(b.x - a.x, b.y - a.y); l.scale = clamp(gesture.s0 * d / Math.max(10, gesture.d0), 0.08, 8); l.rot = gesture.r0 + Math.atan2(b.y - a.y, b.x - a.x) - gesture.a0; l.x = (a.x + b.x) / 2 - gesture.mx; l.y = (a.y + b.y) / 2 - gesture.my; syncSliders(); }
+});
+function endPtr(e) { ptrs.delete(e.pointerId); if (ptrs.size === 0) gesture = null; else if (gesture && gesture.mode === "pinch") gesture = null; }
+cv.addEventListener("pointerup", endPtr); cv.addEventListener("pointercancel", endPtr);
+cv.addEventListener("wheel", e => { const l = sel(); if (!l) return; e.preventDefault(); l.scale = clamp(l.scale * (e.deltaY < 0 ? 1.06 : 0.94), 0.08, 8); syncSliders(); }, { passive: false });
+addEventListener("keydown", e => { if ((e.key === "Delete" || e.key === "Backspace") && sel() && !/INPUT|TEXTAREA/.test(document.activeElement.tagName)) { deleteSel(); e.preventDefault(); } });
+
+// ---------- UI building blocks ----------
+const panel = $("panel"); let currentTab = "idea"; const sliderRefs = {};
+function sec(title, ...kids) { const d = el("div", "sec"); if (title) d.append(el("h4", null, title)); kids.flat().forEach(k => k && d.append(k)); return d; }
+function note(text) { return el("p", "note", text); }
+function chipGroup(opts, cur, on, styler) { const d = el("div", "chips"); d.setAttribute("role", "radiogroup"); opts.forEach(o => { const b = el("button", "chip" + (o.id === cur ? " on" : ""), o.label); b.type = "button"; b.setAttribute("aria-pressed", o.id === cur); if (styler) styler(b, o); b.onclick = () => { d.querySelectorAll(".chip").forEach(x => { x.classList.remove("on"); x.setAttribute("aria-pressed", false); }); b.classList.add("on"); b.setAttribute("aria-pressed", true); on(o.id); }; d.append(b); }); return d; }
+function swatchGroup(cur, on, { none = false, rainbow = false, id = "c" } = {}) {
+  const d = el("div", "swatches"); const mark = b => { d.querySelectorAll(".sw").forEach(x => x.classList.remove("on")); b.classList.add("on"); };
+  const add = (val, cls, label) => { const b = el("button", "sw " + cls + (cur === val ? " on" : "")); b.type = "button"; b.setAttribute("aria-label", label); if (!cls) b.style.background = val; b.onclick = () => { mark(b); on(val); }; d.append(b); };
+  if (none) add("none", "none", "No outline"); if (rainbow) add("rainbow", "rainbow", "Rainbow");
+  COLORS.forEach(c => add(c, "", c));
+  const cb = el("label", "sw custom" + (cur && cur[0] === "#" && !COLORS.includes(cur) ? " on" : "")); cb.title = "Pick any colour";
+  const inp = el("input"); inp.type = "color"; inp.id = "col-" + id; inp.value = cur && cur[0] === "#" ? cur : "#ff4fa3"; inp.setAttribute("aria-label", "Pick any colour");
+  if (cur && cur[0] === "#" && !COLORS.includes(cur)) cb.style.background = cur;
+  inp.oninput = () => { cb.style.background = inp.value; mark(cb); on(inp.value); }; cb.append(inp); d.append(cb); return d;
+}
+function slider(key, label, min, max, step, val, on, fmt = v => v) {
+  const w = el("label", "slider"); const top = el("span", "sl-top"); const out = el("span", "sl-val", fmt(val)); top.append(el("span", null, label), out);
+  const i = el("input"); i.type = "range"; i.min = min; i.max = max; i.step = step; i.value = val; i.id = "sl-" + key;
+  i.oninput = () => { const v = +i.value; out.textContent = fmt(v); on(v); }; w.append(top, i); w._i = i; w._out = out; sliderRefs[key] = { i, out, fmt }; return w;
+}
+function button(label, onClick, cls = "btn small") { const b = el("button", cls, label); b.type = "button"; b.onclick = onClick; return b; }
+function keepScroll(fn) { const y = panel.scrollTop; fn(); panel.scrollTop = y; }
+function syncSliders() { const l = sel(); if (!l || currentTab !== "edit") return; const set = (k, v) => { const r = sliderRefs[k]; if (r && document.activeElement !== r.i) { r.i.value = v; r.out.textContent = r.fmt(v); } }; set("size", l.scale); set("turn", Math.round(((l.rot * 180 / Math.PI) % 360 + 540) % 360 - 180)); }
+
+// ---------- tabs ----------
+const ICONS = {
+  idea: '<path d="M12 2.5l2.2 6.8 6.8 2.2-6.8 2.2L12 20.5l-2.2-6.8-6.8-2.2 6.8-2.2z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>',
+  bg: '<rect x="3.5" y="3.5" width="17" height="17" rx="4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M4 16l4.5-4.5 4 4 3-3 4.5 4.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="15.5" cy="8.5" r="1.6" fill="currentColor"/>',
+  pics: '<circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="9" cy="10" r="1.2" fill="currentColor"/><circle cx="15" cy="10" r="1.2" fill="currentColor"/><path d="M8.3 14.2c2 2.3 5.4 2.3 7.4 0" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>',
+  photos: '<path d="M4 8.5h3l1.5-2.5h7L17 8.5h3v10H4z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="12" cy="13.3" r="3.2" fill="none" stroke="currentColor" stroke-width="1.8"/>',
+  gifs: '<rect x="3" y="6" width="18" height="12" rx="3" fill="none" stroke="currentColor" stroke-width="1.8"/><text x="12" y="15.3" text-anchor="middle" font-size="7.5" font-weight="900" font-family="Nunito, sans-serif" fill="currentColor">GIF</text>',
+  text: '<text x="12" y="17.5" text-anchor="middle" font-size="15" font-weight="800" font-family="Fredoka, sans-serif" fill="currentColor">Aa</text>',
+  edit: '<path d="M5 7h14M5 12h14M5 17h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="9" cy="7" r="2.2" fill="var(--surface)" stroke="currentColor" stroke-width="1.8"/><circle cx="15" cy="12" r="2.2" fill="var(--surface)" stroke="currentColor" stroke-width="1.8"/><circle cx="8" cy="17" r="2.2" fill="var(--surface)" stroke="currentColor" stroke-width="1.8"/>',
+};
+const TABS = [["idea", "Idea"], ["bg", "Background"], ["pics", "Pictures"], ["photos", "Photos"], ["gifs", "GIFs"], ["text", "Text"], ["edit", "Edit"]];
+TABS.forEach(([id, label]) => { const b = el("button", "tab"); b.type = "button"; b.dataset.tab = id; b.innerHTML = `<svg viewBox="0 0 24 24" aria-hidden="true">${ICONS[id]}</svg>`; b.append(el("span", null, label === "Background" ? "Backdrop" : label)); b.onclick = () => showTab(id); $("tabs").append(b); });
+function showTab(id) { currentTab = id; document.querySelectorAll(".tab").forEach(b => b.classList.toggle("on", b.dataset.tab === id)); panel.scrollTop = 0; renderPanel(); }
+function renderPanel() { panel.innerHTML = ""; for (const k in sliderRefs) delete sliderRefs[k]; ({ idea: renderIdea, bg: renderBg, pics: renderPics, photos: renderPhotos, gifs: renderGifs, text: renderTextTab, edit: renderEdit })[currentTab](); }
+
+// ---------- Idea tab ----------
+let ideaText = "";
+const STARTERS = [
+  { label: "Beating heart", text: "a big beating heart with sparkles and the words Love you" },
+  { label: "Space party", text: "rockets and planets floating in a starry night sky" },
+  { label: "Kitty dreams", text: "a cute bouncing kitten with floating hearts" },
+  { label: "Footy fan", text: "a spinning football with confetti and GOAL in comic writing" },
+  { label: "Rainbow unicorn", text: "a floating unicorn and rainbow with sparkles" },
+  { label: "Spooky night", text: "floating ghosts and pumpkins with spooky Boo writing" },
+  { label: "Ocean calm", text: "dolphins and shells with bubbles, calm blue sea" },
+  { label: "Birthday", text: "birthday cake, balloons and confetti saying Happy Birthday" },
+];
+const RECIPES = {
+  "Beating heart": { bg: { kind: "gradient", id: "grape" }, effect: "sparkles", pattern: "none", pictures: [{ emoji: "❤️", x: .5, y: .54, size: 2.1, anim: "heartbeat", outline: "#ffffff", outlineWidth: 10 }], texts: [{ text: "Love you", x: .5, y: .76, size: 1.1, style: "bubble", anim: "still" }], gifSearch: "beating heart" },
+  "Space party": { bg: { kind: "gradient", id: "night" }, effect: "stars", pattern: "none", pictures: [{ emoji: "🚀", x: .3, y: .62, size: 1.5, anim: "diag" }, { emoji: "🪐", x: .68, y: .48, size: 1.7, anim: "float" }, { emoji: "🌙", x: .78, y: .82, size: 1, anim: "swing" }], texts: [{ text: "To the moon", x: .5, y: .9, size: .85, style: "chrome", anim: "still" }], gifSearch: "space rocket" },
+  "Kitty dreams": { bg: { kind: "gradient", id: "cotton" }, effect: "hearts", pattern: "dots", pictures: [{ emoji: "🐱", x: .5, y: .56, size: 2, anim: "bounce", outline: "#ffffff", outlineWidth: 12 }, { emoji: "🧶", x: .78, y: .74, size: .9, anim: "spin" }], texts: [{ text: "Meow", x: .5, y: .8, size: 1.2, style: "candy", anim: "still" }], gifSearch: "cute kitten" },
+  "Footy fan": { bg: { kind: "gradient", id: "forest" }, effect: "confetti", pattern: "stripes", pictures: [{ emoji: "⚽", x: .5, y: .52, size: 2, anim: "spin" }, { emoji: "🏆", x: .5, y: .72, size: 1, anim: "pulse" }], texts: [{ text: "GOAL!", x: .5, y: .86, size: 1.5, style: "comic", anim: "heartbeat" }], gifSearch: "football goal" },
+  "Rainbow unicorn": { bg: { kind: "gradient", id: "unicorn" }, effect: "sparkles", pattern: "stars", pictures: [{ emoji: "🦄", x: .5, y: .56, size: 2.1, anim: "float", outline: "#ffffff", outlineWidth: 10 }, { emoji: "🌈", x: .5, y: .38, size: 1.3, anim: "pulse" }], texts: [{ text: "Dream big", x: .5, y: .8, size: 1.1, style: "rainbow", anim: "still" }], gifSearch: "unicorn rainbow" },
+  "Spooky night": { bg: { kind: "gradient", id: "midnight" }, effect: "fireflies", pattern: "none", pictures: [{ emoji: "👻", x: .4, y: .52, size: 1.8, anim: "float" }, { emoji: "🎃", x: .7, y: .7, size: 1.2, anim: "wiggle" }, { emoji: "🦇", x: .2, y: .38, size: .8, anim: "right" }], texts: [{ text: "Boo!", x: .5, y: .84, size: 1.6, style: "spooky", anim: "still" }], gifSearch: "spooky ghost" },
+  "Ocean calm": { bg: { kind: "gradient", id: "lagoon" }, effect: "bubbles", pattern: "none", pictures: [{ emoji: "🐬", x: .45, y: .55, size: 1.9, anim: "swing" }, { emoji: "🐚", x: .75, y: .78, size: .9, anim: "still" }], texts: [{ text: "Stay calm", x: .5, y: .86, size: 1.1, style: "script", anim: "still" }], gifSearch: "ocean waves" },
+  "Birthday": { bg: { kind: "gradient", id: "candy" }, effect: "confetti", pattern: "dots", pictures: [{ emoji: "🎂", x: .5, y: .58, size: 1.9, anim: "bounce", outline: "#ffffff", outlineWidth: 10 }, { emoji: "🎈", x: .2, y: .5, size: 1.2, anim: "float" }, { emoji: "🎈", x: .82, y: .46, size: 1, anim: "float" }], texts: [{ text: "Happy\nBirthday", x: .5, y: .8, size: 1, style: "glitter", anim: "still" }], gifSearch: "happy birthday" },
+};
+const SYN = { love: "heart", lovely: "heart", cat: "cat", kitty: "cat", kitten: "cat", puppy: "dog", doggy: "dog", footy: "soccer", football: "soccer", space: "rocket planet", unicorn: "unicorn", spooky: "ghost", halloween: "ghost jack", ocean: "water wave fish", sea: "water wave fish", beach: "beach", birthday: "birthday cake balloon", party: "party", flower: "flower blossom", flowers: "flower blossom", sparkly: "sparkles", shiny: "sparkles", sparkle: "sparkles", rainbow: "rainbow", music: "musical note", dance: "dancing", night: "moon star", christmas: "christmas santa", snow: "snow", food: "pizza", horse: "horse", bunny: "rabbit", butterfly: "butterfly" };
+const EMOJI_STOP = new Set("the and with saying says say words word writing written text name that this some lots big little very have want make wallpaper background screen lock please colour color into for its from".split(" "));
+ALL_EMOJI.forEach(x => x.w = x.n.toLowerCase().split(/[^a-z0-9]+/).filter(Boolean));
+function emojiSearch(q, limit = 60) {
+  const words = q.toLowerCase().split(/[^a-z0-9]+/).filter(w => w.length > 2 && !EMOJI_STOP.has(w));
+  const terms = new Set(); words.forEach(w => { terms.add(w); if (SYN[w]) SYN[w].split(" ").forEach(s => terms.add(s)); if (w.endsWith("s") && w.length > 3) terms.add(w.slice(0, -1)); });
+  if (!terms.size) return [];
+  const scored = [];
+  ALL_EMOJI.forEach(x => { if (x.g === "Flags" && !terms.has("flag")) return; let s = 0; terms.forEach(tm => { if (x.w.includes(tm)) s += 3; else if (tm.length >= 4 && x.w.some(w => w.startsWith(tm) || (w.length >= 4 && tm.startsWith(w)))) s += 1; }); if (s) scored.push([s, x]); });
+  scored.sort((a, b) => b[0] - a[0] || a[1].w.length - b[1].w.length); return scored.slice(0, limit).map(x => x[1]);
+}
+function giphyLink(q) { const a = el("a", null, `Find “${q}” GIFs on GIPHY`); a.href = "https://giphy.com/search/" + encodeURIComponent(q.trim().replace(/\s+/g, "-")); a.target = "_blank"; a.rel = "noopener"; return a; }
+function renderIdea() {
+  panel.append(el("h3", null, "What should your wallpaper look like?"));
+  const ta = el("textarea"); ta.id = "idea"; ta.rows = 2; ta.placeholder = "e.g. a beating pink heart with sparkles and my name in gold bubble writing"; ta.value = ideaText; ta.oninput = () => ideaText = ta.value;
+  const go = button("Make my wallpaper", () => runIdea(go), "btn primary big-add");
+  const out = el("div"); out.id = "ideaOut";
+  panel.append(sec(null, ta, go, out));
+  panel.append(sec("Or start from one of these", chipGroup(STARTERS.map(s => ({ id: s.label, label: s.label })), null, id => { const s = STARTERS.find(x => x.label === id); ideaText = s.text; ta.value = s.text; applyRecipe(RECIPES[id]); toast("Here you go. Tap anything to change it."); showIdeaResults(out, s.text, RECIPES[id].gifSearch); })));
+}
+function showIdeaResults(out, text, gifQ) {
+  out.innerHTML = ""; const w0 = extractWords(text); const found = emojiSearch(w0 ? text.replace(w0, " ") : text, 48);
+  if (found.length) { const g = el("div", "result-grid"); found.forEach(x => { const b = el("button", "pick", x.e); b.type = "button"; b.title = x.n; b.setAttribute("aria-label", "Add " + x.n); b.onclick = () => { addLayer({ type: "emoji", emoji: x.e }); toast("Added. Drag it where you like."); }; g.append(b); }); out.append(sec("Pictures that match", g)); }
+  const q = gifQ || text.split(/\s+/).slice(0, 4).join(" ");
+  if (q.trim()) { const gb = el("div"); out.append(sec("GIFs for this idea", gb)); gifResults(gb, q); }
+}
+function runIdea(btn) {
+  const text = ideaText.trim(); const out = $("ideaOut"); if (!text) { toast("Type an idea first"); return; }
+  const r = localDesign(text);
+  try { applyRecipe(r); toast("Here's your idea. Tap anything to change it."); } catch (e) { toast("Here are some matching pictures."); }
+  showIdeaResults(out, text, r.gifSearch);
+}
+const STOP = new Set("a an the with and my in on of some lots lot big little small that saying says say words word writing written text name is me i want wallpaper background screen lock make it please colour color colours colors bubble gold neon comic chrome glitter script font style letters across diagonal scrolling scroll moving which who has have its it's to for".split(" "));
+function gifWords(text) { return text.toLowerCase().replace(/["“”'‘’].*?["“”'‘’]/g, " ").split(/[^a-z]+/).filter(w => w.length > 2 && !STOP.has(w)).slice(0, 3).join(" "); }
+function extractWords(text) {
+  let m = text.match(/["“‘]([^"”’]{1,30})["”’]/) || text.match(/(?:^|\s)'([^']{1,30})'(?=\s|$|[,.!?])/); if (m) return m[1].trim();
+  m = text.match(/\b(?:saying|says|say|that reads|reads|the words?|words|my name is|name is|named|called|spelling|spells)\s+([A-Za-z0-9!?'’& ]{1,30}?)(?=\s+(?:in|with|and|on|written|across|going|that|which)\b|[,.]|$)/i);
+  if (m) { const w = m[1].trim(); if (w && !/^(in|with|a|the|my)$/i.test(w)) return w; }
+  return "";
+}
+function localDesign(text) {
+  const t = " " + text.toLowerCase() + " ";
+  const THEMES = [[/heart|love/, "Beating heart"], [/space|rocket|planet|astronaut|galaxy|alien/, "Space party"], [/\bcats?\b|kitt/, "Kitty dreams"], [/foot|soccer|goal/, "Footy fan"], [/unicorn/, "Rainbow unicorn"], [/spook|ghost|hallowe|pumpkin|witch|bat\b/, "Spooky night"], [/ocean|\bsea\b|fish|dolphin|beach|shark|mermaid|whale/, "Ocean calm"], [/birthday|cake|balloon/, "Birthday"]];
+  const words0 = extractWords(text); const found = emojiSearch(words0 ? text.replace(words0, " ") : text, 8);
+  let base = null; const theme = THEMES.find(([re]) => re.test(t));
+  if (theme) base = JSON.parse(JSON.stringify(RECIPES[theme[1]]));
+  if (base && found.length) { const focal = found[0]; const themeHit = base.pictures.some(p => p.emoji === focal.e); if (!themeHit && !theme[0].test(" " + focal.n + " ")) { base = null; } }
+  if (base && found.length && theme[0].test(" " + found[0].n + " ")) base.pictures[0].emoji = found[0].e;
+  if (!base) {
+    base = { bg: { kind: "gradient", id: "grape" }, effect: "sparkles", pattern: "none", pictures: [], texts: [] };
+    const pos = [[.5, .53, 2], [.22, .4, .9], [.8, .66, 1], [.22, .72, .8]];
+    const seen = new Set(); const picks = found.filter(x => !seen.has(x.e) && seen.add(x.e)).slice(0, 4);
+    picks.forEach((x, i) => base.pictures.push({ emoji: x.e, x: pos[i][0], y: pos[i][1], size: pos[i][2], anim: i ? "float" : "pulse", outline: i ? null : "#ffffff", outlineWidth: 10 }));
+    if (!picks.length) base.pictures.push({ emoji: "✨", x: .5, y: .53, size: 2, anim: "pulse" });
+  }
+  const COLW = [[/pink/, "candy", "#ff4fa3"], [/purple|violet|lilac/, "grape", "#c084fc"], [/blue/, "ocean", "#3b82f6"], [/green/, "mint", "#2bd47d"], [/\bred\b/, "berry", "#ff2b4f"], [/orange/, "sunset", "#ff8a00"], [/yellow/, "lemon", "#ffd23f"], [/black|dark/, "midnight", "#000000"], [/white/, "cloud", "#ffffff"], [/rainbow/, "unicorn", null], [/night/, "night", null], [/\bsky\b/, "sky", null], [/fire|flame/, "fire", null], [/peach/, "peach", "#fcb69f"]];
+  const colHits = COLW.filter(c => c[0].test(t)); const bgHit = colHits.find(c => c[1]);
+  if (bgHit) base.bg = { kind: "gradient", id: bgHit[1] };
+  const EFW = [[/sparkl|glitter|shin/, "sparkles"], [/snow|winter|christmas/, "snow"], [/bubbl/, "bubbles"], [/confetti|party|celebrat/, "confetti"], [/star|twinkl/, "stars"], [/heart|love/, "hearts"], [/magic|fair|firefl/, "fireflies"], [/aurora|northern/, "aurora"], [/disco|danc/, "disco"], [/lava/, "lava"], [/\bsun\b|sunny|sunshine/, "sunburst"]];
+  const ef = EFW.find(e => e[0].test(t)); if (ef) base.effect = ef[1];
+  const ANW = [[/beat/, "heartbeat"], [/bounc/, "bounce"], [/spin/, "spin"], [/float/, "float"], [/flash/, "flash"], [/puls/, "pulse"], [/wiggl|danc/, "wiggle"], [/swing/, "swing"], [/shak/, "shake"], [/zoom/, "zoom"], [/jell/, "jelly"]];
+  const an = ANW.find(a => a[0].test(t)); if (an && base.pictures[0]) base.pictures[0].anim = an[1];
+  const STW = [[/gold/, "gold"], [/neon/, "neon"], [/bubble/, "bubble"], [/comic|cartoon/, "comic"], [/rainbow (?:writing|text|letters)/, "rainbow"], [/chrome|silver|metal/, "chrome"], [/glitter|sparkly (?:writing|text|letters)/, "glitter"], [/candy|sweet/, "candy"], [/glitch/, "glitch"], [/script|fancy|joined|handwrit|cursive/, "script"], [/spooky|scary|creepy/, "spooky"], [/arcade|pixel|game/, "arcade"], [/marker|graffiti/, "marker"], [/retro|80s/, "retro"]];
+  const st = STW.find(x => x[0].test(t));
+  const words = extractWords(text);
+  const textAnim = /scroll|across/.test(t) ? "left" : /diagonal/.test(t) ? "diag" : "still";
+  if (words) base.texts = [{ text: words, x: .5, y: .8, size: words.length > 12 ? .8 : 1.15, style: st ? st[1] : (base.texts[0] ? base.texts[0].style : "bubble"), anim: textAnim, angle: /diagonal|slant/.test(t) ? -25 : 0 }];
+  else if (base.texts[0]) { if (st) base.texts[0].style = st[1]; if (textAnim !== "still") base.texts[0].anim = textAnim; }
+  const tc = colHits.find(c => c[2]); if (tc && base.texts[0] && st && !["gold", "chrome", "rainbow", "candy"].includes(st[1])) base.texts[0].color = tc[2];
+  base.gifSearch = gifWords(text) || base.gifSearch || "";
+  return base;
+}
+function buildPrompt(idea) {
+  return `You design animated iPhone lock-screen wallpapers in a fun wallpaper app used by a young person. Turn their idea into a design. Reply with JSON only, no prose, shaped like:
+{"bg":{"kind":"gradient","id":"<${GRADIENTS.map(g => g.id).join("|")}>"} or {"kind":"solid","color":"#rrggbb"},
+"effect":"<${EFFECTS.map(e => e.id).join("|")}>",
+"pattern":"<${PATTERNS.map(p => p.id).join("|")}>",
+"pictures":[{"emoji":"<a single standard emoji>","x":0-1,"y":0-1,"size":0.5-2.5,"anim":"<${ANIMS.map(a => a.id).join("|")}>","outline":"#rrggbb or none","outlineWidth":0-16}],
+"texts":[{"text":"<max 24 characters, use \\n for a second line>","x":0-1,"y":0-1,"size":0.6-1.8,"angle":-40 to 40,"style":"<${TEXT_STYLES.map(s => s.id).join("|")}>","anim":"<anim id>"}],
+"gifSearch":"<2-4 words to search GIPHY with>"}
+Rules: 1-6 pictures with one clear focal picture near x 0.5, y 0.45-0.62 that is biggest. 0-2 texts: include the exact words the idea asks for; otherwise a short fitting phrase or none. The lock screen clock covers y 0.08-0.27, so keep things out of that band. Text usually goes around y 0.72-0.9. Keep it kind and fun.
+Idea: """${idea.slice(0, 400)}"""`;
+}
+function applyRecipe(r) {
+  if (!r || typeof r !== "object") throw new Error("bad");
+  const num = (v, a, b, d) => { v = Number(v); return Number.isFinite(v) ? clamp(v, a, b) : d; };
+  const hex = v => typeof v === "string" && /^#[0-9a-f]{6}$/i.test(v) ? v : null;
+  if (r.bg && r.bg.kind === "solid" && hex(r.bg.color)) state.bg = Object.assign(state.bg, { kind: "solid", color: r.bg.color });
+  else if (r.bg && GRADIENTS.some(g => g.id === r.bg.id)) state.bg = Object.assign(state.bg, { kind: "gradient", id: r.bg.id });
+  if (EFFECTS.some(e => e.id === r.effect)) state.effect = r.effect;
+  if (PATTERNS.some(e => e.id === r.pattern)) state.pattern = r.pattern;
+  const pics = (Array.isArray(r.pictures) ? r.pictures : []).filter(p => p && EMOJI_SET.has(p.emoji)).slice(0, 8);
+  const texts = (Array.isArray(r.texts) ? r.texts : []).filter(x => x && typeof x.text === "string" && x.text.trim()).slice(0, 3);
+  if (!pics.length && !texts.length) throw new Error("empty");
+  layers = layers.filter(l => l.type === "photo" || l.type === "gif");
+  pics.forEach(p => addLayer({ type: "emoji", emoji: p.emoji, x: num(p.x, 0, 1, .5) * W, y: num(p.y, 0, 1, .55) * H, scale: num(p.size, .3, 3, 1), anim: ANIM_IDS.has(p.anim) ? p.anim : "still", outlineColor: hex(p.outline) || "none", outlineW: hex(p.outline) ? num(p.outlineWidth, 0, 20, 8) : 0 }, { quiet: true }));
+  texts.forEach(x => addLayer(Object.assign(textDefaults(x.text.slice(0, 40), TEXT_STYLES.some(s => s.id === x.style) ? x.style : "bubble"), hex(x.color) ? { color: x.color } : {}, { x: num(x.x, 0, 1, .5) * W, y: num(x.y, 0, 1, .8) * H, size: num(x.size, .4, 2.2, 1), rot: num(x.angle, -60, 60, 0) * Math.PI / 180, anim: ANIM_IDS.has(x.anim) ? x.anim : "still" }), { quiet: true }));
+  texts.length && ensureFonts();
+  selId = null;
+}
+
+// ---------- Background tab ----------
+function renderBg() {
+  const tiles = el("div", "grid-tiles");
+  GRADIENTS.forEach(g => { const b = el("button", "tile" + (state.bg.kind === "gradient" && state.bg.id === g.id ? " on" : "")); b.type = "button"; b.style.background = cssGrad(g); b.setAttribute("aria-label", g.name); b.append(el("span", null, g.name)); b.onclick = () => { state.bg.kind = "gradient"; state.bg.id = g.id; tiles.querySelectorAll(".tile").forEach(x => x.classList.remove("on")); b.classList.add("on"); }; tiles.append(b); });
+  const guide = el("label", "check"); const cb = el("input"); cb.type = "checkbox"; cb.id = "guide"; cb.checked = state.guide; cb.onchange = () => state.guide = cb.checked; guide.append(cb, el("span", null, "Show where the clock goes (never saved)"));
+  panel.append(
+    sec("Blends", tiles),
+    sec("Plain colours", swatchGroup(state.bg.kind === "solid" ? state.bg.color : null, c => { state.bg.kind = "solid"; state.bg.color = c; renderPanelKeep(); }, { id: "bg" })),
+    sec("Moving effects", chipGroup(EFFECTS, state.effect, id => state.effect = id)),
+    sec("Patterns", chipGroup(PATTERNS, state.pattern, id => state.pattern = id)),
+    sec("Your own photo", button(state.bg.kind === "photo" ? "Change background photo" : "Use a photo as the background", () => $("fileBg").click(), "btn"),
+      state.bg.kind === "photo" ? slider("dim", "Darken", 0, 0.7, 0.05, state.bg.dim, v => state.bg.dim = v, v => Math.round(v * 100) + "%") : null),
+    sec(null, guide)
+  );
+}
+function renderPanelKeep() { keepScroll(renderPanel); }
+
+// ---------- Pictures tab ----------
+let picCat = "Animals & Nature", picQuery = "";
+function renderPics() {
+  const search = el("input"); search.type = "search"; search.id = "picsearch"; search.placeholder = "Search pictures, e.g. heart, cat, star"; search.value = picQuery;
+  const cats = el("div", "cats"); const grid = el("div", "emoji-grid");
+  const fill = () => {
+    grid.innerHTML = ""; const list = picQuery.trim() ? emojiSearch(picQuery, 240) : ALL_EMOJI.filter(x => x.g === picCat);
+    if (!list.length) { grid.append(note("No pictures match that. Try another word.")); return; }
+    const frag = document.createDocumentFragment();
+    list.forEach(x => { const b = el("button", "pick", x.e); b.type = "button"; b.title = x.n; b.setAttribute("aria-label", "Add " + x.n); b.onclick = () => { addLayer({ type: "emoji", emoji: x.e, x: W / 2 + (Math.random() - 0.5) * 160, y: H * 0.55 + (Math.random() - 0.5) * 200 }); toast("Added. Drag it where you like."); }; frag.append(b); });
+    grid.append(frag);
+  };
+  EMOJI_GROUPS.forEach(([g]) => { const b = el("button", "chip" + (g === picCat && !picQuery ? " on" : ""), GROUP_LABELS[g] || g); b.type = "button"; b.onclick = () => { picCat = g; picQuery = ""; search.value = ""; cats.querySelectorAll(".chip").forEach(x => x.classList.remove("on")); b.classList.add("on"); fill(); }; cats.append(b); });
+  search.oninput = () => { picQuery = search.value; cats.querySelectorAll(".chip").forEach(x => x.classList.toggle("on", !picQuery && x.textContent === (GROUP_LABELS[picCat] || picCat))); fill(); };
+  panel.append(el("h3", null, `${ALL_EMOJI.length.toLocaleString()} pictures`), sec(null, search, cats, grid));
+  fill();
+}
+
+// ---------- Photos tab ----------
+function renderPhotos() {
+  panel.append(el("h3", null, "Photos from your phone"),
+    sec(null, button("Add a photo", () => $("filePhoto").click(), "btn primary big-add"),
+      note("Then pick a shape, a frame or a sticker outline for it. You can add as many photos as you like.")),
+    sec("Photos on your wallpaper", layerList(l => l.type === "photo", "No photos yet.")));
+}
+function layerList(filter, empty) { const items = layers.filter(filter); if (!items.length) return note(empty); const d = el("div", "layer-list"); items.slice().reverse().forEach(l => { const [ic, nm] = layerName(l); const b = el("button", "layer-btn"); b.type = "button"; b.append(el("b", null, ic), el("span", null, nm)); b.onclick = () => select(l.id, true); d.append(b); }); return d; }
+
+// ---------- GIFs tab ----------
+let gifQuery = "";
+function renderGifs() {
+  const q = el("input"); q.type = "search"; q.id = "gifq"; q.placeholder = "What GIF? e.g. beating heart, dancing cat"; q.value = gifQuery; q.enterKeyHint = "search";
+  const box = el("div");
+  const go = () => { gifQuery = q.value; q.blur(); gifResults(box, gifQuery); };
+  q.addEventListener("keydown", e => { if (e.key === "Enter") go(); });
+  const row = el("div", "row"); row.style.flexWrap = "nowrap"; row.append(q, button("Search", go, "btn"));
+  panel.append(el("h3", null, "Add GIFs and videos"), sec(null, row, box),
+    sec("Your own videos", button("Add a video from your phone", () => $("fileVid").click(), "btn primary big-add"), note("Film something with the camera first, or pick any video. It plays on a loop with no sound.")),
+    sec("GIFs from your phone", button("Add a GIF from your phone", () => $("fileGif").click(), "btn")),
+    sec("GIFs and videos on your wallpaper", layerList(l => l.type === "gif" || l.type === "video", "None yet.")));
+  gifResults(box, gifQuery);
+}
+
+// ---------- Text tab ----------
+let newText = "Hello!";
+function renderTextTab() {
+  const ta = el("textarea"); ta.id = "newtext"; ta.rows = 2; ta.value = newText; ta.oninput = () => newText = ta.value;
+  const styles = el("div", "styles");
+  TEXT_STYLES.forEach(s => { const b = el("button", "style-tile"); b.type = "button"; styleTilePreview(b, s); b.onclick = () => { const l = addLayer(Object.assign(textDefaults(newText.trim() || "Hello!", s.id), { y: H * (0.7 + Math.random() * 0.18) }), { edit: true }); ensureFonts(); toast("Added. Drag it where you like."); }; styles.append(b); });
+  panel.append(el("h3", null, "Add writing"), sec(null, ta, note("Pick a style to add it. You can change everything about it afterwards.")), sec("Styles", styles), sec("Writing on your wallpaper", layerList(l => l.type === "text", "No writing yet.")));
+}
+function styleTilePreview(b, s) {
+  const p = s.p; const span = el("div", null, "Aa"); span.style.fontFamily = `"${p.font}", sans-serif`; span.style.fontWeight = (FONTS.find(f => f.name === p.font) || {}).w || 400;
+  const cols = { gold: "linear-gradient(#fff7cc,#ffd34d,#c98a00)", chrome: "linear-gradient(#fff,#c9d3e0,#6f7d90,#f2f5fa)", rainbow: "linear-gradient(90deg,#ff4f4f,#ffd23f,#4fff8a,#4fc3ff,#b44fff)", holo: "linear-gradient(90deg,#ffb3f0,#b3e5ff,#c7ffb3,#fff3b3)", gradient: `linear-gradient(${p.color},${p.color2})` };
+  if (cols[p.fill]) { span.style.background = cols[p.fill]; span.style.webkitBackgroundClip = "text"; span.style.backgroundClip = "text"; span.style.color = "transparent"; } else span.style.color = p.color;
+  if (p.outlineW) span.style.webkitTextStroke = `${Math.min(2, p.outlineW / 3)}px ${p.outlineColor}`;
+  if (p.shadow === "glow") span.style.textShadow = `0 0 10px ${p.shadowColor}`; else if (p.shadow === "hard" || p.shadow === "3d") span.style.textShadow = `2px 2px 0 ${p.shadowColor}`;
+  b.append(span, el("small", null, s.label)); b.setAttribute("aria-label", "Add text in " + s.label + " style");
+}
+
+// ---------- Edit tab ----------
+function renderEdit() {
+  const l = sel();
+  if (!l) { panel.append(el("h3", null, "Things on your wallpaper"), note("Tap something on the screen, or pick it here, to change it."), sec(null, layerList(() => true, "Nothing yet. Add pictures, photos, GIFs or writing."))); return; }
+  const [ic, nm] = layerName(l);
+  const head = el("div", "edit-head"); head.append(el("h3", null, l.type === "text" ? "Writing" : nm), button("Done", () => { selId = null; renderPanel(); }, "btn small"));
+  panel.append(head);
+  const re = () => renderPanelKeep();
+  if (l.type === "text") {
+    const ta = el("textarea"); ta.id = "edittext"; ta.rows = 2; ta.value = l.text; ta.oninput = () => l.text = ta.value;
+    panel.append(sec(null, ta),
+      sec("Quick styles", chipGroup(TEXT_STYLES, null, id => { const st = TEXT_STYLES.find(s => s.id === id); Object.assign(l, st.p); ensureFonts(); re(); })),
+      sec("Font", chipGroup(FONTS.map(f => ({ id: f.name, label: f.label || f.name })), l.font, id => { l.font = id; ensureFonts(); }, (b, o) => { b.classList.add("font-chip"); b.style.fontFamily = `"${o.id}", sans-serif`; })),
+      sec("Text size", slider("tsize", "Size", 0.3, 3, 0.05, l.size, v => l.size = v, v => Math.round(v * 100) + "%"), slider("spacing", "Letter spacing", -0.1, 0.5, 0.01, l.spacing, v => l.spacing = v, v => Math.round(v * 100))),
+      sec("Colour style", chipGroup(FILLS, l.fill, id => { l.fill = id; re(); })),
+      ["solid", "gradient", "glitter"].includes(l.fill) ? sec(l.fill === "gradient" ? "Top colour" : "Colour", swatchGroup(l.color, c => l.color = c, { id: "tc" })) : null,
+      l.fill === "gradient" ? sec("Bottom colour", swatchGroup(l.color2, c => l.color2 = c, { id: "tc2" })) : null,
+      sec("Outline", swatchGroup(l.outlineW ? l.outlineColor : "none", c => { if (c === "none") l.outlineW = 0; else { l.outlineColor = c; if (!l.outlineW) { l.outlineW = 5; const r = sliderRefs.ow; if (r) { r.i.value = 5; r.out.textContent = "5"; } } } }, { none: true, rainbow: true, id: "to" }), slider("ow", "Outline thickness", 0, 20, 1, l.outlineW, v => l.outlineW = v)),
+      sec("Shadow", chipGroup(SHADOWS, l.shadow, id => { l.shadow = id; re(); }), l.shadow !== "none" && l.shadow !== "soft" ? swatchGroup(l.shadowColor, c => l.shadowColor = c, { id: "ts" }) : null),
+      sec("Letter effects", chipGroup(TEXT_FX, l.effect, id => l.effect = id)));
+  }
+  if (l.type === "video") panel.append(sec(null, toggle("Fill the whole screen (as the background)", !!l.cover, v => { l.cover = v; if (v) { layers = layers.filter(x => x !== l); layers.unshift(l); } re(); }), slider("vrate", "Video speed", 0.25, 2, 0.05, l.img.playbackRate || 1, v => { l.img.playbackRate = v; }, v => v.toFixed(2) + "×")));
+  if (l.type === "photo" || (l.type === "video" && !l.cover)) panel.append(sec("Remove the background", note(l.type === "video" ? "Keeps just the person and makes everything else see-through. You choose which bit to use. Works best with one person in good light." : "Keeps just the person and makes everything else see-through. Works best with one person in good light."), button("Cut out the person", () => cutOutPerson(l), "btn primary")));
+  if (l.type === "photo" || (l.type === "video" && !l.cover)) {
+    panel.append(
+      sec("Shape", chipGroup(SHAPES, l.shape, id => { l.shape = id; })),
+      sec("Frame or sticker", chipGroup(FRAMES, l.frame, id => { l.frame = id; if (id !== "none" && l.frameW === 0) l.frameW = 14; re(); })),
+      l.frame !== "none" && l.frame !== "gold" && l.frame !== "rainbow" && !l.frame.startsWith("w-") ? sec("Frame colour", swatchGroup(l.frameColor, c => l.frameColor = c, { id: "fc" })) : null,
+      l.frame !== "none" ? sec(null, slider("fw", "Frame thickness", 2, 40, 1, l.frameW, v => l.frameW = v)) : null,
+      sec(null, toggle("Drop shadow", l.shadow, v => l.shadow = v)));
+  }
+  if (l.type === "emoji" || l.type === "gif") {
+    if (l.type === "gif") panel.append(sec(null, toggle("Fill the whole screen (as the background)", !!l.cover, v => { l.cover = v; if (v) { layers = layers.filter(x => x !== l); layers.unshift(l); } re(); })));
+    if (!l.cover) panel.append(
+      sec("Sticker outline", swatchGroup(l.outlineW ? l.outlineColor : "none", c => { if (c === "none") l.outlineW = 0; else { l.outlineColor = c; if (!l.outlineW) l.outlineW = 10; } re(); }, { none: true, rainbow: true, id: "eo" }),
+        l.outlineW ? slider("eow", "Outline thickness", 2, 24, 1, l.outlineW, v => l.outlineW = v) : null,
+        toggle("Drop shadow", l.shadow, v => l.shadow = v)));
+  }
+  if (!l.cover) {
+    panel.append(
+      sec("Movement", chipGroup(ANIMS, l.anim, id => l.anim = id), slider("speed", "Speed", 0.25, 3, 0.05, l.speed, v => l.speed = v, v => v.toFixed(2) + "×")),
+      sec("Size and angle", slider("size", "Size", 0.08, 6, 0.01, l.scale, v => l.scale = v, v => Math.round(v * 100) + "%"),
+        slider("turn", "Turn", -180, 180, 1, Math.round(((l.rot * 180 / Math.PI) % 360 + 540) % 360 - 180), v => l.rot = v * Math.PI / 180, v => v + "°"),
+        el("div", "row")));
+    const row = panel.lastChild.lastChild;
+    row.append(button("Straighten", () => { l.rot = 0; syncSliders(); }), button("Centre", () => { l.x = W / 2; l.y = H / 2; }), button("Flip", () => l.flip = !l.flip));
+  }
+  panel.append(sec("See-through", slider("op", "Visible", 0.1, 1, 0.05, l.opacity, v => l.opacity = v, v => Math.round(v * 100) + "%")),
+    sec("Arrange", (() => { const r = el("div", "row"); r.append(button("Bring forward", () => moveLayer(1)), button("Send back", () => moveLayer(-1)), button("Copy", duplicateSel), button("Delete", deleteSel, "btn small danger")); return r; })()));
+}
+function toggle(label, val, on) { const w = el("label", "check"); const i = el("input"); i.type = "checkbox"; i.checked = !!val; i.id = "tg-" + label.replace(/\W/g, ""); i.onchange = () => on(i.checked); w.append(i, el("span", null, label)); return w; }
+function moveLayer(d) { const l = sel(); const i = layers.indexOf(l); const j = clamp(i + d, 0, layers.length - 1); layers.splice(i, 1); layers.splice(j, 0, l); toast(d > 0 ? "Brought forward" : "Sent back", 1200); }
+function duplicateSel() { const l = sel(); if (!l) return; const c = {}; for (const k in l) if (k[0] !== "_" && k !== "id") c[k] = l[k]; c.x += 40; c.y += 40; addLayer(c, { edit: true }); toast("Copied"); }
+function deleteSel() { const l = sel(); if (!l) return; layers = layers.filter(x => x !== l); if (l.type === "video" && !layers.some(x => x.img === l.img)) { try { l.img.pause(); URL.revokeObjectURL(l.img.src); l.img.remove(); } catch (e) {} } selId = null; renderPanelKeep(); toast("Deleted", 1200); }
+
+// ---------- files ----------
+function readFile(input) { return new Promise(res => { input.onchange = () => { const f = input.files && input.files[0]; input.value = ""; res(f || null); }; }); }
+async function loadImage(file, max = 1500) {
+  const url = URL.createObjectURL(file);
+  try { const img = await new Promise((res, rej) => { const i = new Image(); i.onload = () => res(i); i.onerror = rej; i.src = url; }); const s = Math.min(1, max / Math.max(img.naturalWidth, img.naturalHeight)); const c = makeCanvas(img.naturalWidth * s, img.naturalHeight * s); c.getContext("2d").drawImage(img, 0, 0, c.width, c.height); return c; }
+  finally { URL.revokeObjectURL(url); }
+}
+$("filePhoto").addEventListener("click", async () => { const f = await readFile($("filePhoto")); if (!f) return; try { const img = await loadImage(f); addLayer({ type: "photo", img, shape: "rounded", frame: "sticker", frameColor: "#ffffff", frameW: 14, shadow: true, scale: 0.9 }, { edit: true }); toast("Photo added. Pick a shape and frame below."); } catch (e) { toast("That photo couldn't be opened. Try another one."); } });
+async function loadVideo(file) {
+  const v = document.createElement("video"); v.muted = true; v.defaultMuted = true; v.loop = true; v.playsInline = true;
+  v.setAttribute("playsinline", ""); v.setAttribute("muted", ""); v.preload = "auto";
+  v.style.cssText = "position:fixed;left:0;top:0;width:2px;height:2px;opacity:0.01;pointer-events:none;z-index:-1";
+  document.body.append(v); v.src = URL.createObjectURL(file);
+  await new Promise((res, rej) => { v.onloadeddata = res; v.onerror = () => rej(new Error("video")); setTimeout(res, 10000); });
+  try { await v.play(); } catch (e) {}
+  if (!v.videoWidth) throw new Error("video");
+  return v;
+}
+function resumeVideos() { layers.forEach(l => { if (l.type === "video" && l.img.paused) l.img.play().catch(() => {}); }); }
+document.addEventListener("visibilitychange", () => { if (!document.hidden) resumeVideos(); });
+addEventListener("pointerdown", resumeVideos, true);
+$("fileVid").addEventListener("click", async () => {
+  const f = await readFile($("fileVid")); if (!f) return;
+  toast("Loading video…", 4000);
+  try { const v = await loadVideo(f); addLayer({ type: "video", img: v, shape: "rounded", frame: "sticker", frameColor: "#ffffff", frameW: 12, shadow: true, scale: 0.85 }, { edit: true }); toast("Video added. Drag it where you like, or make it fill the screen."); }
+  catch (e) { toast("That video couldn't be opened. Try a different one."); }
+});
+$("fileBg").addEventListener("click", async () => { const f = await readFile($("fileBg")); if (!f) return; try { state.bg.img = await loadImage(f, 1700); state.bg.kind = "photo"; renderPanelKeep(); } catch (e) { toast("That photo couldn't be opened. Try another one."); } });
+$("fileGif").addEventListener("click", async () => {
+  const f = await readFile($("fileGif")); if (!f) return;
+  try {
+    const buf = await f.arrayBuffer(); const head = new Uint8Array(buf.slice(0, 4));
+    if (head[0] === 0x47 && head[1] === 0x49 && head[2] === 0x46) {
+      toast("Loading GIF…", 1500); await new Promise(r => setTimeout(r, 30));
+      const gif = decodeGif(buf); addLayer({ type: "gif", gif, scale: 1 }, { edit: true });
+      toast(gif.frames.length > 1 ? "GIF added. Drag it where you like." : "That GIF only has one picture in it, so it won't move.");
+    } else { const img = await loadImage(f); addLayer({ type: "photo", img, shape: "rounded", frame: "none", frameColor: "#ffffff", frameW: 0, shadow: false }, { edit: true }); toast("That came through as a still picture. Save GIFs to Files and add them from there to keep them moving.", 5000); }
+  } catch (e) { console.error(e); toast("That GIF couldn't be opened. Try another one."); }
+});
+// open pickers directly from buttons (the click listener above wires the change handler first)
+["filePhoto", "fileBg", "fileGif"].forEach(id => { const inp = $(id); const orig = inp.click.bind(inp); inp.click = () => { inp.dispatchEvent(new Event("click")); orig(); }; });
+
+// ---------- fonts ----------
+function ensureFonts() { if (!document.fonts) return; FONTS.forEach(f => document.fonts.load(`${f.w || 400} 40px "${f.name}"`).catch(() => {})); }
+
+// ---------- preview ----------
+$("btnPreview").onclick = () => { previewOpen = true; $("preview").hidden = false; fitStage(); };
+$("preview").onclick = () => { previewOpen = false; $("preview").hidden = true; };
+
+// ---------- new design ----------
+function openSheet(build) { const back = el("div", "sheet-back"); const sh = el("div", "sheet"); sh.setAttribute("role", "dialog"); back.append(sh); back.onclick = e => { if (e.target === back && !back._busy) back.remove(); }; build(sh, back); document.body.append(back); return back; }
+$("btnNew").onclick = () => openSheet((sh, back) => { sh.append(el("h3", null, "Start a new wallpaper?"), note("This clears everything on the screen.")); const r = el("div", "row"); r.append(button("Start fresh", () => { layers = []; selId = null; state.bg = { kind: "gradient", id: "candy", color: "#ff4fa3", img: null, dim: 0 }; state.effect = "none"; state.pattern = "none"; back.remove(); showTab("bg"); }, "btn primary"), button("Keep my design", () => back.remove(), "btn")); sh.append(r); });
+
+// ---------- saving ----------
+function offerFile(blob, filename, sh) {
+  sh.querySelectorAll(".result").forEach(x => x.remove());
+  const file = new File([blob], filename, { type: blob.type });
+  const url = URL.createObjectURL(blob); const box = el("div", "result sec"); const isImg = blob.type.startsWith("image");
+  let canShare = false; try { canShare = !!(navigator.canShare && navigator.canShare({ files: [file] })); } catch (e) {}
+  if (isImg) { const img = el("img"); img.src = url; img.alt = "Your wallpaper"; box.append(img); }
+  else { const v = el("video"); v.src = url; v.controls = true; v.loop = true; v.playsInline = true; v.muted = true; v.autoplay = true; box.append(v); }
+  box.append(button(canShare ? (isImg ? "Save to Photos or share" : "Save video or share") : "Download", async () => {
+    if (canShare) { try { await navigator.share({ files: [file] }); } catch (e) { if (e && e.name !== "AbortError") toast("The share menu didn't open. Try again."); } }
+    else { const a = document.createElement("a"); a.href = url; a.download = filename; document.body.append(a); a.click(); a.remove(); }
+  }, "btn primary big-add"));
+  if (isImg) box.append(note("You can also press and hold the picture and tap Save to Photos."));
+  sh.insertBefore(box, sh.lastChild); box.scrollIntoView({ block: "nearest" });
+  return true;
+}
+function pickVideoType() { const types = ["video/mp4;codecs=avc1.42E01E", "video/mp4;codecs=avc1", "video/mp4", "video/webm;codecs=vp9", "video/webm;codecs=vp8", "video/webm"]; for (const t of types) { try { if (MediaRecorder.isTypeSupported(t)) return t; } catch (e) {} } return ""; }
+$("btnSave").onclick = () => openSheet((sh, back) => {
+  selId = null; if (currentTab === "edit") renderPanel();
+  let secs = 5;
+  const picBtn = button("Save picture", async () => { exporting = true; drawScene((performance.now() - t0) / 1000); exporting = false; cv.toBlob(b => { if (b) offerFile(b, "sparkle-wallpaper.png", sh); else toast("Couldn't make the picture."); }, "image/png"); }, "btn");
+  const bar = el("div", "progress"); const fillBar = el("i"); bar.append(fillBar); bar.hidden = true;
+  const vidBtn = button("Make moving video", async () => {
+    if (!window.MediaRecorder || !cv.captureStream) { toast("This browser can't make videos. Use Preview and screen recording instead.", 4000); return; }
+    const type = pickVideoType(); let rec;
+    try { rec = new MediaRecorder(cv.captureStream(30), Object.assign({ videoBitsPerSecond: 9e6 }, type ? { mimeType: type } : {})); } catch (e) { toast("This browser can't make videos. Use Preview and screen recording instead.", 4000); return; }
+    const chunks = []; rec.ondataavailable = e => { if (e.data && e.data.size) chunks.push(e.data); };
+    const done = new Promise(r => rec.onstop = r);
+    back._busy = true; vidBtn.disabled = picBtn.disabled = true; bar.hidden = false; exporting = true;
+    rec.start(250); const start = performance.now();
+    await new Promise(r => { const tick = () => { const p = (performance.now() - start) / (secs * 1000); fillBar.style.width = Math.min(100, p * 100) + "%"; if (p >= 1) r(); else requestAnimationFrame(tick); }; tick(); });
+    rec.stop(); await done; exporting = false; back._busy = false; vidBtn.disabled = picBtn.disabled = false; bar.hidden = true;
+    const mime = (rec.mimeType || type || "video/webm").split(";")[0]; const blob = new Blob(chunks, { type: mime });
+    if (!blob.size) { toast("The video came out empty. Try again with the app open on screen."); return; }
+    offerFile(blob, "sparkle-wallpaper." + (mime.includes("mp4") ? "mp4" : "webm"), sh);
+  }, "btn primary");
+  sh.append(el("h3", null, "Save your wallpaper"),
+    sec("Still picture", note("Saves exactly what's on screen, at full phone size."), picBtn),
+    sec("Moving wallpaper", note("Records the animation as a short video."), chipGroup([{ id: 3, label: "3 seconds" }, { id: 5, label: "5 seconds" }, { id: 8, label: "8 seconds" }], 5, v => secs = v), vidBtn, bar),
+    sec("Make it move on the lock screen", (() => { const o = el("ol", "steps"); o.innerHTML = "<li>Make the video, then tap <b>Save video or share</b>. Pick <b>Save Video</b> to put it in Photos, or send it straight to <b>intoLive</b>.</li><li>In intoLive, choose the video and make it a <b>Live Photo</b>.</li><li>Go to <b>Settings › Wallpaper › Add New</b>, pick the Live Photo and set it as the lock screen.</li><li>The wallpaper moves when the phone wakes up.</li>"; return o; })()),
+    button("Close", () => { if (!back._busy) back.remove(); }, "btn ghost"));
+});
+
+// ---------- start ----------
+showTab("idea");
+applyRecipe(RECIPES["Beating heart"]);
+ensureFonts();
+fitStage();
+requestAnimationFrame(loop);
+</script>
+</body>
+</html>
